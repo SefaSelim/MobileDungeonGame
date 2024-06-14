@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class StoryManagementScript : MonoBehaviour
 {
@@ -13,31 +14,60 @@ public class StoryManagementScript : MonoBehaviour
         public int[] nextNodes;
     }
 
+    [System.Serializable]
+    public class StoryNodeWrapper
+    {
+        public StoryNode[] nodes;
+    }
+
     public TextMeshProUGUI storyTextUI;
     public Button[] optionButtons;
-
-    // Eğer bu değişken zaten tanımlıysa, tekrar tanımlamadan devam edebilirsiniz.
-    // Aşağıdaki satırı kontrol edin ve eğer zaten varsa yeni bir tanım eklemeyin.
     public StoryNode[] storyNodes;
 
     private int currentNode;
+    private bool canSelectOption = true;
 
     void Start()
     {
+        LoadStoryNodesFromJSON();
         currentNode = 0;
         UpdateStory();
     }
 
     public void OnOptionSelected(int optionIndex)
     {
+        if (!canSelectOption)
+        {
+            return;
+        }
+
+        if (optionIndex < 0 || optionIndex >= storyNodes[currentNode].nextNodes.Length)
+        {
+            Debug.LogError("Invalid option index: " + optionIndex);
+            return;
+        }
+        
         currentNode = storyNodes[currentNode].nextNodes[optionIndex];
         UpdateStory();
     }
 
     void UpdateStory()
     {
+        canSelectOption = false; // Seçenekleri devre dışı bırak
+
         StoryNode node = storyNodes[currentNode];
         storyTextUI.text = node.storyText;
+
+        // Mevcut düğümün son düğüm olup olmadığını kontrol et
+        if (node.nextNodes.Length == 0)
+        {
+            // Seçenek düğmelerini devre dışı bırak
+            foreach (var button in optionButtons)
+            {
+                button.gameObject.SetActive(false);
+            }
+            return;
+        }
 
         for (int i = 0; i < optionButtons.Length; i++)
         {
@@ -45,7 +75,7 @@ public class StoryManagementScript : MonoBehaviour
             {
                 optionButtons[i].gameObject.SetActive(true);
                 optionButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = node.options[i];
-                int index = i; // Avoid closure problem
+                int index = i; // Closure probleminden kaçınmak için
                 optionButtons[i].onClick.RemoveAllListeners();
                 optionButtons[i].onClick.AddListener(() => OnOptionSelected(index));
             }
@@ -54,57 +84,30 @@ public class StoryManagementScript : MonoBehaviour
                 optionButtons[i].gameObject.SetActive(false);
             }
         }
+
+        StartCoroutine(EnableOptionsAfterDelay(1f)); // Seçenekleri 1 saniye sonra yeniden etkinleştir
     }
 
-    void Awake()
+    IEnumerator EnableOptionsAfterDelay(float delay)
     {
-        // Örnek hikaye düğümlerini burada tanımlayın.
-        storyNodes = new StoryNode[]
-        {
-            new StoryNode
-            {
-                storyText = "Bir gün ormanda yürürken uzaktan Turanı gördünüz",
-                options = new string[] {"Turana yaklaş", "Geri dön"},
-                nextNodes = new int[] {1, 2}
-            },
-            new StoryNode
-            {
-                storyText = "Ormanın derinliklerine ilerlediniz ve Turanı gördünüz.",
-                options = new string[] {"Turana yaklaş", "Kaç"},
-                nextNodes = new int[] {3, 4}
-            },
-            new StoryNode
-            {
-                storyText = "Geri döndünüz ve evinize gittiniz.",
-                options = new string[] {},
-                nextNodes = new int[] {}
-            },
-            new StoryNode
-            {
-                storyText = "Turan sizi fark etti ve size doğru koşmaya başladı",
-                options = new string[] {"AMMMINAKEE", "Kaçanzi ol"},
-                nextNodes = new int[] {5, 6}
-            },
-            new StoryNode
-            {
-                storyText = "Kaçtınız ve ormanın çıkışını buldunuz.",
-                options = new string[] {},
-                nextNodes = new int[] {}
-            },
-            new StoryNode
-            {
-                storyText = "AMINAKE vuruşu yaptınız ve Turan yere iki seksen uzandı",
-                options = new string[] {},
-                nextNodes = new int[] {}
-            },
-            new StoryNode
-            {
-                storyText = "Hızlıca kaçtınız ve Turan sizi yakalayamadı. GÜVENDESİNİZ",
-                options = new string[] {},
-                nextNodes = new int[] {}
-            }
-        };
+        yield return new WaitForSeconds(delay);
+        canSelectOption = true; // Seçenekleri tekrar etkinleştir
     }
 
-    // Mevcut fonksiyonlar burada olacaktır.
+    void LoadStoryNodesFromJSON()
+    {
+        TextAsset jsonText = Resources.Load<TextAsset>("storyNodes");
+        Debug.Log("Trying to load JSON file.");
+        if (jsonText != null)
+        {
+            Debug.Log("JSON file loaded successfully: " + jsonText.text);
+            StoryNodeWrapper wrapper = JsonUtility.FromJson<StoryNodeWrapper>(jsonText.text);
+            storyNodes = wrapper.nodes;
+            Debug.Log("Story nodes loaded successfully.");
+        }
+        else
+        {
+            Debug.LogError("JSON file not found or could not be loaded.");
+        }
+    }
 }

@@ -1,0 +1,40 @@
+{
+    "nodes": [
+        {
+            "storyText": "Ormana yaklaştın",
+            "options": ["Devam et", "Geri dön"],
+            "nextNodes": [1, 2]
+        },
+        {
+            "storyText": "Ormana girdin ve ayı gördün",
+            "options": ["Ayıya yaklaş", "Kaç"],
+            "nextNodes": [4,3]
+        },
+        {
+            "storyText": "Geri döndün",
+            "options": [],
+            "nextNodes": []
+        },
+        {
+            "storyText": "Kaçtın ve ormandan uzaklaştın",
+            "options": [],
+            "nextNodes": []
+        },
+        {
+            "storyText": "Ayıya doğru yaklaşmaya başladın ve Ayı seni fark etti",
+            "options": ["Ayıya vur", "Koşarak uzaklaş"],
+            "nextNodes": [5,6]
+        },
+        {
+            "storyText": "Ayı öldü",
+            "options": [],
+            "nextNodes": []
+        },
+        {
+            "storyText": "Koşarak ordan uzaklaştın",
+            "options": [],
+            "nextNodes": []
+        }
+
+    ]
+}
