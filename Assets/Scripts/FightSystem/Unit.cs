@@ -9,12 +9,12 @@ public class Unit : MonoBehaviour
     public int damage;
     public int maxHP;
     public int currentHP;
+    public int unitAttackRoll; //20lik zara ekleniyor.
+    public int unitAC;
 
-    /// <summary>
-    /// Takes damage and returns true if the unit's health drops to zero or below.
-    /// </summary>
-    /// <param name="dmg">Amount of damage to take</param>
-    /// <returns>True if the unit's health drops to zero or below, false otherwise</returns>
+    public int weapondamage;
+
+
     public bool TakeDamage(int dmg)
     {
         currentHP -= dmg;

@@ -47,9 +47,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unitName: Salih
   unitLevel: 2
-  damage: 15
+  damage: 8
   maxHP: 20
   currentHP: 20
+  unitAttackRoll: 6
+  unitAC: 13
+  weapondamage: 4
 --- !u!1 &2202774621703963998
 GameObject:
   m_ObjectHideFlags: 0
