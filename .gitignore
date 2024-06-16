@@ -1,6 +1,8 @@
 ###
 # Unity folders and files
 ###
+/[Uu]serSettings/
+/[Ll]ogs/
 /[Aa]ssets/AssetStoreTools*
 /[Bb]uild/
 /[Ll]ibrary/
