@@ -12,9 +12,9 @@ public class FightSystem : MonoBehaviour
     public GameObject playerPrefab;
     public GameObject enemyPrefab;
     public Transform enemyBattleStation;
-    
+
     public TextMeshProUGUI enemyName, enemyLevel, enemyHP, playerHP, playerLevel, playerName, dialogueText, enemyAC, playerAC;
-    
+
 
     public Button attackButton;
     public Button healButton;
@@ -90,12 +90,23 @@ public class FightSystem : MonoBehaviour
 
         int attackRoll = Random.Range(1, 21);
         attackRoll += playerUnit.unitAttackRoll;
-        yield return StartCoroutine(ShowMessage("Saldırı zarınız " + attackRoll, 2f));
-         
+        if (attackRoll - playerUnit.unitAttackRoll == 20)
+        {
+            yield return StartCoroutine(ShowMessage("KRİTİK VURUŞ!!!", 2f));
+        }
+        else
+        {
+            yield return StartCoroutine(ShowMessage("Saldırı zarınız " + attackRoll, 2f));
+        }
+
         if (attackRoll >= enemyUnit.unitAC)
         {
             int damage = Random.Range(1, playerUnit.damage + 1);
             damage += playerUnit.weapondamage;
+            if (attackRoll - playerUnit.unitAttackRoll == 20)
+            {
+                damage = damage * 2;
+            }
             bool isDead = enemyUnit.TakeDamage(damage);
             enemyHP.text = "HP " + Mathf.Max(0, enemyUnit.currentHP);
 
@@ -129,7 +140,7 @@ public class FightSystem : MonoBehaviour
         playerUnit.Heal(healAmount);
         playerHP.text = "HP " + playerUnit.currentHP;
 
-        yield return StartCoroutine(ShowMessage("5 HP iyileştiniz!", 2f));
+        yield return StartCoroutine(ShowMessage(healAmount + " HP iyileştiniz!", 2f));
 
         state = BattleState.ENEMYTURN;
         StartCoroutine(EnemyTurn());
@@ -142,11 +153,21 @@ public class FightSystem : MonoBehaviour
 
         int attackRoll = Random.Range(1, 21);
         attackRoll += enemyUnit.unitAttackRoll;
-        yield return StartCoroutine(ShowMessage("Rakibin saldırı zarı " + attackRoll, 2f));
+        if (attackRoll - enemyUnit.unitAttackRoll == 20)
+        {
+            yield return StartCoroutine(ShowMessage("RAKİP KRİTİK VURDU!!! ", 2f));
+        }
+        else
+        {
+            yield return StartCoroutine(ShowMessage("Rakibin saldırı zarı " + attackRoll, 2f));
+        }
         if (attackRoll >= playerUnit.unitAC)
         {
+
             int damage = Random.Range(1, enemyUnit.damage + 1);
             damage += enemyUnit.weapondamage;
+            if (attackRoll - enemyUnit.unitAC == 20)
+            { damage = damage * 2; }
             bool isDead = playerUnit.TakeDamage(damage);
             playerHP.text = "HP " + Mathf.Max(0, playerUnit.currentHP);
 
