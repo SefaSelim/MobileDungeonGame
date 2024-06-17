@@ -399,7 +399,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9647059, g: 0.8627451, b: 0.6745098, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -981,6 +981,22 @@ PrefabInstance:
       propertyPath: removeButton
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2994184988754366248, guid: 66424a165e387db42bfbf5b795c89c60, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2994184988754366248, guid: 66424a165e387db42bfbf5b795c89c60, type: 3}
+      propertyPath: m_Color.b
+      value: 0.39215687
+      objectReference: {fileID: 0}
+    - target: {fileID: 2994184988754366248, guid: 66424a165e387db42bfbf5b795c89c60, type: 3}
+      propertyPath: m_Color.g
+      value: 0.29803923
+      objectReference: {fileID: 0}
+    - target: {fileID: 2994184988754366248, guid: 66424a165e387db42bfbf5b795c89c60, type: 3}
+      propertyPath: m_Color.r
+      value: 0.20392157
+      objectReference: {fileID: 0}
     - target: {fileID: 3536634609300514396, guid: 66424a165e387db42bfbf5b795c89c60, type: 3}
       propertyPath: m_Name
       value: ChestplateIcon
@@ -1157,6 +1173,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 345935179}
     m_Modifications:
+    - target: {fileID: 2097988337894304888, guid: 66424a165e387db42bfbf5b795c89c60, type: 3}
+      propertyPath: m_Color.b
+      value: 0.6745098
+      objectReference: {fileID: 0}
+    - target: {fileID: 2097988337894304888, guid: 66424a165e387db42bfbf5b795c89c60, type: 3}
+      propertyPath: m_Color.g
+      value: 0.8627451
+      objectReference: {fileID: 0}
+    - target: {fileID: 2097988337894304888, guid: 66424a165e387db42bfbf5b795c89c60, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9647059
+      objectReference: {fileID: 0}
     - target: {fileID: 2536384908688552282, guid: 66424a165e387db42bfbf5b795c89c60, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1236,6 +1264,22 @@ PrefabInstance:
     - target: {fileID: 2536384908688552282, guid: 66424a165e387db42bfbf5b795c89c60, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2994184988754366248, guid: 66424a165e387db42bfbf5b795c89c60, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2994184988754366248, guid: 66424a165e387db42bfbf5b795c89c60, type: 3}
+      propertyPath: m_Color.b
+      value: 0.39215687
+      objectReference: {fileID: 0}
+    - target: {fileID: 2994184988754366248, guid: 66424a165e387db42bfbf5b795c89c60, type: 3}
+      propertyPath: m_Color.g
+      value: 0.29803923
+      objectReference: {fileID: 0}
+    - target: {fileID: 2994184988754366248, guid: 66424a165e387db42bfbf5b795c89c60, type: 3}
+      propertyPath: m_Color.r
+      value: 0.20392157
       objectReference: {fileID: 0}
     - target: {fileID: 3536634609300514396, guid: 66424a165e387db42bfbf5b795c89c60, type: 3}
       propertyPath: m_Name
@@ -1337,14 +1381,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.003921569, g: 0.1254902, b: 0.30588236, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2045701026, guid: 591e226ef7ba94040a98b9313bb1c308, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
