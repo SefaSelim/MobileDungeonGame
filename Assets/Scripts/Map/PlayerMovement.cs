@@ -56,6 +56,15 @@ public class MousePositionOnImage : MonoBehaviour
         }
     }
 
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("UIElement"))
+        {
+            StopCoroutine(moveCoroutine);
+            animator.SetBool("IsWalking", false);
+        }
+    }
+
     IEnumerator SlideToPosition(Vector2 targetPosition)
     {
         isMoving = true; // Set moving flag to true
