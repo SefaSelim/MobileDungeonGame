@@ -172,7 +172,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 70
+  controlID: 19
   draggingID: 0
 --- !u!114 &8
 MonoBehaviour:
@@ -297,8 +297,8 @@ MonoBehaviour:
     y: 0
     width: 589.6
     height: 400
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -398,7 +398,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 2c5effff1e98ffff18fbffffee630000fe630000086400001264000038640000
+      m_ExpandedIDs: 06fbffff0e640000186400002e640000aa640000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -851,9 +851,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.69925404, y: 0.40381342, z: -0.034892943}
+    m_Target: {x: 0.14137673, y: 0.1643823, z: -0.02613459}
     speed: 2
-    m_Value: {x: 0.69925404, y: 0.40381342, z: -0.034892943}
+    m_Value: {x: 0.07101766, y: 0.17099725, z: -0.027018595}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -903,9 +903,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 2.751876
+    m_Target: 1.8760412
     speed: 2
-    m_Value: 2.751876
+    m_Value: 1.9644411
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1045,7 +1045,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Map/PlayerMovement
+    - Assets
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1053,16 +1053,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 46
   m_LastFolders:
-  - Assets/Scripts/Map/PlayerMovement
+  - Assets
   m_LastFoldersGridSize: 46
   m_LastProjectPath: C:\Users\Selim\DungeonGameMobile
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 182.20001}
-    m_SelectedIDs: 52870000
-    m_LastClickedID: 34642
-    m_ExpandedIDs: 0000000096640000986400009a6400009c6400009e640000a0640000a2640000a4640000a6640000a8640000aa640000c064000000ca9a3b
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 36650000
+    m_LastClickedID: 25910
+    m_ExpandedIDs: 000000000c6500000e65000010650000126500001465000016650000186500001a6500001c6500001e6500002065000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1090,7 +1090,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000096640000986400009a6400009c6400009e640000a0640000a2640000a4640000a6640000a8640000aa640000
+    m_ExpandedIDs: 000000000c6500000e65000010650000126500001465000016650000186500001a6500001c6500001e65000020650000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1117,7 +1117,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 72850000ac6200000a640000706300006e6300002a640000d66b0000ee6300001e65000000000000707a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1224,7 +1224,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 216
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
