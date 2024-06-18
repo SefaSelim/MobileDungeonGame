@@ -1,8 +1,9 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
-public class MousePositionOnImage : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     public Canvas canvas; // Reference to the Canvas
     public RectTransform canvasRectTransform; // Reference to the Canvas's RectTransform
@@ -56,14 +57,25 @@ public class MousePositionOnImage : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+
+    void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("UIElement"))
+        if (collision.gameObject.CompareTag("Blocker"))
         {
             StopCoroutine(moveCoroutine);
             animator.SetBool("IsWalking", false);
         }
     }
+    
+    public void CollisionDetected ()
+    {
+         
+            StopCoroutine(moveCoroutine);
+            animator.SetBool("IsWalking", false);
+  
+    }
+
+
 
     IEnumerator SlideToPosition(Vector2 targetPosition)
     {
@@ -72,6 +84,7 @@ public class MousePositionOnImage : MonoBehaviour
 
         Vector2 startPosition = gameObjectToMove.transform.localPosition;
         float elapsedTime = 0f;
+
 
         // Determine the direction and flip the character
         if (targetPosition.x > startPosition.x)
