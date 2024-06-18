@@ -13,7 +13,7 @@ public class FightSystem : MonoBehaviour
     public GameObject enemyPrefab;
     public Transform enemyBattleStation;
 
-    public TextMeshProUGUI enemyName, enemyLevel, enemyHP, playerHP, playerLevel, playerName, dialogueText, enemyAC, playerAC;
+    public TextMeshProUGUI enemyName, enemyLevel, enemyHP, playerHP, playerLevel, playerName, dialogueText, enemyAC, playerAC, playerCurrentEXP, playerMaxExp;
 
 
     public Button attackButton;
@@ -40,7 +40,8 @@ public class FightSystem : MonoBehaviour
 
         GameObject enemyGO = Instantiate(enemyPrefab, enemyBattleStation);
         enemyUnit = enemyGO.GetComponent<Unit>();
-
+        playerCurrentEXP.text = "EXP " + playerUnit.playerexp;
+        playerMaxExp.text = "/ " + playerUnit.expToLevelUP;
         playerLevel.text = "Lvl " + playerUnit.unitLevel;
         playerHP.text = "HP " + playerUnit.currentHP;
         playerName.text = playerUnit.unitName;
@@ -105,7 +106,7 @@ public class FightSystem : MonoBehaviour
             damage += playerUnit.weapondamage;
             if (attackRoll - playerUnit.unitAttackRoll == 20)
             {
-                damage = damage * 2;
+                damage *= 2;
             }
             bool isDead = enemyUnit.TakeDamage(damage);
             enemyHP.text = "HP " + Mathf.Max(0, enemyUnit.currentHP);
@@ -115,7 +116,7 @@ public class FightSystem : MonoBehaviour
             if (isDead)
             {
                 state = BattleState.WON;
-                EndBattle();
+                StartCoroutine(EndBattle());
             }
             else
             {
@@ -146,6 +147,8 @@ public class FightSystem : MonoBehaviour
         StartCoroutine(EnemyTurn());
     }
 
+
+
     IEnumerator EnemyTurn()
     {
         dialogueText.text = "Rakip saldırıyor!";
@@ -166,7 +169,7 @@ public class FightSystem : MonoBehaviour
 
             int damage = Random.Range(1, enemyUnit.damage + 1);
             damage += enemyUnit.weapondamage;
-            if (attackRoll - enemyUnit.unitAC == 20)
+            if (attackRoll - enemyUnit.unitAttackRoll == 20)
             { damage = damage * 2; }
             bool isDead = playerUnit.TakeDamage(damage);
             playerHP.text = "HP " + Mathf.Max(0, playerUnit.currentHP);
@@ -176,7 +179,7 @@ public class FightSystem : MonoBehaviour
             if (isDead)
             {
                 state = BattleState.LOST;
-                EndBattle();
+                StartCoroutine(EndBattle());
             }
             else
             {
@@ -198,15 +201,23 @@ public class FightSystem : MonoBehaviour
         yield return new WaitForSeconds(delay);
     }
 
-    void EndBattle()
+    IEnumerator EndBattle()
     {
         attackButton.interactable = false;
         healButton.interactable = false;
 
         if (state == BattleState.WON)
         {
-            dialogueText.text = "Kazandınız!";
             Debug.Log("YOU WON");
+            playerUnit.TakeExp(enemyUnit.exptobegiven);
+             playerCurrentEXP.text = "EXP " + playerUnit.playerexp;
+            playerMaxExp.text = " / " + playerUnit.expToLevelUP;
+            playerLevel.text = "Lvl " + playerUnit.unitLevel;
+            playerUnit.unitAC++;
+            playerAC.text = "AC " + playerUnit.unitAC;
+
+            yield return StartCoroutine(ShowMessage("TEBRİKLER " + enemyUnit.unitName + "'I YENEREK " + enemyUnit.exptobegiven + " EXP KAZANDINIZ.", 2f));
+        
         }
         else if (state == BattleState.LOST)
         {

@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class Unit : MonoBehaviour
 {
-    public string unitName;
+    public int playerexp;
+    public int expToLevelUP;
+    public string unitName;     
     public int unitLevel;
     public int damage;
     public int maxHP;
     public int currentHP;
     public int unitAttackRoll; //20lik zara ekleniyor.
     public int unitAC;
+    public int exptobegiven;
 
     public int weapondamage;
 
@@ -36,4 +39,15 @@ public class Unit : MonoBehaviour
             currentHP = maxHP; 
         }
     }
+
+    public void TakeExp(int expamount)
+    {
+        playerexp += expamount;
+        if(playerexp >= expToLevelUP )
+        {
+            playerexp -= expToLevelUP;
+            unitLevel++;
+            expToLevelUP = Mathf.FloorToInt(expToLevelUP * 1.5f);
+        }
+    }   
 }

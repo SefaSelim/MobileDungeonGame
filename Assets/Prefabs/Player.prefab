@@ -44,11 +44,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acbe0958bbec1aa4d98cfa113589fc05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerexp: 70
+  expToLevelUP: 100
   unitName: Player
-  unitLevel: 2
+  unitLevel: 1
   damage: 9
   maxHP: 50
   currentHP: 45
   unitAttackRoll: 5
   unitAC: 12
+  exptobegiven: 0
   weapondamage: 3

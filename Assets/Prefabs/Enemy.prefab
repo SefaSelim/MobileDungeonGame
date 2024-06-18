@@ -45,13 +45,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acbe0958bbec1aa4d98cfa113589fc05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerexp: 0
+  expToLevelUP: 0
   unitName: Salih
   unitLevel: 2
   damage: 8
-  maxHP: 20
-  currentHP: 20
+  maxHP: 5
+  currentHP: 5
   unitAttackRoll: 6
-  unitAC: 13
+  unitAC: 1
+  exptobegiven: 50
   weapondamage: 4
 --- !u!1 &2202774621703963998
 GameObject:
