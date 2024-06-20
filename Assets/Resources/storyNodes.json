@@ -3,38 +3,44 @@
         {
             "storyText": "Ormana yaklaştın",
             "options": ["Devam et", "Geri dön"],
-            "nextNodes": [1, 2]
+            "nextNodes": [1, 2],
+            "actions": []
         },
         {
             "storyText": "Ormana girdin ve ayı gördün",
             "options": ["Ayıya yaklaş", "Kaç"],
-            "nextNodes": [4,3]
+            "nextNodes": [4, 3],
+            "actions": []
         },
         {
             "storyText": "Geri döndün",
             "options": [],
-            "nextNodes": []
+            "nextNodes": [],
+            "actions": []
         },
         {
             "storyText": "Kaçtın ve ormandan uzaklaştın",
             "options": [],
-            "nextNodes": []
+            "nextNodes": [],
+            "actions": []
         },
         {
             "storyText": "Ayıya doğru yaklaşmaya başladın ve Ayı seni fark etti",
             "options": ["Ayıya vur", "Koşarak uzaklaş"],
-            "nextNodes": [5,6]
+            "nextNodes": [5, 6],
+            "actions": []
         },
         {
-            "storyText": "Ayı öldü",
+            "storyText": "Ayı öldü ve bir adet 'AYI POSTU' kazandın ve skorun 50 arttı.",
             "options": [],
-            "nextNodes": []
+            "nextNodes": [],
+            "actions": ["giveItem:AYI_POSTU","increaseScore:50"]
         },
         {
             "storyText": "Koşarak ordan uzaklaştın",
             "options": [],
-            "nextNodes": []
+            "nextNodes": [],
+            "actions": []
         }
-
     ]
 }

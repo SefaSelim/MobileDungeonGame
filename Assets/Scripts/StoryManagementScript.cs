@@ -12,6 +12,7 @@ public class StoryManagementScript : MonoBehaviour
         public string storyText;
         public string[] options;
         public int[] nextNodes;
+        public string[] actions;
     }
 
     [System.Serializable]
@@ -46,7 +47,7 @@ public class StoryManagementScript : MonoBehaviour
             Debug.LogError("Invalid option index: " + optionIndex);
             return;
         }
-        
+
         currentNode = storyNodes[currentNode].nextNodes[optionIndex];
         UpdateStory();
     }
@@ -57,6 +58,9 @@ public class StoryManagementScript : MonoBehaviour
 
         StoryNode node = storyNodes[currentNode];
         storyTextUI.text = node.storyText;
+
+        // Eylemleri gerçekleştir
+        PerformActions(node.actions);
 
         // Mevcut düğümün son düğüm olup olmadığını kontrol et
         if (node.nextNodes.Length == 0)
@@ -109,5 +113,56 @@ public class StoryManagementScript : MonoBehaviour
         {
             Debug.LogError("JSON file not found or could not be loaded.");
         }
+    }
+
+    void PerformActions(string[] actions)
+    {
+        foreach (var action in actions)
+        {
+            if (string.IsNullOrEmpty(action)) continue;
+
+            string[] parts = action.Split(':');
+            if (parts.Length != 2)
+            {
+                Debug.LogError("Invalid action format: " + action);
+                continue;
+            }
+
+            string actionType = parts[0];
+            string actionValue = parts[1];
+
+            switch (actionType)
+            {
+                case "giveItem":
+                    GiveItem(actionValue);
+                    break;
+                case "decreaseHealth":
+                    DecreaseHealth(int.Parse(actionValue));
+                    break;
+                case "increaseScore":
+                    IncreaseScore(int.Parse(actionValue));
+                    break;
+                default:
+                    Debug.LogError("Unknown action type: " + actionType);
+                    break;
+            }
+        }
+    }
+
+    void GiveItem(string itemName)
+    {
+        // Oyuncuya item verme kodunu buraya ekleyin
+        Debug.Log("Item verildi: " + itemName);
+    }
+
+    void DecreaseHealth(int amount)
+    {
+        // Oyuncunun sağlığını azaltma kodunu buraya ekleyin
+        Debug.Log("Health decreased by: " + amount);
+    }
+
+    void IncreaseScore(int amount)
+    {
+        Debug.Log("Score increased by: " + amount);
     }
 }
