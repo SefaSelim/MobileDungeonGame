@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Blocker
+  - Fishing
+  - CollisionDebugger
   layers:
   - Default
   - TransparentFX
@@ -13,7 +15,7 @@ TagManager:
   - Water
   - UI
   - UIBUTTON
-  - 
+  - Inventory
   - 
   - 
   - 
