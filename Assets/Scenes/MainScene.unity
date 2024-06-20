@@ -1734,6 +1734,7 @@ GameObject:
   - component: {fileID: 1251165165}
   - component: {fileID: 1251165164}
   - component: {fileID: 1251165168}
+  - component: {fileID: 1251165169}
   m_Layer: 0
   m_Name: FightPoint
   m_TagString: Blocker
@@ -1925,6 +1926,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1251165169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1251165162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c766ba72a218ef54fbdbabf05673ef40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BattleSystem: {fileID: 1438243867}
+  Enemy: {fileID: 873273395541190175, guid: 1164f843e540f7047ad886e5136b01be, type: 3}
 --- !u!1 &1334521165 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4749741809310928414, guid: 9cd658b858fedf54cb118f4fd91acb42, type: 3}
@@ -2070,7 +2085,7 @@ PrefabInstance:
     - target: {fileID: 3643884302246018952, guid: 9cd658b858fedf54cb118f4fd91acb42, type: 3}
       propertyPath: enemyPrefab
       value: 
-      objectReference: {fileID: 873273395541190175, guid: 1164f843e540f7047ad886e5136b01be, type: 3}
+      objectReference: {fileID: 873273395541190175, guid: f66ba6c016a826a47ba01b4f50917c2e, type: 3}
     - target: {fileID: 4749741809310928414, guid: 9cd658b858fedf54cb118f4fd91acb42, type: 3}
       propertyPath: m_Name
       value: FightSystem
@@ -2306,6 +2321,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1438243867 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4087132859943795929, guid: 9cd658b858fedf54cb118f4fd91acb42, type: 3}
+  m_PrefabInstance: {fileID: 1357671318}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1508419676
 PrefabInstance:
   m_ObjectHideFlags: 0
