@@ -996,6 +996,7 @@ GameObject:
   - component: {fileID: 303504225}
   - component: {fileID: 303504224}
   - component: {fileID: 303504228}
+  - component: {fileID: 303504229}
   m_Layer: 0
   m_Name: FightPoint2
   m_TagString: Blocker
@@ -1187,6 +1188,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &303504229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303504222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c766ba72a218ef54fbdbabf05673ef40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BattleSystem: {fileID: 1438243867}
+  Enemy: {fileID: 873273395541190175, guid: f66ba6c016a826a47ba01b4f50917c2e, type: 3}
 --- !u!1 &391835578
 GameObject:
   m_ObjectHideFlags: 0
