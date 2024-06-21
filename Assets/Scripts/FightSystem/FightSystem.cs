@@ -28,7 +28,7 @@ public class FightSystem : MonoBehaviour
         StartCoroutine(SetupBattle());
     }
 
-    IEnumerator SetupBattle()
+    public IEnumerator SetupBattle()
     {
         GameObject playerGO = Instantiate(playerPrefab);
         playerUnit = playerGO.GetComponent<Unit>();
