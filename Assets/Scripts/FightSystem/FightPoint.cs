@@ -16,11 +16,12 @@ public class FightPoint : MonoBehaviour
     }
 }
     // Update is called once per frame
-    void SetupFightPoint()
+    public void SetupFightPoint()
     {
           fightSystem = BattleSystem.GetComponent<FightSystem>();
           fightSystem.enemyPrefab  = Enemy;
           StartCoroutine(fightSystem.SetupBattle());
+          Debug.Log("SAVAŞ BAŞLADI");
 
     }
 }

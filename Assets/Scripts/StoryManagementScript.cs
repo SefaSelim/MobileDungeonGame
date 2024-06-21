@@ -28,11 +28,18 @@ public class StoryManagementScript : MonoBehaviour
     private int currentNode;
     private bool canSelectOption = true;
 
+    public GameObject fightpoint;
+
+    FightPoint fpscript;
+    
+
+
     void Start()
     {
         LoadStoryNodesFromJSON();
         currentNode = 0;
         UpdateStory();
+        
     }
 
     public void OnOptionSelected(int optionIndex)
@@ -89,7 +96,7 @@ public class StoryManagementScript : MonoBehaviour
             }
         }
 
-        StartCoroutine(EnableOptionsAfterDelay(1f)); // Seçenekleri 1 saniye sonra yeniden etkinleştir
+        StartCoroutine(EnableOptionsAfterDelay(0.5f)); // Seçenekleri 0.5 saniye sonra yeniden etkinleştir
     }
 
     IEnumerator EnableOptionsAfterDelay(float delay)
@@ -142,6 +149,9 @@ public class StoryManagementScript : MonoBehaviour
                 case "increaseScore":
                     IncreaseScore(int.Parse(actionValue));
                     break;
+                case "startBattle":
+                    StartBattle();
+                    break;
                 default:
                     Debug.LogError("Unknown action type: " + actionType);
                     break;
@@ -164,5 +174,18 @@ public class StoryManagementScript : MonoBehaviour
     void IncreaseScore(int amount)
     {
         Debug.Log("Score increased by: " + amount);
+    }
+
+    void StartBattle()
+    {
+        fpscript = fightpoint.GetComponent<FightPoint>();
+        if (fpscript != null)
+        {
+            fpscript.SetupFightPoint();
+        }
+        else
+        {
+            Debug.LogError("FightPoint component not found on the fightpoint GameObject.");
+        }
     }
 }

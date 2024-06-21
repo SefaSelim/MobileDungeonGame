@@ -26,15 +26,15 @@
         },
         {
             "storyText": "Ayıya doğru yaklaşmaya başladın ve Ayı seni fark etti",
-            "options": ["Ayıya vur", "Koşarak uzaklaş"],
+            "options": ["Ayıyla savaşa başla", "Koşarak uzaklaş"],
             "nextNodes": [5, 6],
             "actions": []
         },
         {
-            "storyText": "Ayı öldü ve bir adet 'AYI POSTU' kazandın ve skorun 50 arttı.",
+            "storyText": "",
             "options": [],
             "nextNodes": [],
-            "actions": ["giveItem:AYI_POSTU","increaseScore:50"]
+            "actions": ["startBattle:"]
         },
         {
             "storyText": "Koşarak ordan uzaklaştın",

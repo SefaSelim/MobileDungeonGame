@@ -8,6 +8,7 @@ public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
 
 public class FightSystem : MonoBehaviour
 {
+    public GameObject FightScreen;
     public BattleState state;
     public GameObject playerPrefab;
     public GameObject enemyPrefab;
@@ -30,6 +31,7 @@ public class FightSystem : MonoBehaviour
 
     public IEnumerator SetupBattle()
     {
+        FightScreen.SetActive(true);
         GameObject playerGO = Instantiate(playerPrefab);
         playerUnit = playerGO.GetComponent<Unit>();
         if (playerUnit == null)
