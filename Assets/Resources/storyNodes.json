@@ -1,46 +1,102 @@
 {
     "nodes": [
         {
-            "storyText": "Ormana yaklaştın",
-            "options": ["Devam et", "Geri dön"],
-            "nextNodes": [1, 2],
-            "actions": []
+            "storyText": "Evde canın sıkıldı ve dışarı biraz hava almaya çıktın",
+            "dialogueText":"",
+            "options": ["(devam)"],
+            "nextNodes": [1],
+            "actions": [""]
         },
         {
-            "storyText": "Ormana girdin ve ayı gördün",
-            "options": ["Ayıya yaklaş", "Kaç"],
-            "nextNodes": [4, 3],
-            "actions": []
-        },
-        {
-            "storyText": "Geri döndün",
-            "options": [],
-            "nextNodes": [],
-            "actions": []
-        },
-        {
-            "storyText": "Kaçtın ve ormandan uzaklaştın",
-            "options": [],
-            "nextNodes": [],
-            "actions": []
-        },
-        {
-            "storyText": "Ayıya doğru yaklaşmaya başladın ve Ayı seni fark etti",
-            "options": ["Ayıyla savaşa başla", "Koşarak uzaklaş"],
-            "nextNodes": [5, 6],
-            "actions": []
+            "storyText": "Dışarıda dolaşırken değişik hareketleri olan bir adam gördün",
+            "dialogueText":"",
+            "options": ["--Yanına git--"],
+            "nextNodes": [2],
+            "actions": [""]
         },
         {
             "storyText": "",
-            "options": [],
-            "nextNodes": [],
-            "actions": ["startBattle:"]
+            "dialogueText":"Uh! merhaba hoşgeldin",
+            "options": ["merhaba"],
+            "nextNodes": [3],
+            "actions": ["startDialogue:köylü"]
         },
         {
-            "storyText": "Koşarak ordan uzaklaştın",
-            "options": [],
+            "storyText": "",
+            "dialogueText":"...   Adın nedir?",
+            "options": ["Ben, Kai","Tanımadığım birine ismimi söylememeyi tercih ederim"],
+            "nextNodes": [4,5],
+            "actions": ["startDialogue:köylü"]
+        },
+        {
+            "storyText": "",
+            "dialogueText":"Aaa! Demek Kai sensin. Adını çok duydum. Köy halkı sana minnettar",
+            "options": ["Teşekkürler fakat ben seni hiç tanıyamadım"],
+            "nextNodes": [6],
+            "actions": ["startDialogue:köylü"]
+        },
+        {
+            "storyText": "",
+            "dialogueText":"Demek öyle... Tamam söylemesen de olur. Ne için geldin?",
+            "options": ["Biraz gergin görünüyorsun"],
+            "nextNodes": [8],
+            "actions": ["startDialogue:köylü"]
+        },
+        {
+            "storyText": "",
+            "dialogueText":"Iıı... Olabilir sonuçta bu köyde bir sürü insan var.",
+            "options": ["Sen hangi evde oturuyorsun","Biraz gergin görünüyorsun"],
+            "nextNodes": [7,8],
+            "actions": ["startDialogue:köylü"]
+        },
+        {
+            "storyText": "",
+            "dialogueText":"Iı... Ş şu evde",
+            "options": ["İyi de o ev Kıro amcanın evi"],
+            "nextNodes": [9],
+            "actions": ["startDialogue:köylü"]
+        },
+        {
+            "storyText": "",
+            "dialogueText":"Ö- Önemli bir şey yok. Konuşmasak iyi olur",
+            "options": ["Bir şey var, eminim. Söyle ne oldu"],
+            "nextNodes": [9],
+            "actions": ["startDialogue:köylü"]
+        },
+        {
+            "storyText": "Yabancı hızlıca koşmaya başladı",
+            "dialogueText":"",
+            "options": ["--Arkasından koş--"],
+            "nextNodes": [10],
+            "actions": [""]
+        },
+        {
+            "storyText": "Yakalayıp ayağına çelme taktın ve onu düşürdün",
+            "dialogueText":"",
+            "options": ["SÖYLE NE OLDU"],
+            "nextNodes": [11],
+            "actions": [""]
+        },
+        {
+            "storyText": "",
+            "dialogueText":"Hu huh huh! Beni deşifre etmene izin vermeyeceğim.(Yabancı kılıç çekti)",
+            "options": ["--Gerile--"],
+            "nextNodes": [12],
+            "actions": ["startDialogue:köylü"]
+        },
+        {
+            "storyText": "",
+            "dialogueText":"Şarabımı kafatasında içeceğim",
+            "options": ["--Kılıcını çek--(Savaşa başlar)"],
+            "nextNodes": [13],
+            "actions": ["startDialogue:köylü"]
+        },
+        {
+            "storyText": "",
+            "dialogueText":"",
+            "options": [""],
             "nextNodes": [],
-            "actions": []
+            "actions": ["startBattle:"]
         }
     ]
 }

@@ -2,6 +2,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
+using System.Collections.Generic;
 
 public class StoryManagementScript : MonoBehaviour
 {
@@ -10,6 +13,7 @@ public class StoryManagementScript : MonoBehaviour
     {
         [TextArea(3, 10)]
         public string storyText;
+        public string dialogueText;
         public string[] options;
         public int[] nextNodes;
         public string[] actions;
@@ -25,6 +29,9 @@ public class StoryManagementScript : MonoBehaviour
     public Button[] optionButtons;
     public StoryNode[] storyNodes;
 
+    public TextMeshProUGUI dialogueTextUI;
+    public Image char_image;
+    public string image_name;
     private int currentNode;
     private bool canSelectOption = true;
 
@@ -32,6 +39,9 @@ public class StoryManagementScript : MonoBehaviour
 
     FightPoint fpscript;
     
+    public List<string> history = new List<string>();
+    public GameObject historyPanel;
+    public TextMeshProUGUI historyText;
 
 
     void Start()
@@ -40,6 +50,20 @@ public class StoryManagementScript : MonoBehaviour
         currentNode = 0;
         UpdateStory();
         
+    }
+
+    void Update()
+    {
+        if (dialogueTextUI.text == "")
+        {
+            char_image.gameObject.SetActive(false);
+            dialogueTextUI.gameObject.SetActive(false);
+        }
+        else
+        {
+            char_image.gameObject.SetActive(true);
+            dialogueTextUI.gameObject.SetActive(true);
+        }
     }
 
     public void OnOptionSelected(int optionIndex)
@@ -55,6 +79,17 @@ public class StoryManagementScript : MonoBehaviour
             return;
         }
 
+        StoryNode currentNodeData = storyNodes[currentNode];
+        if (!string.IsNullOrEmpty(currentNodeData.storyText))
+        {
+            history.Add("OLAY: " + currentNodeData.storyText);
+        }
+        if (!string.IsNullOrEmpty(currentNodeData.dialogueText))
+        {
+            history.Add("O: " + currentNodeData.dialogueText);
+        }
+        history.Add("SEN: " + currentNodeData.options[optionIndex]);
+
         currentNode = storyNodes[currentNode].nextNodes[optionIndex];
         UpdateStory();
     }
@@ -65,6 +100,7 @@ public class StoryManagementScript : MonoBehaviour
 
         StoryNode node = storyNodes[currentNode];
         storyTextUI.text = node.storyText;
+        dialogueTextUI.text = node.dialogueText;
 
         // Eylemleri gerçekleştir
         PerformActions(node.actions);
@@ -152,6 +188,9 @@ public class StoryManagementScript : MonoBehaviour
                 case "startBattle":
                     StartBattle();
                     break;
+                case "startDialogue":
+                    StartDialogue(actionValue);
+                    break;
                 default:
                     Debug.LogError("Unknown action type: " + actionType);
                     break;
@@ -188,4 +227,21 @@ public class StoryManagementScript : MonoBehaviour
             Debug.LogError("FightPoint component not found on the fightpoint GameObject.");
         }
     }
+
+    void StartDialogue(string kaynak)
+    {
+        image_name=kaynak;
+        Sprite newSprite = Resources.Load<Sprite>(image_name);
+        if (newSprite != null)
+        {
+            // Image bileşenine yeni Sprite'ı ata
+            char_image.sprite = newSprite;
+        }
+        else
+        {
+            Debug.LogError("Sprite not found!");
+        }
+        
+    }
+    
 }
