@@ -712,7 +712,7 @@ PrefabInstance:
     - target: {fileID: 4234377917979191730, guid: 44253f09a93c6004a9611312d3642c5d, type: 3}
       propertyPath: fightpoint
       value: 
-      objectReference: {fileID: 1251165162}
+      objectReference: {fileID: 303504222}
     - target: {fileID: 5636909935358953785, guid: 44253f09a93c6004a9611312d3642c5d, type: 3}
       propertyPath: m_IsActive
       value: 1
