@@ -40,14 +40,9 @@ public class ContentScaler : MonoBehaviour
                 Vector2 mousePositionViewport;
                 RectTransformUtility.ScreenPointToLocalPointInRectangle(viewportRectTransform, mousePositionScreen, canvas.worldCamera, out mousePositionViewport);
 
-                // Adjust for viewport's position within the canvas
-                Vector3[] viewportCorners = new Vector3[4];
-                viewportRectTransform.GetWorldCorners(viewportCorners);
-                Vector2 viewportTopLeft = RectTransformUtility.WorldToScreenPoint(canvas.worldCamera, viewportCorners[0]);
-                mousePositionViewport += (Vector2)viewportRectTransform.position - viewportTopLeft;
-
-                // Convert to content space
-                Vector2 mousePositionContent = mousePositionViewport + scrollRect.content.anchoredPosition;
+                // Convert to content local position
+                Vector2 mousePositionContent;
+                RectTransformUtility.ScreenPointToLocalPointInRectangle(contentRectTransform, mousePositionScreen, canvas.worldCamera, out mousePositionContent);
 
                 // Calculate new scale
                 Vector3 newScale = contentRectTransform.localScale * (1f + scrollInput * scrollSensitivity);
@@ -58,15 +53,15 @@ public class ContentScaler : MonoBehaviour
                 // Calculate scale factor
                 float scaleFactor = newScale.x / contentRectTransform.localScale.x;
 
+                // Calculate the position delta
+                Vector2 mouseDelta = mousePositionContent - (Vector2)contentRectTransform.InverseTransformPoint(contentRectTransform.position);
+                Vector2 positionDelta = mouseDelta - mouseDelta * scaleFactor;
+
                 // Apply new scale
                 contentRectTransform.localScale = newScale;
 
                 // Adjust content position to zoom towards mouse
-                Vector2 contentSpaceCoordinate = mousePositionContent - contentRectTransform.anchoredPosition;
-                Vector2 newContentSpaceCoordinate = contentSpaceCoordinate * scaleFactor;
-                Vector2 positionDelta = newContentSpaceCoordinate - contentSpaceCoordinate;
-
-                contentRectTransform.anchoredPosition -= positionDelta;
+                contentRectTransform.anchoredPosition += positionDelta;
 
                 // Ensure scroll view updates its content
                 Canvas.ForceUpdateCanvases();

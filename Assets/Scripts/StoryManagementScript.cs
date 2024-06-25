@@ -34,6 +34,7 @@ public class StoryManagementScript : MonoBehaviour
     public string image_name;
     private int currentNode;
     private bool canSelectOption = true;
+    public string jsonName;
 
     public GameObject fightpoint;
 
@@ -143,7 +144,7 @@ public class StoryManagementScript : MonoBehaviour
 
     void LoadStoryNodesFromJSON()
     {
-        TextAsset jsonText = Resources.Load<TextAsset>("storyNodes");
+        TextAsset jsonText = Resources.Load<TextAsset>(jsonName);
         Debug.Log("Trying to load JSON file.");
         if (jsonText != null)
         {

@@ -1,7 +1,7 @@
 {
     "nodes": [
         {
-            "storyText": "Evde canın sıkıldı ve dışarı biraz hava almaya çıktın",
+            "storyText": "Bugün turanı götten siktin",
             "dialogueText":"",
             "options": ["(devam)"],
             "nextNodes": [1],
