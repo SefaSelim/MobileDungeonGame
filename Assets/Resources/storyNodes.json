@@ -1,22 +1,22 @@
 {
     "nodes": [
         {
-            "storyText": "'Bu köyün boklu hayvanlarından da bıktım', Yolda yürürken dedenin köye serzenişini duydun",
-            "dialogueText":"",
+            "storyText": "",
+            "dialogueText":"'Bu köyün boklu hayvanlarından da bıktım', Yolda yürürken dedenin köye serzenişini duydun",
             "options": ["'Hey dede !'","Hiçbir şey yapma"],
             "nextNodes": [1,2],
             "actions": ["startDialogue:köylü"]
         },
         {
-            "storyText": "Hah ha evlat ne kadar çabuk dönmüşsün, dediğim mantarları topladın mı ?",
-            "dialogueText":"",
+            "storyText": "",
+            "dialogueText":"Hah ha evlat ne kadar çabuk dönmüşsün, dediğim mantarları topladın mı ?",
             "options": ["Evet dede işte burada","Hayır dede hiç mantar bulamadım ben de geri döndüm (+3 Mantar)"],
             "nextNodes": [3,6],
             "actions": ["startDialogue:köylü"]
         },
         {
-            "storyText": "Dedene seslenmedin ve senden habersiz yoluna devam etti, sanırım kahvehaneye gidiyor",
-            "dialogueText":"",
+            "storyText": "",
+            "dialogueText":"Dedene seslenmedin ve senden habersiz yoluna devam etti, sanırım kahvehaneye gidiyor",
             "options": ["Eve doğru yürümeye devam et"],
             "nextNodes": [7],
             "actions": [""]
@@ -24,7 +24,7 @@
         {
             "storyText": "",
             "dialogueText":"Aferin sana evlat ! Al sana biraz para, bakkaldan kendine bir şeyler alırsın",
-            "options": ["'Teşekkürler Dede ! Bu gerçekten çok işime yarayacak !'(+10 gold)", "Daha fazlasını iste"],
+            "options": ["'Teşekkürler Dede ! Bu gerçekten çok işime yarayacak !'(+10 gold)", "Daha fazlasını iste (+20 / 0 gold)"],
             "nextNodes": [4,5],
             "actions": ["startDialogue:köylü"]
         },
@@ -38,7 +38,7 @@
         {
             "storyText": "",
             "dialogueText":"Evlat, şansını fazla zorluyorsun ancak al bakalım haydi ama buradan direkt eve gidiyorsun, ben de yakında gelirim kahvede işim var",
-            "options": ["Biraz gergin görünüyorsun"],
+            "options": ["Tamam dede, hemen dönüyorum"],
             "nextNodes": [7],
             "actions": ["startDialogue:köylü"]
         },
@@ -64,15 +64,15 @@
             "actions": ["startDialogue:köylü"]
         },
         {
-            "storyText": "Yabancı hızlıca koşmaya başladı",
-            "dialogueText":"",
+            "storyText": "",
+            "dialogueText":"Yabancı hızlıca koşmaya başladı",
             "options": ["--Arkasından koş--"],
             "nextNodes": [10],
             "actions": [""]
         },
         {
-            "storyText": "Yakalayıp ayağına çelme taktın ve onu düşürdün",
-            "dialogueText":"",
+            "storyText": "",
+            "dialogueText":"Yakalayıp ayağına çelme taktın ve onu düşürdün",
             "options": ["SÖYLE NE OLDU"],
             "nextNodes": [11],
             "actions": [""]
