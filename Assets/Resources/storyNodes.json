@@ -1,60 +1,60 @@
 {
     "nodes": [
         {
-            "storyText": "Evde canın sıkıldı ve dışarı biraz hava almaya çıktın",
+            "storyText": "'Bu köyün boklu hayvanlarından da bıktım', Yolda yürürken dedenin köye serzenişini duydun",
             "dialogueText":"",
-            "options": ["(devam)"],
-            "nextNodes": [1],
-            "actions": [""]
-        },
-        {
-            "storyText": "Dışarıda dolaşırken değişik hareketleri olan bir adam gördün",
-            "dialogueText":"",
-            "options": ["--Yanına git--"],
-            "nextNodes": [2],
-            "actions": [""]
-        },
-        {
-            "storyText": "",
-            "dialogueText":"Uh! merhaba hoşgeldin",
-            "options": ["merhaba"],
-            "nextNodes": [3],
+            "options": ["'Hey dede !'","Hiçbir şey yapma"],
+            "nextNodes": [1,2],
             "actions": ["startDialogue:köylü"]
         },
         {
+            "storyText": "Hah ha evlat ne kadar çabuk dönmüşsün, dediğim mantarları topladın mı ?",
+            "dialogueText":"",
+            "options": ["Evet dede işte burada","Hayır dede hiç mantar bulamadım ben de geri döndüm (+3 Mantar)"],
+            "nextNodes": [3,6],
+            "actions": ["startDialogue:köylü"]
+        },
+        {
+            "storyText": "Dedene seslenmedin ve senden habersiz yoluna devam etti, sanırım kahvehaneye gidiyor",
+            "dialogueText":"",
+            "options": ["Eve doğru yürümeye devam et"],
+            "nextNodes": [7],
+            "actions": [""]
+        },
+        {
             "storyText": "",
-            "dialogueText":"...   Adın nedir?",
-            "options": ["Ben, Kai","Tanımadığım birine ismimi söylememeyi tercih ederim"],
+            "dialogueText":"Aferin sana evlat ! Al sana biraz para, bakkaldan kendine bir şeyler alırsın",
+            "options": ["'Teşekkürler Dede ! Bu gerçekten çok işime yarayacak !'(+10 gold)", "Daha fazlasını iste"],
             "nextNodes": [4,5],
             "actions": ["startDialogue:köylü"]
         },
         {
             "storyText": "",
-            "dialogueText":"Aaa! Demek Kai sensin. Adını çok duydum. Köy halkı sana minnettar",
-            "options": ["Teşekkürler fakat ben seni hiç tanıyamadım"],
-            "nextNodes": [6],
+            "dialogueText":"Haydi evlat, artık eve doğru git, hava kararıyor ben de yakında gelirim kahveye uğramam gerekiyor",
+            "options": ["Tamam dede, eve gidiyorum"],
+            "nextNodes": [7],
             "actions": ["startDialogue:köylü"]
         },
         {
             "storyText": "",
-            "dialogueText":"Demek öyle... Tamam söylemesen de olur. Ne için geldin?",
+            "dialogueText":"Evlat, şansını fazla zorluyorsun ancak al bakalım haydi ama buradan direkt eve gidiyorsun, ben de yakında gelirim kahvede işim var",
             "options": ["Biraz gergin görünüyorsun"],
-            "nextNodes": [8],
+            "nextNodes": [7],
             "actions": ["startDialogue:köylü"]
         },
         {
             "storyText": "",
-            "dialogueText":"Iıı... Olabilir sonuçta bu köyde bir sürü insan var.",
-            "options": ["Sen hangi evde oturuyorsun","Biraz gergin görünüyorsun"],
-            "nextNodes": [7,8],
+            "dialogueText":"Tüh! yapacak bir şey yok, domuzlar hepsini yemiş olmalı, haydi evlat eve dön artık geç oluyor, ben de kahvehaneye uğrayıp geleceğim, bir arkadaşa borcum vardı",
+            "options": ["Tamam dede, sana bol şans"],
+            "nextNodes": [7],
             "actions": ["startDialogue:köylü"]
         },
         {
             "storyText": "",
-            "dialogueText":"Iı... Ş şu evde",
-            "options": ["İyi de o ev Kıro amcanın evi"],
-            "nextNodes": [9],
-            "actions": ["startDialogue:köylü"]
+            "dialogueText":"Eve döndün",
+            "options": [""],
+            "nextNodes": [],
+            "actions": []
         },
         {
             "storyText": "",
