@@ -1,11 +1,11 @@
 {
     "nodes": [
         {
-            "storyText": "",
-            "dialogueText":"'Bu köyün boklu hayvanlarından da bıktım', Yolda yürürken dedenin köye serzenişini duydun",
+            "storyText": "--Bu köyün boklu hayvanlarından da bıktım--, Yolda yürürken dedenin köye serzenişini duydun",
+            "dialogueText":"",
             "options": ["'Hey dede !'","Hiçbir şey yapma"],
             "nextNodes": [1,2],
-            "actions": ["startDialogue:köylü"]
+            "actions": [""]
         },
         {
             "storyText": "",
@@ -15,8 +15,8 @@
             "actions": ["startDialogue:köylü"]
         },
         {
-            "storyText": "",
-            "dialogueText":"Dedene seslenmedin ve senden habersiz yoluna devam etti, sanırım kahvehaneye gidiyor",
+            "storyText": "Dedene seslenmedin ve senden habersiz yoluna devam etti, sanırım kahvehaneye gidiyor",
+            "dialogueText":"",
             "options": ["Eve doğru yürümeye devam et"],
             "nextNodes": [7],
             "actions": [""]
@@ -50,8 +50,8 @@
             "actions": ["startDialogue:köylü"]
         },
         {
-            "storyText": "",
-            "dialogueText":"Eve döndün",
+            "storyText": "Eve döndün",
+            "dialogueText":"",
             "options": [""],
             "nextNodes": [],
             "actions": []
