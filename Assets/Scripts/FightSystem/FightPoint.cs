@@ -6,7 +6,9 @@ public class FightPoint : MonoBehaviour
 {
     
     public GameObject BattleSystem;
-    public GameObject Enemy;
+    public GameObject Enemy1;
+     public GameObject Enemy2;
+      public GameObject Enemy3;
     FightSystem fightSystem;
     
     private void OnCollisionEnter2D(Collision2D collision) {
@@ -19,7 +21,9 @@ public class FightPoint : MonoBehaviour
     public void SetupFightPoint()
     {
           fightSystem = BattleSystem.GetComponent<FightSystem>();
-          fightSystem.enemyPrefab  = Enemy;
+          fightSystem.enemyPrefabs[0]  = Enemy1;
+           fightSystem.enemyPrefabs[1]  = Enemy2;
+            fightSystem.enemyPrefabs[2]  = Enemy3;
           StartCoroutine(fightSystem.SetupBattle());
           Debug.Log("SAVAŞ BAŞLADI");
 

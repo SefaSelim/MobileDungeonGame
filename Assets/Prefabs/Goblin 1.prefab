@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8290516719863189759}
   - component: {fileID: 7236277761542751748}
   m_Layer: 0
-  m_Name: Goblin
+  m_Name: Goblin 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,11 +47,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerexp: 0
   expToLevelUP: 0
-  unitName: Goblin
+  unitName: Salih
   unitLevel: 14
   damage: 8
-  maxHP: 6
-  currentHP: 6
+  maxHP: 13
+  currentHP: 13
   unitAttackRoll: 6
   unitAC: 5
   exptobegiven: 50

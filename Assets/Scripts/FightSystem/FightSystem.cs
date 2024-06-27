@@ -4,29 +4,37 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
+public enum BattleState { START, PLAYERTURN, ENEMY1TURN, ENEMY2TURN, ENEMY3TURN, WON, LOST }
 
 public class FightSystem : MonoBehaviour
 {
+    int enemyIndex;
     public GameObject FightScreen;
     public BattleState state;
     public GameObject playerPrefab;
-    public GameObject enemyPrefab;
-    public Transform enemyBattleStation;
+    public GameObject[] enemyPrefabs;
+    public Transform[] enemyBattleStations;
 
-    public TextMeshProUGUI enemyName, enemyLevel, enemyHP, playerHP, playerLevel, playerName, dialogueText, enemyAC, playerAC, playerCurrentEXP, playerMaxExp;
+    public TextMeshProUGUI enemyName1, enemyName2, enemyName3;
+    public TextMeshProUGUI enemyLevel1, enemyLevel2, enemyLevel3;
+    public TextMeshProUGUI enemyHP1, enemyHP2, enemyHP3;
 
+    public TextMeshProUGUI enemyAC1, enemyAC2, enemyAC3;
+    public TextMeshProUGUI playerHP, playerLevel, playerName, dialogueText, playerAC, playerCurrentEXP, playerMaxExp;
 
-    public Button attackButton;
+    public Button mainattackButton,attackButton1, attackButton2, attackButton3;
     public Button healButton;
 
     Unit playerUnit;
-    Unit enemyUnit;
+    List<Unit> enemyUnits = new List<Unit>();
 
     void Start()
     {
         state = BattleState.START;
         StartCoroutine(SetupBattle());
+        attackButton1.onClick.AddListener(() => OnSelectButton(attackButton1));
+        attackButton2.onClick.AddListener(() => OnSelectButton(attackButton2));
+        attackButton3.onClick.AddListener(() => OnSelectButton(attackButton3));
     }
 
     public IEnumerator SetupBattle()
@@ -34,14 +42,25 @@ public class FightSystem : MonoBehaviour
         FightScreen.SetActive(true);
         GameObject playerGO = Instantiate(playerPrefab);
         playerUnit = playerGO.GetComponent<Unit>();
-        if (playerUnit == null)
+
+        for (int i = 0; i < enemyPrefabs.Length; i++)
         {
-            Debug.LogError("Player Unit component not found!");
-            yield break;
+            GameObject enemyGO = Instantiate(enemyPrefabs[i], enemyBattleStations[i]);
+            Unit enemyUnit = enemyGO.GetComponent<Unit>();
+            enemyUnits.Add(enemyUnit);
         }
 
-        GameObject enemyGO = Instantiate(enemyPrefab, enemyBattleStation);
-        enemyUnit = enemyGO.GetComponent<Unit>();
+        UpdateUI();
+
+        dialogueText.text = "Düşmanlarla karşılaştınız!";
+        yield return new WaitForSeconds(2f);
+
+        state = BattleState.PLAYERTURN;
+        PlayerTurn();
+    }
+
+    void UpdateUI()
+    {
         playerCurrentEXP.text = "EXP " + playerUnit.playerexp;
         playerMaxExp.text = "/ " + playerUnit.expToLevelUP;
         playerLevel.text = "Lvl " + playerUnit.unitLevel;
@@ -49,32 +68,56 @@ public class FightSystem : MonoBehaviour
         playerName.text = playerUnit.unitName;
         playerAC.text = "AC" + playerUnit.unitAC;
 
-        enemyName.text = enemyUnit.unitName;
-        enemyLevel.text = "Lvl " + enemyUnit.unitLevel;
-        enemyHP.text = "HP " + enemyUnit.currentHP;
-        enemyAC.text = "AC" + enemyUnit.unitAC;
-
-        dialogueText.text = enemyUnit.unitName + " ile karşılaştınız!";
-        yield return new WaitForSeconds(2f);
-
-        state = BattleState.PLAYERTURN;
-        PlayerTurn();
+        for (int i = 0; i < enemyUnits.Count; i++)
+        {
+            TextMeshProUGUI enemyName = (TextMeshProUGUI)GetType().GetField("enemyName" + (i + 1)).GetValue(this);
+            TextMeshProUGUI enemyLevel = (TextMeshProUGUI)GetType().GetField("enemyLevel" + (i + 1)).GetValue(this);
+            TextMeshProUGUI enemyHP = (TextMeshProUGUI)GetType().GetField("enemyHP" + (i + 1)).GetValue(this);
+      
+            enemyName.text = enemyUnits[i].unitName;
+            enemyLevel.text = "Lvl " + enemyUnits[i].unitLevel;
+            enemyHP.text = "HP " + enemyUnits[i].currentHP;
+        }
     }
 
     void PlayerTurn()
     {
-        dialogueText.text = "Sıra sizde. Ne Yapacaksınız?";
-        attackButton.interactable = true;
+        dialogueText.text = "Sıra sizde. Kime saldıracaksınız?";
+        attackButton1.interactable = enemyUnits.Count > 0;
+        attackButton2.interactable = enemyUnits.Count > 1;
+        attackButton3.interactable = enemyUnits.Count > 2;
         healButton.interactable = true;
     }
 
+    public void OnSelectButton(Button SelectedEnemyButton){
+        
+        SelectedEnemyButton.interactable=false; 
+            if (SelectedEnemyButton != attackButton1)
+        {
+            attackButton1.interactable = true;
+            enemyIndex = 0;
+        }
+
+        if (SelectedEnemyButton != attackButton2)
+        {
+            attackButton2.interactable = true;
+            enemyIndex = 1;
+        }
+
+        if (SelectedEnemyButton != attackButton3)
+        {
+            attackButton3.interactable = true;
+            enemyIndex = 2;
+        }
+
+    }
     public void OnAttackButton()
     {
         if (state != BattleState.PLAYERTURN)
         {
             return;
         }
-        StartCoroutine(PlayerAttack());
+        StartCoroutine(PlayerAttack(enemyIndex));
     }
 
     public void OnHealButton()
@@ -86,10 +129,14 @@ public class FightSystem : MonoBehaviour
         StartCoroutine(PlayerHeal());
     }
 
-    IEnumerator PlayerAttack()
+    IEnumerator PlayerAttack(int enemyIndex)
     {
-        attackButton.interactable = false;
+        attackButton1.interactable = false;
+        attackButton2.interactable = false;
+        attackButton3.interactable = false;
         healButton.interactable = false;
+
+        Unit targetEnemy = enemyUnits[enemyIndex];
 
         int attackRoll = Random.Range(1, 21);
         attackRoll += playerUnit.unitAttackRoll;
@@ -102,7 +149,7 @@ public class FightSystem : MonoBehaviour
             yield return StartCoroutine(ShowMessage("Saldırı zarınız " + attackRoll, 2f));
         }
 
-        if (attackRoll >= enemyUnit.unitAC)
+        if (attackRoll >= targetEnemy.unitAC)
         {
             int damage = Random.Range(1, playerUnit.damage + 1);
             damage += playerUnit.weapondamage;
@@ -110,55 +157,97 @@ public class FightSystem : MonoBehaviour
             {
                 damage *= 2;
             }
-            bool isDead = enemyUnit.TakeDamage(damage);
-            enemyHP.text = "HP " + Mathf.Max(0, enemyUnit.currentHP);
+            bool isDead = targetEnemy.TakeDamage(damage);
+            UpdateUI();
 
-            yield return StartCoroutine(ShowMessage("Saldırdınız ve " + damage + " zarar verdiniz!", 2f));
+            yield return StartCoroutine(ShowMessage(targetEnemy.unitName + "'e " + damage + " zarar verdiniz!", 2f));
 
             if (isDead)
             {
-                state = BattleState.WON;
-                StartCoroutine(EndBattle());
+                enemyUnits.RemoveAt(enemyIndex);
+                if (enemyUnits.Count == 0)
+                {
+                    state = BattleState.WON;
+                    StartCoroutine(EndBattle());
+                }
+                else
+                {
+                    StartCoroutine(NextTurn());
+                }
             }
             else
             {
-                state = BattleState.ENEMYTURN;
-                StartCoroutine(EnemyTurn());
+                StartCoroutine(NextTurn());
             }
         }
         else
         {
             yield return StartCoroutine(ShowMessage("Iskaladınız!", 2f));
-            state = BattleState.ENEMYTURN;
-            StartCoroutine(EnemyTurn());
+            StartCoroutine(NextTurn());
         }
     }
 
     IEnumerator PlayerHeal()
     {
-        attackButton.interactable = false;
+        attackButton1.interactable = false;
+        attackButton2.interactable = false;
+        attackButton3.interactable = false;
         healButton.interactable = false;
 
         int healAmount = Random.Range(1, 6); // 1 to 5
         playerUnit.Heal(healAmount);
-        playerHP.text = "HP " + playerUnit.currentHP;
+        UpdateUI();
 
         yield return StartCoroutine(ShowMessage(healAmount + " HP iyileştiniz!", 2f));
 
-        state = BattleState.ENEMYTURN;
-        StartCoroutine(EnemyTurn());
+        StartCoroutine(NextTurn());
     }
 
+    IEnumerator NextTurn()
+    {
+        if (state == BattleState.PLAYERTURN)
+        {
+            state = BattleState.ENEMY1TURN;
+        }
+        else if (state == BattleState.ENEMY1TURN)
+        {
+            state = enemyUnits.Count > 1 ? BattleState.ENEMY2TURN : BattleState.PLAYERTURN;
+        }
+        else if (state == BattleState.ENEMY2TURN)
+        {
+            state = enemyUnits.Count > 2 ? BattleState.ENEMY3TURN : BattleState.PLAYERTURN;
+        }
+        else if (state == BattleState.ENEMY3TURN)
+        {
+            state = BattleState.PLAYERTURN;
+        }
 
+        if (state == BattleState.PLAYERTURN)
+        {
+            PlayerTurn();
+        }
+        else
+        {
+            StartCoroutine(EnemyTurn());
+        }
+
+        yield return null;
+    }
 
     IEnumerator EnemyTurn()
     {
-        dialogueText.text = "Rakip saldırıyor!";
+        int enemyIndex = 0;
+        if (state == BattleState.ENEMY2TURN) enemyIndex = 1;
+        else if (state == BattleState.ENEMY3TURN) enemyIndex = 2;
+
+        Unit currentEnemy = enemyUnits[enemyIndex];
+
+        dialogueText.text = currentEnemy.unitName + " saldırıyor!";
         yield return new WaitForSeconds(1f);
 
         int attackRoll = Random.Range(1, 21);
-        attackRoll += enemyUnit.unitAttackRoll;
-        if (attackRoll - enemyUnit.unitAttackRoll == 20)
+        attackRoll += currentEnemy.unitAttackRoll;
+        if (attackRoll - currentEnemy.unitAttackRoll == 20)
         {
             yield return StartCoroutine(ShowMessage("RAKİP KRİTİK VURDU!!! ", 2f));
         }
@@ -166,17 +255,19 @@ public class FightSystem : MonoBehaviour
         {
             yield return StartCoroutine(ShowMessage("Rakibin saldırı zarı " + attackRoll, 2f));
         }
+
         if (attackRoll >= playerUnit.unitAC)
         {
-
-            int damage = Random.Range(1, enemyUnit.damage + 1);
-            damage += enemyUnit.weapondamage;
-            if (attackRoll - enemyUnit.unitAttackRoll == 20)
-            { damage = damage * 2; }
+            int damage = Random.Range(1, currentEnemy.damage + 1);
+            damage += currentEnemy.weapondamage;
+            if (attackRoll - currentEnemy.unitAttackRoll == 20)
+            {
+                damage = damage * 2;
+            }
             bool isDead = playerUnit.TakeDamage(damage);
-            playerHP.text = "HP " + Mathf.Max(0, playerUnit.currentHP);
+            UpdateUI();
 
-            yield return StartCoroutine(ShowMessage(enemyUnit.unitName + " size " + damage + " zarar verdi!", 2f));
+            yield return StartCoroutine(ShowMessage(currentEnemy.unitName + " size " + damage + " zarar verdi!", 2f));
 
             if (isDead)
             {
@@ -185,15 +276,13 @@ public class FightSystem : MonoBehaviour
             }
             else
             {
-                state = BattleState.PLAYERTURN;
-                PlayerTurn();
+                StartCoroutine(NextTurn());
             }
         }
         else
         {
             yield return StartCoroutine(ShowMessage("Rakip ıskaladı!", 2f));
-            state = BattleState.PLAYERTURN;
-            PlayerTurn();
+            StartCoroutine(NextTurn());
         }
     }
 
@@ -205,26 +294,33 @@ public class FightSystem : MonoBehaviour
 
     IEnumerator EndBattle()
     {
-        attackButton.interactable = false;
+        attackButton1.interactable = false;
+        attackButton2.interactable = false;
+        attackButton3.interactable = false;
         healButton.interactable = false;
 
         if (state == BattleState.WON)
         {
-            Debug.Log("YOU WON");
-            playerUnit.TakeExp(enemyUnit.exptobegiven);
-             playerCurrentEXP.text = "EXP " + playerUnit.playerexp;
-            playerMaxExp.text = " / " + playerUnit.expToLevelUP;
-            playerLevel.text = "Lvl " + playerUnit.unitLevel;
-            playerUnit.unitAC++;
-            playerAC.text = "AC " + playerUnit.unitAC;
+            int totalExp = 0;
+            foreach (Unit enemy in enemyUnits)
+            {
+                totalExp += enemy.exptobegiven;
+            }
 
-            yield return StartCoroutine(ShowMessage("TEBRİKLER " + enemyUnit.unitName + "'I YENEREK " + enemyUnit.exptobegiven + " EXP KAZANDINIZ.", 2f));
-        
+            playerUnit.TakeExp(totalExp);
+            UpdateUI();
+
+            yield return StartCoroutine(ShowMessage("TEBRİKLER! Tüm düşmanları yenerek " + totalExp + " EXP KAZANDINIZ.", 2f));
+
+
         }
         else if (state == BattleState.LOST)
         {
-            dialogueText.text = "Kaybettiniz!";
-            Debug.Log("YOU LOST");
+            yield return StartCoroutine(ShowMessage("Kaybettiniz!", 2f));
         }
+
     }
+
+    
+
 }
