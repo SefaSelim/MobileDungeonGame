@@ -24,7 +24,7 @@
         {
             "storyText": "",
             "dialogueText":"Aferin sana evlat ! Al sana biraz para, bakkaldan kendine bir şeyler alırsın",
-            "options": ["'Teşekkürler Dede ! Bu gerçekten çok işime yarayacak !'(+10 gold)", "Daha fazlasını iste (+20 / 0 gold)"],
+            "options": ["'Teşekkürler Dede ! Bu gerçekten çok işime yarayacak !'(+10 gold)", "Daha fazlasını iste (verme ihtimali %40))"],
             "nextNodes": [4,5],
             "actions": ["startDialogue:köylü"]
         },
@@ -32,21 +32,28 @@
             "storyText": "",
             "dialogueText":"Haydi evlat, artık eve doğru git, hava kararıyor ben de yakında gelirim kahveye uğramam gerekiyor",
             "options": ["Tamam dede, eve gidiyorum"],
-            "nextNodes": [7],
+            "nextNodes": [8],
             "actions": ["startDialogue:köylü"]
         },
         {
             "storyText": "",
-            "dialogueText":"Evlat, şansını fazla zorluyorsun ancak al bakalım haydi ama buradan direkt eve gidiyorsun, ben de yakında gelirim kahvede işim var",
+            "dialogueText":"",
+            "options":[],
+            "nextNodes":[6,7],
+            "actions":["rastgele:0,4"]
+        },
+        {
+            "storyText": "",
+            "dialogueText":"AL PARA %40 tuttu",
             "options": ["Tamam dede, hemen dönüyorum"],
-            "nextNodes": [7],
+            "nextNodes": [8],
             "actions": ["startDialogue:köylü"]
         },
         {
             "storyText": "",
-            "dialogueText":"Tüh! yapacak bir şey yok, domuzlar hepsini yemiş olmalı, haydi evlat eve dön artık geç oluyor, ben de kahvehaneye uğrayıp geleceğim, bir arkadaşa borcum vardı",
+            "dialogueText":"YOK PARA %60 geldi",
             "options": ["Tamam dede, sana bol şans"],
-            "nextNodes": [7],
+            "nextNodes": [8],
             "actions": ["startDialogue:köylü"]
         },
         {
@@ -55,55 +62,6 @@
             "options": [""],
             "nextNodes": [],
             "actions": []
-        },
-        {
-            "storyText": "",
-            "dialogueText":"Ö- Önemli bir şey yok. Konuşmasak iyi olur",
-            "options": ["Bir şey var, eminim. Söyle ne oldu"],
-            "nextNodes": [9],
-            "actions": ["startDialogue:köylü"]
-        },
-        {
-            "storyText": "",
-            "dialogueText":"Yabancı hızlıca koşmaya başladı",
-            "options": ["--Arkasından koş--"],
-            "nextNodes": [10],
-            "actions": [""]
-        },
-        {
-            "storyText": "",
-            "dialogueText":"Yakalayıp ayağına çelme taktın ve onu düşürdün",
-            "options": ["SÖYLE NE OLDU"],
-            "nextNodes": [11],
-            "actions": [""]
-        },
-        {
-            "storyText": "",
-            "dialogueText":"Hu huh huh! Beni deşifre etmene izin vermeyeceğim.(Yabancı kılıç çekti)",
-            "options": ["--Gerile--"],
-            "nextNodes": [12],
-            "actions": ["startDialogue:köylü"]
-        },
-        {
-            "storyText": "",
-            "dialogueText":"Şarabımı kafatasında içeceğim",
-            "options": ["--Kılıcını çek--(Savaşa başlar)","'Dur, Kılıcına Davranma !'"],
-            "nextNodes": [13,14],
-            "actions": ["startDialogue:köylü"]
-        },
-        {
-            "storyText": "",
-            "dialogueText":"",
-            "options": [""],
-            "nextNodes": [],
-            "actions": ["startBattle:"]
-        },
-        { 
-            "storyText": "",
-            "dialogueText":"Selam Bebek ben geldim",
-            "options": [""],
-            "nextNodes": [],
-            "actions": ["startDialogue:knight"]
         }
     ]
 }

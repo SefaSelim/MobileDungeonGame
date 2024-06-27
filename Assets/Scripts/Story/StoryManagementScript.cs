@@ -191,6 +191,9 @@ public class StoryManagementScript : MonoBehaviour
                 case "startDialogue":
                     StartDialogue(actionValue);
                     break;
+                case "rastgele":
+                    Rastgele(float.Parse(actionValue));
+                    break;
                 default:
                     Debug.LogError("Unknown action type: " + actionType);
                     break;
@@ -243,5 +246,28 @@ public class StoryManagementScript : MonoBehaviour
         }
         
     }
+    
+    void Rastgele(float firstOptionProbability)
+{
+    StoryNode currentNodeData = storyNodes[currentNode];
+    if (currentNodeData.nextNodes.Length > 0)
+    {
+        System.Random random = new System.Random();
+        float randomValue = (float)random.NextDouble();
+
+        if (randomValue < firstOptionProbability)
+        {
+            currentNode = currentNodeData.nextNodes[0];
+        }
+        else
+        {
+            int randomIndex = random.Next(1, currentNodeData.nextNodes.Length);
+            currentNode = currentNodeData.nextNodes[1];
+        }
+        Debug.Log("Rastgele() çağırıldı tutulan sayı ve probability: " + randomValue +" " + firstOptionProbability);
+        UpdateStory();
+    }
+    
+}
     
 }
