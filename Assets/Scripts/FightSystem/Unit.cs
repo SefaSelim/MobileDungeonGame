@@ -18,16 +18,18 @@ public class Unit : MonoBehaviour
     public int weapondamage;
 
 
-    public bool TakeDamage(int dmg)
+      public bool TakeDamage(int dmg)
     {
         currentHP -= dmg;
+        Debug.Log($"{unitName} took {dmg} damage. Current HP: {currentHP}");
 
         if (currentHP <= 0)
         {
             currentHP = 0;
-            return true; 
+            Debug.Log($"{unitName} died!");
+            return true; // Ölüm durumu
         }
-        return false; 
+        return false; // Hala hayatta
     }
 
     public void Heal(int amount)
