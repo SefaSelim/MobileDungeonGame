@@ -44,24 +44,94 @@
         },
         {
             "storyText": "",
-            "dialogueText":"AL PARA %40 tuttu",
-            "options": ["Tamam dede, hemen dönüyorum"],
+            "dialogueText":"Al bakalım evlat sana 20 altın, Ancak şansını fazla zorlama haydi eve artık",
+            "options": ["Tamam dede, hemen dönüyorum (+20 altın)"],
             "nextNodes": [8],
             "actions": ["startDialogue:köylü"]
         },
         {
             "storyText": "",
-            "dialogueText":"YOK PARA %60 geldi",
-            "options": ["Tamam dede, sana bol şans"],
+            "dialogueText":"Hadi lan oradan yallah doğru eve, elinizdekilerle yetinmeyi bir öğrenemediniz",
+            "options": ["Tamam dede dönüyorum off !"],
             "nextNodes": [8],
             "actions": ["startDialogue:köylü"]
         },
         {
-            "storyText": "Eve döndün",
+            "storyText": "Eve dönüş yolunda bir arbede duydun, hemen ara bir sokakta bir adam bir kadın görüyorsun. --BIRAAAK BENİ PİS SAPIK-- sanırım kadın orada bulunmaktan pek memnun değil Ne Yapacaksın? ",
+            "dialogueText":"",
+            "options": ["Müdahale Et","Görmezden Gel"],
+            "nextNodes": [9,18],
+            "actions": [""]
+        },
+        {
+            "storyText": "",
             "dialogueText":"",
             "options": [""],
+            "nextNodes": [10],
+            "actions": ["startBattle:"]
+        },
+        {
+            "storyText": "",
+            "dialogueText":"Ço ço çokk teşekkür ederim. .. --Kadın korkudan doğru düzgün konuşamıyordu dahi-- Al al bunu bir teşekkür hediyesi, belki çok bir şey etmez ama yine de işine yarayacaktır --Bir Kolye Uzatır--",
+            "options": ["Buna gerek yok, her insanın yapması gereken şeyi yaptım diye beni ödüllendirmene gerek yok","Teşekkür ederim bu işime yarayacaktır(+Evsiz Kadının Kolyesi)","Az önce hayatını kurtarmama rağmen gerçekten böyle mi teşekkür ediyorsun ?"],
+            "nextNodes": [11,12,13],
+            "actions": ["startDialogue:WomenOnStreet"]
+        },
+        {
+            "storyText": "",
+            "dialogueText":"Tekrar teşekkür ederim Kai, bunu asla unutmayacağım ve herkesin yaptığın bu iyiliği bilmesini sağlayacağım.",
+            "options": ["Eve doğru devam et"],
+            "nextNodes": [18],
+            "actions": ["startDialogue:WomenOnStreet"]
+        },
+        {
+            "storyText": "",
+            "dialogueText":"Tekrar teşekkür ederim, O kolyeye iyi bak tamam mı o benim için çok değerli... -- Yürüyerek uzaklaşır --",
+            "options": ["Eve doğru devam et"],
+            "nextNodes": [18],
+            "actions": ["startDialogue:WomenOnStreet"]
+        },
+        {
+            "storyText": "",
+            "dialogueText":"Şşşey, Tam olarak ne istiyorsun, çok bir şeyim yok gerçekten",
+            "options": ["Neyin varsa ver (+20 Gold , +Evsiz Kadının Kolyesi)","Aslında sahip olduğun güzel şeyleri görebiliyorum -- Kadına doğru yaklaş -- (%5 Şans)"],
+            "nextNodes": [14,15],
+            "actions": ["startDialogue:WomenOnStreet"]
+        },
+        {
+            "storyText": "",
+            "dialogueText":"Tamam Al her şeyi al -- Kadın korku dolu gözleriyle kaçıp uzaklaşır --",
+            "options": ["Eve doğru devam et"],
+            "nextNodes": [18],
+            "actions": ["startDialogue:WomenOnStreet"]
+        },
+        {
+            "storyText": "",
+            "dialogueText":"",
+            "options": [""],
+            "nextNodes": [16,17],
+            "actions": ["rastgele:0,05"]
+        },
+        {
+            "storyText": "Kadına istemeyeceği şeyler yaşattın ve ardından işin bittiği anda kadın kaçarak uzaklaştı",
+            "dialogueText":"",
+            "options": ["Eve doğru devam et (+1 Çeviklik / -1000 aura)"],
+            "nextNodes": [18],
+            "actions": [""]
+        },
+        {
+            "storyText": "Kadına yaptığın hamle başarısız oldu ve kadın ani bir hareketle kaçarak uzaklaştı, hiçbir şey elde edemedin",
+            "dialogueText":"",
+            "options": ["Tüh! Eve doğru gideyim artık"],
+            "nextNodes": [18],
+            "actions": [""]
+        },
+        {
+            "storyText": "Evine bakıp bir iç çekiyorsun -- evim evim, güzel evim --",
+            "dialogueText":"",
+            "options": ["Eve Gir"],
             "nextNodes": [],
-            "actions": []
+            "actions": [""]
         }
     ]
 }
