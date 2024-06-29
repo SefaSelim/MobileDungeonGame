@@ -14,7 +14,7 @@ public class FightSystem : MonoBehaviour
     public GameObject FightScreen;
     public BattleState state;
     public GameObject playerPrefab;
-    public GameObject[] enemyPrefabs;
+    //public GameObject[] enemyPrefabs;
     public Transform[] enemyBattleStations;
 
     public TextMeshProUGUI[] enemyNames;
@@ -35,6 +35,12 @@ public class FightSystem : MonoBehaviour
 
     void Start()
     {
+        
+
+    }
+
+    public IEnumerator SetupBattle(GameObject[] enemyPrefabs)
+    {
         state = BattleState.START;
 
         enemyCount = Mathf.Min(enemyPrefabs.Length, enemyBattleStations.Length, attackButtons.Length);
@@ -50,13 +56,7 @@ public class FightSystem : MonoBehaviour
 
         mainAttackButton.onClick.AddListener(OnAttackButton);
         healButton.onClick.AddListener(OnHealButton);
-        StartCoroutine(SetupBattle());
         Debug.Log("Start method completed. Enemy count: " + enemyCount);
-
-    }
-
-    public IEnumerator SetupBattle()
-    {
         FightScreen.SetActive(true);
         GameObject playerGO = Instantiate(playerPrefab);
         playerUnit = playerGO.GetComponent<Unit>();
@@ -69,28 +69,29 @@ public class FightSystem : MonoBehaviour
         Debug.Log($"Enemy prefabs count: {enemyPrefabs.Length}");
         Debug.Log($"Enemy battle stations count: {enemyBattleStations.Length}");
 
-        for (int i = 0; i < enemyCount; i++)
+         for (int i = 0; i < enemyCount; i++)
+    {
+        if (i < enemyBattleStations.Length)
         {
-            if (i < enemyPrefabs.Length && i < enemyBattleStations.Length)
+            GameObject enemyGO = Instantiate(enemyPrefabs[i], enemyBattleStations[i]);
+            Unit enemyUnit = enemyGO.GetComponent<Unit>();
+            if (enemyUnit != null)
             {
-                GameObject enemyGO = Instantiate(enemyPrefabs[i], enemyBattleStations[i]);
-                Unit enemyUnit = enemyGO.GetComponent<Unit>();
-                if (enemyUnit != null)
-                {
-                    enemyUnits.Add(enemyUnit);
-                    totalExp += enemyUnit.exptobegiven;
-                    Debug.Log($"Enemy {i} created: {enemyUnit.unitName}");
-                }
-                else
-                {
-                    Debug.LogError($"Enemy {i} prefab does not have a Unit component!");
-                }
+                enemyUnits.Add(enemyUnit);
+                totalExp += enemyUnit.exptobegiven;
+                Debug.Log($"Enemy {i} created: {enemyUnit.unitName}");
             }
             else
             {
-                Debug.LogError($"Not enough enemy prefabs or battle stations for enemy {i}");
+                Debug.LogError($"Enemy {i} prefab does not have a Unit component!");
             }
         }
+        else
+        {
+            Debug.LogWarning($"Not enough battle stations for enemy {i}");
+            break;
+        }
+    }
 
         Debug.Log($"Enemies created. Enemy count: {enemyUnits.Count}");
 

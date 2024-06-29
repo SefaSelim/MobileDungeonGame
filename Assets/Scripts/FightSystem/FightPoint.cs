@@ -1,15 +1,15 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class FightPoint : MonoBehaviour
 {
     
-    public GameObject BattleSystem;
-    public GameObject Enemy1;
-     public GameObject Enemy2;
-      public GameObject Enemy3;
-    FightSystem fightSystem;
+    // public GameObject BattleSystem;
+    // public GameObject Enemy1;
+    //  public GameObject Enemy2;
+    //   public GameObject Enemy3;
+    // FightSystem fightSystem;
     
     private void OnCollisionEnter2D(Collision2D collision) {
     if (collision.collider.CompareTag("CollisionDebugger"))
@@ -28,4 +28,4 @@ public class FightPoint : MonoBehaviour
           Debug.Log("SAVAŞ BAŞLADI");
 
     }
-}
+}*/
