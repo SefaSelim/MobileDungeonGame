@@ -1232,7 +1232,6 @@ GameObject:
   - component: {fileID: 303504225}
   - component: {fileID: 303504224}
   - component: {fileID: 303504228}
-  - component: {fileID: 303504229}
   m_Layer: 0
   m_Name: FightPoint2
   m_TagString: Blocker
@@ -1424,23 +1423,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &303504229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 303504222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c766ba72a218ef54fbdbabf05673ef40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BattleSystem: {fileID: 1438243867}
-  Enemy1: {fileID: 0}
-  Enemy2: {fileID: 0}
-  Enemy3: {fileID: 0}
-  fightSystem: {fileID: 0}
 --- !u!1 &311843603
 GameObject:
   m_ObjectHideFlags: 0
@@ -3391,7 +3373,6 @@ GameObject:
   - component: {fileID: 1251165165}
   - component: {fileID: 1251165164}
   - component: {fileID: 1251165168}
-  - component: {fileID: 1251165169}
   m_Layer: 0
   m_Name: FightPoint
   m_TagString: Blocker
@@ -3583,23 +3564,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1251165169
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1251165162}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c766ba72a218ef54fbdbabf05673ef40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BattleSystem: {fileID: 1438243867}
-  Enemy1: {fileID: 0}
-  Enemy2: {fileID: 0}
-  Enemy3: {fileID: 0}
-  fightSystem: {fileID: 0}
 --- !u!1 &1334521165 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4749741809310928414, guid: 9cd658b858fedf54cb118f4fd91acb42, type: 3}
