@@ -23,12 +23,12 @@ private void Update() {
     {
               timer += Time.deltaTime;
 
-        if (timer > 0.25f)
+        if (timer > 1f)
         {
             timer = 0f;
             animator.SetBool("İsClicked", false);
             onclick = false;
-            SceneManager.LoadScene("MainScene");
+           SceneManager.LoadScene("MainScene");
         }
     }
 
