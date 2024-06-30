@@ -4,9 +4,13 @@ using UnityEngine.UI;
 using System.Collections;
 using Unity.VisualScripting;
 using System.Collections.Generic;
-
+using System.Linq;
 public class StoryManagementScript : MonoBehaviour
 {
+
+
+    public GameObject BattleSystem;
+    public FightSystem fightSystemsc;
     [System.Serializable]
     public class StoryNode
     {
@@ -35,10 +39,10 @@ public class StoryManagementScript : MonoBehaviour
     private bool canSelectOption = true;
     public string jsonName;
 
-    public GameObject fightpoint;
+    // public GameObject fightpoint;
 
-    FightPoint fpscript;
-    
+    // FightPoint fpscript;
+
     public List<string> history = new List<string>();
     public GameObject historyPanel;
     public TextMeshProUGUI historyText;
@@ -46,10 +50,11 @@ public class StoryManagementScript : MonoBehaviour
 
     void Start()
     {
+
         LoadStoryNodesFromJSON();
         currentNode = 0;
         UpdateStory();
-        
+
     }
 
     void Update()
@@ -173,6 +178,7 @@ public class StoryManagementScript : MonoBehaviour
 
             string actionType = parts[0];
             string actionValue = parts[1];
+            string[] buabibirimi = actionValue.Split(',');
 
             switch (actionType)
             {
@@ -186,7 +192,8 @@ public class StoryManagementScript : MonoBehaviour
                     IncreaseScore(int.Parse(actionValue));
                     break;
                 case "startBattle":
-                    StartBattle();
+                    StartBattle(buabibirimi);
+
                     break;
                 case "startDialogue":
                     StartDialogue(actionValue);
@@ -218,22 +225,46 @@ public class StoryManagementScript : MonoBehaviour
         Debug.Log("Score increased by: " + amount);
     }
 
-    void StartBattle()
+    void StartBattle(string[] enemies)
+{
+    fightSystemsc = BattleSystem.GetComponent<FightSystem>();
+    
+    // Düşman sayısını kontrol et ve sınırla
+    int enemyCount = Mathf.Min(enemies.Length, 3);
+    GameObject[] biisimler = new GameObject[enemyCount];
+
+    for (int i = 0; i < enemyCount; i++)
     {
-        fpscript = fightpoint.GetComponent<FightPoint>();
-        if (fpscript != null)
+        if (!string.IsNullOrEmpty(enemies[i]))
         {
-            fpscript.SetupFightPoint();
-        }
-        else
-        {
-            Debug.LogError("FightPoint component not found on the fightpoint GameObject.");
+            GameObject biisim = Resources.Load<GameObject>(enemies[i]);
+            if (biisim != null)
+            {
+                biisimler[i] = biisim;
+            }
+            else
+            {
+                Debug.LogWarning($"Enemy prefab not found: {enemies[i]}");
+            }
         }
     }
 
+    // Null olmayan düşmanları filtrele
+    biisimler = biisimler.Where(x => x != null).ToArray();
+
+    if (biisimler.Length > 0)
+    {
+        StartCoroutine(fightSystemsc.SetupBattle(biisimler));
+    }
+    else
+    {
+        Debug.LogError("No valid enemy prefabs found for battle.");
+    }
+}
+
     void StartDialogue(string kaynak)
     {
-        image_name=kaynak;
+        image_name = kaynak;
         Sprite newSprite = Resources.Load<Sprite>(image_name);
         if (newSprite != null)
         {
@@ -244,30 +275,30 @@ public class StoryManagementScript : MonoBehaviour
         {
             Debug.LogError("Sprite not found!");
         }
-        
-    }
-    
-    void Rastgele(float firstOptionProbability)
-{
-    StoryNode currentNodeData = storyNodes[currentNode];
-    if (currentNodeData.nextNodes.Length > 0)
-    {
-        System.Random random = new System.Random();
-        float randomValue = (float)random.NextDouble();
 
-        if (randomValue < firstOptionProbability)
-        {
-            currentNode = currentNodeData.nextNodes[0];
-        }
-        else
-        {
-            int randomIndex = random.Next(1, currentNodeData.nextNodes.Length);
-            currentNode = currentNodeData.nextNodes[1];
-        }
-        Debug.Log("Rastgele() çağırıldı tutulan sayı ve probability: " + randomValue +" " + firstOptionProbability);
-        UpdateStory();
     }
-    
-}
-    
+
+    void Rastgele(float firstOptionProbability)
+    {
+        StoryNode currentNodeData = storyNodes[currentNode];
+        if (currentNodeData.nextNodes.Length > 0)
+        {
+            System.Random random = new System.Random();
+            float randomValue = (float)random.NextDouble();
+
+            if (randomValue < firstOptionProbability)
+            {
+                currentNode = currentNodeData.nextNodes[0];
+            }
+            else
+            {
+                int randomIndex = random.Next(1, currentNodeData.nextNodes.Length);
+                currentNode = currentNodeData.nextNodes[1];
+            }
+            Debug.Log("Rastgele() çağırıldı tutulan sayı ve probability: " + randomValue + " " + firstOptionProbability);
+            UpdateStory();
+        }
+
+    }
+
 }

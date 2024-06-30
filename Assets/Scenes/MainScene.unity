@@ -761,6 +761,10 @@ PrefabInstance:
       propertyPath: fightpoint
       value: 
       objectReference: {fileID: 303504222}
+    - target: {fileID: 4234377917979191730, guid: 44253f09a93c6004a9611312d3642c5d, type: 3}
+      propertyPath: BattleSystem
+      value: 
+      objectReference: {fileID: 1438243867}
     - target: {fileID: 5211096720483656785, guid: 44253f09a93c6004a9611312d3642c5d, type: 3}
       propertyPath: m_fontSize
       value: 60
@@ -1436,6 +1440,7 @@ MonoBehaviour:
   Enemy1: {fileID: 0}
   Enemy2: {fileID: 0}
   Enemy3: {fileID: 0}
+  fightSystem: {fileID: 0}
 --- !u!1 &311843603
 GameObject:
   m_ObjectHideFlags: 0
@@ -3594,6 +3599,7 @@ MonoBehaviour:
   Enemy1: {fileID: 0}
   Enemy2: {fileID: 0}
   Enemy3: {fileID: 0}
+  fightSystem: {fileID: 0}
 --- !u!1 &1334521165 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4749741809310928414, guid: 9cd658b858fedf54cb118f4fd91acb42, type: 3}
@@ -3924,7 +3930,7 @@ PrefabInstance:
     - target: {fileID: 3643884302246018952, guid: 9cd658b858fedf54cb118f4fd91acb42, type: 3}
       propertyPath: enemyACs.Array.data[2]
       value: 
-      objectReference: {fileID: 1163504112}
+      objectReference: {fileID: 1862683903}
     - target: {fileID: 3643884302246018952, guid: 9cd658b858fedf54cb118f4fd91acb42, type: 3}
       propertyPath: enemyHPs.Array.data[0]
       value: 
@@ -3936,7 +3942,7 @@ PrefabInstance:
     - target: {fileID: 3643884302246018952, guid: 9cd658b858fedf54cb118f4fd91acb42, type: 3}
       propertyPath: enemyHPs.Array.data[2]
       value: 
-      objectReference: {fileID: 399005023}
+      objectReference: {fileID: 406586851}
     - target: {fileID: 3643884302246018952, guid: 9cd658b858fedf54cb118f4fd91acb42, type: 3}
       propertyPath: enemyLevels.Array.size
       value: 3
@@ -3947,7 +3953,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3643884302246018952, guid: 9cd658b858fedf54cb118f4fd91acb42, type: 3}
       propertyPath: attackButtons.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3643884302246018952, guid: 9cd658b858fedf54cb118f4fd91acb42, type: 3}
       propertyPath: enemyNames.Array.data[0]
@@ -3960,7 +3966,7 @@ PrefabInstance:
     - target: {fileID: 3643884302246018952, guid: 9cd658b858fedf54cb118f4fd91acb42, type: 3}
       propertyPath: enemyNames.Array.data[2]
       value: 
-      objectReference: {fileID: 841964843}
+      objectReference: {fileID: 1712816349}
     - target: {fileID: 3643884302246018952, guid: 9cd658b858fedf54cb118f4fd91acb42, type: 3}
       propertyPath: enemyLevels.Array.data[0]
       value: 
@@ -3972,7 +3978,7 @@ PrefabInstance:
     - target: {fileID: 3643884302246018952, guid: 9cd658b858fedf54cb118f4fd91acb42, type: 3}
       propertyPath: enemyLevels.Array.data[2]
       value: 
-      objectReference: {fileID: 1724002791}
+      objectReference: {fileID: 1345504732}
     - target: {fileID: 3643884302246018952, guid: 9cd658b858fedf54cb118f4fd91acb42, type: 3}
       propertyPath: enemyPrefabs.Array.data[0]
       value: 
@@ -3999,7 +4005,7 @@ PrefabInstance:
       objectReference: {fileID: 976323679}
     - target: {fileID: 3643884302246018952, guid: 9cd658b858fedf54cb118f4fd91acb42, type: 3}
       propertyPath: enemyBattleStations.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3643884302246018952, guid: 9cd658b858fedf54cb118f4fd91acb42, type: 3}
       propertyPath: enemyBattleStations.Array.data[0]

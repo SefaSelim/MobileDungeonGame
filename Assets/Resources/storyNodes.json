@@ -68,7 +68,7 @@
             "dialogueText":"",
             "options": [""],
             "nextNodes": [10],
-            "actions": ["startBattle:"]
+            "actions": ["startBattle:Tekkelime"]
         },
         {
             "storyText": "",
