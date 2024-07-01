@@ -10,6 +10,7 @@ public class StoryManagementScript : MonoBehaviour
 
 
     public GameObject BattleSystem;
+    GameObject StoryPointOnParent;
     public FightSystem fightSystemsc;
     [System.Serializable]
     public class StoryNode
@@ -50,11 +51,19 @@ public class StoryManagementScript : MonoBehaviour
 
     void Start()
     {
-
+        StoryPointOnParent = transform.parent.gameObject;
         LoadStoryNodesFromJSON();
         currentNode = 0;
         UpdateStory();
 
+    }
+
+    public void nextDialoge()
+    {
+        StoryPointOnParent = transform.parent.gameObject;
+        LoadStoryNodesFromJSON();
+        currentNode = 0;
+        UpdateStory();
     }
 
     void Update()
@@ -99,7 +108,7 @@ public class StoryManagementScript : MonoBehaviour
         UpdateStory();
     }
 
-    void UpdateStory()
+    public void UpdateStory()
     {
         canSelectOption = false; // Seçenekleri devre dışı bırak
 
@@ -146,9 +155,10 @@ public class StoryManagementScript : MonoBehaviour
         canSelectOption = true; // Seçenekleri tekrar etkinleştir
     }
 
-    void LoadStoryNodesFromJSON()
+    public void LoadStoryNodesFromJSON()
     {
         TextAsset jsonText = Resources.Load<TextAsset>(jsonName);
+
         Debug.Log("Trying to load JSON file.");
         if (jsonText != null)
         {
@@ -201,6 +211,9 @@ public class StoryManagementScript : MonoBehaviour
                 case "rastgele":
                     Rastgele(float.Parse(actionValue));
                     break;
+                case "EndPoint":
+                    EndPoint();
+                break;
                 default:
                     Debug.LogError("Unknown action type: " + actionType);
                     break;
@@ -299,6 +312,11 @@ public class StoryManagementScript : MonoBehaviour
             UpdateStory();
         }
 
+    }
+
+    void EndPoint ()
+    {
+        StoryPointOnParent.SetActive(false);
     }
 
 }

@@ -14,6 +14,14 @@ private void OnCollisionEnter2D(Collision2D collision) {
     {
             questArrow.target = nextTargetPointToQuestPointer.transform;
           storyManagementScript.jsonName = dialogeName;
+            storyManagementScript.nextDialoge();
+
+
+
+
+            gameObject.SetActive(false);
+            nextTargetPointToQuestPointer.SetActive(true);
+
     }
 }
 }

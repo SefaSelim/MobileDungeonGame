@@ -27,6 +27,7 @@ public class FightSystem : MonoBehaviour
     public Button mainAttackButton;
     public Button healButton;
 
+
     Unit playerUnit;
     List<Unit> enemyUnits = new List<Unit>();
     int selectedEnemyIndex = -1;
@@ -35,7 +36,7 @@ public class FightSystem : MonoBehaviour
 
     void Start()
     {
-        
+    
 
     }
 
@@ -403,6 +404,8 @@ public class FightSystem : MonoBehaviour
             }
 
             yield return StartCoroutine(ShowMessage("TEBRİKLER! Tüm düşmanları yenerek " + totalExp + " EXP KAZANDINIZ.", 2f));
+        FightScreen.SetActive(false);
+
         }
         else if (state == BattleState.LOST)
         {

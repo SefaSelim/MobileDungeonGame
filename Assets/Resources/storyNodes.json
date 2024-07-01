@@ -60,7 +60,7 @@
             "storyText": "Eve dönüş yolunda bir arbede duydun, hemen ara bir sokakta bir adam bir kadın görüyorsun. --BIRAAAK BENİ PİS SAPIK-- sanırım kadın orada bulunmaktan pek memnun değil Ne Yapacaksın? ",
             "dialogueText":"",
             "options": ["Müdahale Et","Görmezden Gel"],
-            "nextNodes": [9,18],
+            "nextNodes": [10,18],
             "actions": [""]
         },
         {
@@ -75,7 +75,7 @@
             "dialogueText":"Ço ço çokk teşekkür ederim. .. --Kadın korkudan doğru düzgün konuşamıyordu dahi-- Al al bunu bir teşekkür hediyesi, belki çok bir şey etmez ama yine de işine yarayacaktır --Bir Kolye Uzatır--",
             "options": ["Buna gerek yok, her insanın yapması gereken şeyi yaptım diye beni ödüllendirmene gerek yok","Teşekkür ederim bu işime yarayacaktır(+Evsiz Kadının Kolyesi)","Az önce hayatını kurtarmama rağmen gerçekten böyle mi teşekkür ediyorsun ?"],
             "nextNodes": [11,12,13],
-            "actions": ["startDialogue:WomenOnStreet"]
+            "actions": ["startDialogue:WomenOnStreet","startBattle:Tekkelime"]
         },
         {
             "storyText": "",
@@ -129,9 +129,16 @@
         {
             "storyText": "Evine bakıp bir iç çekiyorsun -- evim evim, güzel evim --",
             "dialogueText":"",
-            "options": ["Eve Gir"],
-            "nextNodes": [],
+            "options": ["Eve dön"],
+            "nextNodes": [19],
             "actions": [""]
+        },
+        {
+            "storyText": "Exit Node / 19",
+            "dialogueText":"",
+            "options": [""],
+            "nextNodes": [],
+            "actions": ["EndPoint:"]
         }
     ]
 }

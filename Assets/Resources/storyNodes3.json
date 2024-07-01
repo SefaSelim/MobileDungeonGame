@@ -1,18 +1,18 @@
 {
     "nodes": [
         {
-            "storyText": "Bugün turanı götten siktin",
+            "storyText": "3.Node Başarılı",
             "dialogueText":"",
             "options": ["(devam)"],
             "nextNodes": [1],
             "actions": [""]
         },
         {
-            "storyText": "",
+            "storyText": "Dışarıda dolaşırken değişik hareketleri olan bir adam gördün",
             "dialogueText":"",
-            "options": [""],
-            "nextNodes": [],
-            "actions": ["EndPoint:"]
+            "options": ["--Yanına git--"],
+            "nextNodes": [2],
+            "actions": [""]
         },
         {
             "storyText": "",
