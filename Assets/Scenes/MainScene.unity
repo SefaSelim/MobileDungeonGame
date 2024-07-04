@@ -1367,7 +1367,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 8411864246580834257, guid: 44253f09a93c6004a9611312d3642c5d, type: 3}
       propertyPath: m_fontStyle
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8411864246580834257, guid: 44253f09a93c6004a9611312d3642c5d, type: 3}
       propertyPath: m_fontSizeMax
@@ -3869,6 +3869,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7658255000878785412, guid: 9cd658b858fedf54cb118f4fd91acb42, type: 3}
       propertyPath: m_HorizontalAlignment
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8586701246995155492, guid: 9cd658b858fedf54cb118f4fd91acb42, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 8586701246995155492, guid: 9cd658b858fedf54cb118f4fd91acb42, type: 3}
+      propertyPath: m_hasFontAssetChanged
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8698823782894528548, guid: 9cd658b858fedf54cb118f4fd91acb42, type: 3}
