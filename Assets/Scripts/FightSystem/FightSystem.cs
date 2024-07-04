@@ -117,9 +117,9 @@ public class FightSystem : MonoBehaviour
         playerCurrentEXP.text = "EXP " + playerUnit.playerexp;
         playerMaxExp.text = "/ " + playerUnit.expToLevelUP;
         playerLevel.text = "Lvl " + playerUnit.unitLevel;
-        playerHP.text = "HP " + playerUnit.currentHP;
+        playerHP.text = "Hp" + playerUnit.currentHP;
         playerName.text = playerUnit.unitName;
-        playerAC.text = "AC" + playerUnit.unitAC;
+        playerAC.text = "Ac" + playerUnit.unitAC;
 
         for (int i = 0; i < enemyCount; i++)
         {
@@ -128,8 +128,8 @@ public class FightSystem : MonoBehaviour
                 Unit enemy = enemyUnits[i];
                 enemyNames[i].text = enemy.unitName;
                 enemyLevels[i].text = "Lvl " + enemy.unitLevel;
-                enemyHPs[i].text = "HP " + enemy.currentHP;
-                enemyACs[i].text = "AC " + enemy.unitAC;
+                enemyHPs[i].text = "" + enemy.currentHP;
+                enemyACs[i].text = "" + enemy.unitAC;
                 attackButtons[i].gameObject.SetActive(true);
             }
             else
