@@ -1679,6 +1679,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0aca31aa76f737a4b8237d7e5e183a76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BattleSystem: {fileID: 0}
+  fightSystemsc: {fileID: 0}
   storyTextUI: {fileID: 8411864246580834257}
   optionButtons:
   - {fileID: 8062269341100434203}
@@ -1689,7 +1691,6 @@ MonoBehaviour:
   char_image: {fileID: 818672362820001472}
   image_name: 
   jsonName: 
-  fightpoint: {fileID: 0}
   history: []
   historyPanel: {fileID: 3937491576482438055}
   historyText: {fileID: 5114966377390622166}
@@ -1990,8 +1991,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2333729366364310607}
   - {fileID: 5169491304443572388}
+  - {fileID: 2333729366364310607}
   m_Father: {fileID: 5341494935861807961}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
