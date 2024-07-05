@@ -264,7 +264,7 @@
         },
         {
             "storyText": "",
-            "dialogueText": "Oğlum, Ne olur güven bana, senin için en iyisi bu Unutma anneler her zaman oğullarını düşünür",
+            "dialogueText": "Oğlum, Ne olur güven bana, senin için en iyisi bu Unutma anneler her zaman çocuklarını düşünür",
             "options": ["Pekala anne, ama bunu döndükten sonra iyice açıklayacaksın söz mü ?"],
             "nextNodes": [22],
             "actions": ["startDialogue:Mom"]
