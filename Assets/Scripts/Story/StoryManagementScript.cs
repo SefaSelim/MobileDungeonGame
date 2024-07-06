@@ -138,7 +138,7 @@ public class StoryManagementScript : MonoBehaviour
                 optionButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = node.options[i];
                 int index = i; // Closure probleminden kaçınmak için
                 optionButtons[i].onClick.RemoveAllListeners();
-                optionButtons[i].onClick.AddListener(() => OnOptionSelected(index));
+                // optionButtons[i].onClick.AddListener(() => OnOptionSelected(index));
             }
             else
             {
