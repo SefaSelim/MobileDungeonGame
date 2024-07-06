@@ -2,6 +2,6 @@ Base path: 'C:/Program Files/Unity/Hub/Editor/2022.3.32f1/Editor/Data', plugins 
 Cmd: initializeCompiler
 
 Cmd: disassembleShader
- name=UI/Default platform=gles3 type=4 mask=6 insize=3946 outsize=3946 ok=1
+ name=UI/Default platform=vulkan type=25 mask=6 insize=2224 outsize=19840 ok=1
 
 Cmd: shutdown

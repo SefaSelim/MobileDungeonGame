@@ -43,7 +43,7 @@
             "storyText": "",
             "dialogueText": "Aferin sana evlat ! Al sana biraz para, bakkaldan kendine bir şeyler alırsın",
             "options": [
-                "'Teşekkürler Dede ! Bu gerçekten çok işime yarayacak !'(+10 gold)",
+                "'Teşekkürler Dede ! Bu gerçekten çok işime yarayacak !'   (+10 gold)",
                 "Daha fazlasını iste (verme ihtimali %40))"
             ],
             "nextNodes": [
