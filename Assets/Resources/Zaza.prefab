@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8290516719863189759}
   - component: {fileID: 7236277761542751748}
   m_Layer: 0
-  m_Name: Ikikelime
+  m_Name: Zaza
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerexp: 0
   expToLevelUP: 0
-  unitName: Apokerim
+  unitName: Salih
   unitLevel: 14
   damage: 8
   maxHP: 13

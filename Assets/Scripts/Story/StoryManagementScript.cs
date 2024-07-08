@@ -268,6 +268,7 @@ public class StoryManagementScript : MonoBehaviour
     if (biisimler.Length > 0)
     {
         StartCoroutine(fightSystemsc.SetupBattle(biisimler));
+        Debug.Log(biisimler);
     }
     else
     {

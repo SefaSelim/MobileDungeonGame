@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerexp: 0
   expToLevelUP: 0
-  unitName: Samet
+  unitName: samet
   unitLevel: 14
   damage: 8
   maxHP: 13
