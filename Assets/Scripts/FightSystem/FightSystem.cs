@@ -36,7 +36,7 @@ public class FightSystem : MonoBehaviour
 
     void Start()
     {
-    
+
 
     }
 
@@ -46,6 +46,9 @@ public class FightSystem : MonoBehaviour
 
         enemyCount = Mathf.Min(enemyPrefabs.Length, enemyBattleStations.Length, attackButtons.Length);
         Debug.Log($"Enemy count set to: {enemyCount}");
+        Debug.Log("enemyPrefabs Length: " + enemyPrefabs.Length);
+        Debug.Log("enemyBattleStations Length: " + enemyBattleStations.Length);
+        Debug.Log("attackButtons Length: " + attackButtons.Length);
 
 
         for (int i = 0; i < attackButtons.Length; i++)
@@ -70,33 +73,67 @@ public class FightSystem : MonoBehaviour
         Debug.Log($"Enemy prefabs count: {enemyPrefabs.Length}");
         Debug.Log($"Enemy battle stations count: {enemyBattleStations.Length}");
 
-         for (int i = 0; i < enemyCount; i++)
-    {
-        if (i < enemyBattleStations.Length)
+        for (int i = 0; i < enemyCount; i++)
         {
-            GameObject enemyGO = Instantiate(enemyPrefabs[i], enemyBattleStations[i]);
-            Unit enemyUnit = enemyGO.GetComponent<Unit>();
-            if (enemyUnit != null)
+            if (i < enemyBattleStations.Length)
             {
-                enemyUnits.Add(enemyUnit);
-                totalExp += enemyUnit.exptobegiven;
-                Debug.Log($"Enemy {i} created: {enemyUnit.unitName}");
+                GameObject enemyGO = Instantiate(enemyPrefabs[i], enemyBattleStations[i]);
+                Unit enemyUnit = enemyGO.GetComponent<Unit>();
+                if (enemyUnit != null)
+                {
+                    enemyUnits.Add(enemyUnit);
+                    totalExp += enemyUnit.exptobegiven;
+                    Debug.Log($"Enemy {i} created: {enemyUnit.unitName}");
+                }
+                else
+                {
+                    Debug.LogError($"Enemy {i} prefab does not have a Unit component!");
+                }
             }
             else
             {
-                Debug.LogError($"Enemy {i} prefab does not have a Unit component!");
+                Debug.LogWarning($"Not enough battle stations for enemy {i}");
+                break;
             }
         }
-        else
-        {
-            Debug.LogWarning($"Not enough battle stations for enemy {i}");
-            break;
-        }
-    }
 
         Debug.Log($"Enemies created. Enemy count: {enemyUnits.Count}");
+        if (enemyCount == 1)
+        {
 
+            RectTransform rectTransform0 = attackButtons[0].GetComponent<RectTransform>();
+            Vector2 Positionrect0 = new Vector2(400, 220);
+            rectTransform0.anchoredPosition = Positionrect0;
+        }
+
+        if(enemyCount == 2)
+        {
+
+            RectTransform rectTransform0 = attackButtons[0].GetComponent<RectTransform>();
+            Vector2 Positionrect0 = new Vector2(200, 220);
+            rectTransform0.anchoredPosition = Positionrect0;
+
+            RectTransform rectTransform1 = attackButtons[1].GetComponent<RectTransform>();
+            Vector2 Positionrect1 = new Vector2(-50, 370);
+            rectTransform1.anchoredPosition = Positionrect1;
+
+        }
+        if(enemyCount == 3)
+        {
+            RectTransform rectTransform0 = attackButtons[0].GetComponent<RectTransform>();
+            Vector2 Positionrect0 = new Vector2(200, 400);
+            rectTransform0.anchoredPosition = Positionrect0;
+
+            RectTransform rectTransform1 = attackButtons[1].GetComponent<RectTransform>();
+            Vector2 Positionrect1 = new Vector2(-50, 550);
+            rectTransform1.anchoredPosition = Positionrect1;
+
+             RectTransform rectTransform2 = attackButtons[2].GetComponent<RectTransform>();
+            Vector2 Positionrect2 = new Vector2(0, 90);
+            rectTransform2.anchoredPosition = Positionrect2;
+        }
         UpdateUI();
+
 
         dialogueText.text = "Düşmanlarla karşılaştınız!";
         yield return new WaitForSeconds(2f);
@@ -142,28 +179,6 @@ public class FightSystem : MonoBehaviour
             }
         }
     }
-
-    void UpdateEnemyInfo(int index)
-    {
-        if (index < enemyUnits.Count && enemyUnits[index] != null)
-        {
-            Unit enemy = enemyUnits[index];
-            enemyNames[index].text = enemy.unitName;
-            enemyLevels[index].text = "Lvl " + enemy.unitLevel;
-            enemyHPs[index].text = "HP " + enemy.currentHP;
-            enemyACs[index].text = "AC " + enemy.unitAC;
-            attackButtons[index].gameObject.SetActive(true);
-        }
-        else
-        {
-            enemyNames[index].text = "";
-            enemyLevels[index].text = "";
-            enemyHPs[index].text = "";
-            enemyACs[index].text = "";
-            attackButtons[index].gameObject.SetActive(false);
-        }
-    }
-
     void PlayerTurn()
     {
         dialogueText.text = "Sıra sizde. Kime saldıracaksınız?";
@@ -391,6 +406,7 @@ public class FightSystem : MonoBehaviour
         for (int i = 0; i < enemyCount; i++)
         {
             attackButtons[i].interactable = false;
+            attackButtons[i].gameObject.SetActive(false);
         }
         healButton.interactable = false;
         mainAttackButton.interactable = false;
@@ -404,7 +420,7 @@ public class FightSystem : MonoBehaviour
             }
 
             yield return StartCoroutine(ShowMessage("TEBRİKLER! Tüm düşmanları yenerek " + totalExp + " EXP KAZANDINIZ.", 2f));
-        FightScreen.SetActive(false);
+            FightScreen.SetActive(false);
 
         }
         else if (state == BattleState.LOST)

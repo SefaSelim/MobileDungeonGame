@@ -128,7 +128,7 @@
                 10
             ],
             "actions": [
-                "startBattle:Tekkelime"
+                "startBattle:Tekkelime,Apokerim,Zaza"
             ]
         },
         {
@@ -146,7 +146,7 @@
             ],
             "actions": [
                 "startDialogue:WomenOnStreet",
-                "startBattle:Tekkelime"
+                "startBattle:Tekkelime,Apokerim,Zaza"
             ]
         },
         {
