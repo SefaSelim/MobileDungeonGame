@@ -22,7 +22,7 @@
             ],
             "nextNodes": [
                 3,
-                6
+                3
             ],
             "actions": [
                 "startDialogue:köylü"
@@ -44,7 +44,7 @@
             "dialogueText": "Aferin sana evlat! Al sana biraz para, bakkaldan kendine bir şeyler alırsın.",
             "options": [
                 "'Teşekkürler Dede ! Bu gerçekten çok işime yarayacak !'   (+10 gold)",
-                "Daha fazlasını iste (verme ihtimali %40))"
+                "Daha fazlasını iste (verme ihtimali %40)"
             ],
             "nextNodes": [
                 4,
@@ -128,7 +128,7 @@
                 10
             ],
             "actions": [
-                "startBattle:Tekkelime,Apokerim,Zaza"
+                "startBattle:Tekkelime,Zaza"
             ]
         },
         {
@@ -136,7 +136,7 @@
             "dialogueText": "Ço ço çokk teşekkür ederim. .. --Kadın korkudan doğru düzgün konuşamıyordu dahi-- Al al bunu bir teşekkür hediyesi, belki çok bir şey etmez ama yine de işine yarayacaktır --Bir Kolye Uzatır--",
             "options": [
                 "Buna gerek yok, her insanın yapması gereken şeyi yaptım diye beni ödüllendirmene gerek yok",
-                "Teşekkür ederim bu işime yarayacaktır(+Evsiz Kadının Kolyesi)",
+                "Teşekkür ederim bu işime yarayacaktır (+Evsiz Kadının Kolyesi)",
                 "Az önce hayatını kurtarmama rağmen gerçekten böyle mi teşekkür ediyorsun ?"
             ],
             "nextNodes": [
@@ -559,12 +559,12 @@
             ]
         },
         {
-            "storyText": "Exit Node / ",
+            "storyText": "",
             "dialogueText": "",
             "options": [],
             "nextNodes": [],
             "actions": [
-                ""
+                "EndPoint:"
             ]
         }
     ]

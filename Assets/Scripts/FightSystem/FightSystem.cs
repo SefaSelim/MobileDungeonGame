@@ -14,6 +14,7 @@ public class FightSystem : MonoBehaviour
     public GameObject FightScreen;
     public BattleState state;
     public GameObject playerPrefab;
+    public GameObject playerGO;
     //public GameObject[] enemyPrefabs;
     public Transform[] enemyBattleStations;
 
@@ -62,7 +63,6 @@ public class FightSystem : MonoBehaviour
         healButton.onClick.AddListener(OnHealButton);
         Debug.Log("Start method completed. Enemy count: " + enemyCount);
         FightScreen.SetActive(true);
-        GameObject playerGO = Instantiate(playerPrefab);
         playerUnit = playerGO.GetComponent<Unit>();
 
         Debug.Log($"Player created: {playerUnit.unitName}");

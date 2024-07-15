@@ -1,0 +1,670 @@
+{
+    "nodes": [
+        {
+            "storyText": "Kampa yaklaştığında, ağaçların arasından goblinlerin siluetlerini görüyorsun. Kamp ateşinin etrafında toplanmış, bir şeyler konuşuyorlar.",
+            "dialogueText": "",
+            "options": [
+                "Gizlice yaklaş",
+                "Doğrudan yaklaş",
+                "Uzaktan gözlemle"
+            ],
+            "nextNodes": [
+                1,
+                2,
+                3
+            ],
+            "actions": [
+                ""
+            ]
+     
+        },
+        {
+            "storyText": "Sessizce kampa yaklaşıyorsun. Goblinlerin konuşmalarını duyabiliyorsun.",
+            "dialogueText": "",
+            "options": [
+                "Dinlemeye devam et",
+                "Kendini göster"
+            ],
+            "nextNodes": [
+                4,
+                2
+            ],
+            "actions": [
+                ""
+            ]
+    
+        },
+        {
+            "storyText": "Doğrudan kampa yürüyorsun. Goblinler seni fark ediyor ve silahlarını çekiyorlar.",
+            "dialogueText": "",
+            "options": [
+                "Barışçıl yaklaş",
+                "Savaşa hazırlan"
+            ],
+            "nextNodes": [
+                5,
+                6
+            ],
+            "actions": [
+                ""
+            ]
+   
+        },
+        {
+            "storyText": "Uzaktan kampı gözlemliyorsun. Goblinlerin arasında bir lider olduğunu fark ediyorsun.",
+            "dialogueText": "",
+            "options": [
+                "Gizlice yaklaş",
+                "Doğrudan yaklaş"
+            ],
+            "nextNodes": [
+                1,
+                2
+            ],
+            "actions": [
+                ""
+            ]
+   
+        },
+        {
+            "storyText": "",
+            "dialogueText": "Şef, kuyudan gelen güç gittikçe artıyor. Ne yapacağız?",
+            "options": [
+                "Dinlemeye devam et",
+                "Kendini göster"
+            ],
+            "nextNodes": [
+                7,
+                2
+            ],
+            "actions": [
+                "startDialogue:goblin"
+            ]
+    
+        },
+        {
+            "storyText": "",
+            "dialogueText": "Dur! Kim olduğunu söyle!",
+            "options": [
+                "Barışçıl olduğunu söyle",
+                "Saldır"
+            ],
+            "nextNodes": [
+                8,
+                6
+            ],
+            "actions": [
+                "startDialogue:goblinLider"
+            ]
+       
+        },
+        {
+            "storyText": "Goblinlere saldırıyorsun.",
+            "dialogueText": "",
+            "options": [
+                "Savaş"
+            ],
+            "nextNodes": [
+                9
+            ],
+            "actions": [
+                ""
+            ]
+    
+        },
+        {
+            "storyText": "",
+            "dialogueText": "Sessiz olun! Birisi bizi dinliyor olabilir. Bunu gece toplantımızda tekrar konuşuruz.",
+            "options": [
+                "Gizlice kuyu'ya doğru ilerle",
+                "Kendini göster"
+            ],
+            "nextNodes": [
+                11,
+                2
+            ],
+            "actions": [
+                "startDialogue:goblinLider"
+            ]
+
+        },
+        {
+            "storyText": "",
+            "dialogueText": "Pekala, neden buradasın?",
+            "options": [
+                "Kuyudaki güç hakkında soru sor",
+                "Yardım teklif et"
+            ],
+            "nextNodes": [
+                12,
+                13
+            ],
+            "actions": [
+                "startDialogue:goblinLider"
+            ]
+      
+        },
+        {
+            "storyText": "Goblinlerle savaşıyorsun. Zorlu bir mücadele sonunda onları alt ediyorsun. Geri kalan goblinler kampın kuytularına kaçıyor",
+            "dialogueText": "",
+            "options": [
+                "Kuyu'ya doğru ilerle"
+            ],
+            "nextNodes": [
+                14
+            ],
+            "actions": [
+                "startBattle:goblin,goblin,goblinLider"
+            ]
+    
+        },
+        {
+            "storyText": "Kamptan kaçmayı başarıyorsun, ancak gizemli güce ulaşamadın. Tekrar denemek için geri dönüyorsun.",
+            "dialogueText": "",
+            "options": [
+                "Gizlice yaklaş",
+                "Doğrudan yaklaş"
+            ],
+            "nextNodes": [
+                1,
+                2
+            ],
+            "actions": [
+                ""
+            ]
+
+        },
+        {
+            "storyText": "Gizlice kuyuya doğru ilerliyorsun. Goblinler hala etrafta devriye geziyor.",
+            "dialogueText": "",
+            "options": [
+                "Kuyuya ulaşmaya çalış %40",
+                "Geri dön ve başka bir yol dene"
+            ],
+            "nextNodes": [
+                41,
+                1
+            ],
+            "actions": [
+                ""
+            ]
+  
+        },
+        {
+            "storyText": "",
+            "dialogueText": "Kuyudaki güç bizim kontrolümüzde. Senin gibi yabancıların burada işi yok!",
+            "options": [
+                "Gücü paylaşmayı teklif et",
+                "Gücün tehlikeli olduğunu söyle"
+            ],
+            "nextNodes": [
+                15,
+                16
+            ],
+            "actions": [
+                "startDialogue:goblinLider"
+            ]
+      
+        },
+        {
+            "storyText": "",
+            "dialogueText": "Yardıma mı ihtiyacımız varmış? Ne cüretle!",
+            "options": [
+                "Özür dile ve gücü sor"
+            ],
+            "nextNodes": [
+                12
+            ],
+            "actions": [
+                "startDialogue:goblinLider"
+            ]
+   
+        },
+        {
+            "storyText": "Kuyuya yaklaşıyorsun. İçinden parlak bir ışık yayılıyor.",
+            "dialogueText": "",
+            "options": [
+                "Kuyuya in",
+                "Etrafı incele"
+            ],
+            "nextNodes": [
+                17,
+                18
+            ],
+            "actions": [
+                ""
+            ]
+      
+        },
+        {
+            "storyText": "",
+            "dialogueText": "Gücü paylaşmak mı? Neden seninle paylaşalım ki?",
+            "options": [
+                "Faydalarını anlat",
+                "Tehlikeyi açıkla"
+            ],
+            "nextNodes": [
+                19,
+                20
+            ],
+            "actions": [
+                "startDialogue:goblinLider"
+            ]
+     
+        },
+        {
+            "storyText": "",
+            "dialogueText": "Tehlikeli mi? Ne biliyorsun sen bu güç hakkında?",
+            "options": [
+                "Bilgini paylaş",
+                "Blöf yap"
+            ],
+            "nextNodes": [
+                20,
+                21
+            ],
+            "actions": [
+                "startDialogue:goblinLider"
+            ]
+    
+        },
+        {
+            "storyText": "Kuyuya iniyorsun. Parlak ışık seni sarıyor ve güç bedenine dolmaya başlıyor.",
+            "dialogueText": "",
+            "options": [
+                "Gücü kabul et",
+                "Direnmeye çalış"
+            ],
+            "nextNodes": [
+                22,
+                23
+            ],
+            "actions": [
+                ""
+            ]
+           
+        },
+        {
+            "storyText": "Kuyunun etrafını inceliyorsun. Eski yazıtlar ve semboller görüyorsun.",
+            "dialogueText": "",
+            "options": [
+                "Yazıtları oku",
+                "Kuyuya in"
+            ],
+            "nextNodes": [
+                24,
+                17
+            ],
+            "actions": [
+                ""
+            ]
+     
+        },
+        {
+            "storyText": "",
+            "dialogueText": "Hmm, ilginç. Belki de seninle iş birliği yapabiliriz. Güç karşılığında kilisenin altınlarının hepsini istiyoruz!",
+            "options": [
+                "Anlaşmayı kabul et",
+                "Daha fazla bilgi iste"
+            ],
+            "nextNodes": [
+                25,
+                26
+            ],
+            "actions": [
+                "startDialogue:goblinLider"
+            ]
+        
+        },
+        {
+            "storyText": "",
+            "dialogueText": "Bu gücün tehlikeleri hakkında bildiklerini anlat. Eğer doğruysa, belki bir anlaşma yapabiliriz.",
+            "options": [
+                "Dürüstçe anlat",
+                "Yalan söyle"
+            ],
+            "nextNodes": [
+                27,
+                28
+            ],
+            "actions": [
+                "startDialogue:goblinLider"
+            ]
+        
+        },
+        {
+            "storyText": "",
+            "dialogueText": "Blöf yaptığını hissedebiliyorum. Bizi kandırmaya çalışıyorsun!",
+            "options": [
+                "Özür dile",
+                "Kaç"
+            ],
+            "nextNodes": [
+                29,
+                10
+            ],
+            "actions": [
+                "startDialogue:goblinLider"
+            ]
+      
+        },
+        {
+            "storyText": "Güç bedenini dolduruyor. Kendini daha güçlü ve bilge hissediyorsun.",
+            "dialogueText": "",
+            "options": [
+                "Kuyudan çık"
+            ],
+            "nextNodes": [
+                30
+            ],
+            "actions": [
+                ""
+            ]
+        
+        },
+        {
+            "storyText": "Güce direnmeye çalışıyorsun ama çok güçlü. Kontrolü kaybetmek üzeresin.",
+            "dialogueText": "",
+            "options": [
+                "Son bir çaba göster",
+                "Teslim ol"
+            ],
+            "nextNodes": [
+                31,
+                22
+            ],
+            "actions": [
+                ""
+            ]
+        
+        },
+        {
+            "storyText": "Yazıtları okuyorsun. Gücün tehlikeli olduğunu ve dikkatli kullanılması gerektiğini öğreniyorsun.",
+            "dialogueText": "",
+            "options": [
+                "Kuyuya in"
+            ],
+            "nextNodes": [
+                17
+            ],
+            "actions": [
+                ""
+            ]
+         
+        },
+        {
+            "storyText": "",
+            "dialogueText": "Anlaştık. Kilisenin altınları karşılığında gücü kullanabilirsin.",
+            "options": [
+                "Kabul et",
+                "Reddet (Sana saldıracaklar)"
+            ],
+            "nextNodes": [
+                33,
+                6
+            ],
+            "actions": [
+                "startDialogue:goblinLider"
+            ]
+           
+        },
+        {
+            "storyText": "",
+            "dialogueText": "Ne bilmek istiyorsun? Sorularını dikkatlice seç.",
+            "options": [
+                "Gücün kaynağı nedir?",
+                "Nasıl kontrol ediliyor?"
+            ],
+            "nextNodes": [
+                34,
+                35
+            ],
+            "actions": [
+                "startDialogue:goblinLider"
+            ]
+          
+        },
+        {
+            "storyText": "",
+            "dialogueText": "Anlattıkların doğru gibi görünüyor. Belki de birlikte çalışabiliriz.",
+            "options": [
+                "İş birliği teklif et",
+                "Gücü yalnız ele geçirmeye çalışmak için onlara saldır"
+            ],
+            "nextNodes": [
+                25,
+                6
+            ],
+            "actions": [
+                "startDialogue:goblinLider"
+            ]
+          
+        },
+        {
+            "storyText": "",
+            "dialogueText": "Yalancı! Gücün her sırrını bilmiyor olsak da yalanını anlamayacak kadar saf değiliz. Bizi kandırmaya çalışıyorsun. Cezanı çekeceksin!",
+            "options": [
+                "Savaş",
+                "Kaç"
+            ],
+            "nextNodes": [
+                6,
+                10
+            ],
+            "actions": [
+                "startDialogue:goblinLider"
+            ]
+         
+        },
+        {
+            "storyText": "",
+            "dialogueText": "Sana son bir şans veriyorum. Dürüst ol yoksa kelleni uçururum!",
+            "options": [
+                "Teşekkür et",
+                "Gücü sor"
+            ],
+            "nextNodes": [
+                36,
+                12
+            ],
+            "actions": [
+                "startDialogue:goblinLider"
+            ]
+          
+        },
+        {
+            "storyText": "Kuyudan çıkıyorsun. Goblinler şaşkınlıkla sana bakıyor. Yeni güçlerini hissedebiliyorsun.",
+            "dialogueText": "",
+            "options": [
+                "Goblinlerle konuş",
+                "Gücünü göster",
+                "Kamptan ayrıl"
+            ],
+            "nextNodes": [
+                37,
+                38,
+                39
+            ],
+            "actions": [
+                ""
+            ]
+       
+        },
+        {
+            "storyText": "Son bir çabayla güce direniyorsun ve kontrolü ele geçirmeyi başarıyorsun.",
+            "dialogueText": "",
+            "options": [
+                "Kuyudan çık"
+            ],
+            "nextNodes": [
+                30
+            ],
+            "actions": [
+                ""
+            ]
+          
+        },
+        {
+            "storyText": "",
+            "dialogueText": "Bu yazıtlar doğruysa, hepimiz büyük tehlike altındayız!",
+            "options": [
+                "Gücü kontrol etmeyi dene"
+            ],
+            "nextNodes": [
+                18
+            ],
+            "actions": [
+                "startDialogue:goblinLider"
+            ]
+         
+        },
+        {
+            "storyText": "Goblinlerle anlaşmaya varıyorsun. Gücü almana izin veriyorlar. Karşılığında onlara kilisenin altınlarını getireceğine inanıyorlar.",
+            "dialogueText": "",
+            "options": [
+                "Kuyu'ya doğru ilerle"
+            ],
+            "nextNodes": [
+                14
+            ],
+            "actions": [
+                ""
+            ]
+         
+        },
+        {
+            "storyText": "",
+            "dialogueText": "Gücün kaynağı çok eski. Efsanelere göre, bu kuyu antik bir medeniyetin kalıntısı.",
+            "options": [
+                "Nasıl kontrol ediliyor?"
+            ],
+            "nextNodes": [
+                35
+            ],
+            "actions": [
+                "startDialogue:goblinLider"
+            ]
+           
+        },
+        {
+            "storyText": "",
+            "dialogueText": "Gücü kontrol etmek zor. Şimdiye kadar sadece küçük miktarlarını kullanmayı başardık.",
+            "options": [
+                "Birlikte çalışmayı öner"
+            ],
+            "nextNodes": [
+                19
+            ],
+            "actions": [
+                "startDialogue:goblinLider"
+            ]
+          
+        },
+        {
+            "storyText": "",
+            "dialogueText": "Teşekkür kabul edildi. Şimdi söyle bakalım, neden buradasın?",
+            "options": [
+                "Dürüstçe anlat",
+                "Yalan söyle"
+            ],
+            "nextNodes": [
+                27,
+                6
+            ],
+            "actions": [
+                "startDialogue:goblinLider"
+            ]
+            
+        },
+        {
+            "storyText": "",
+            "dialogueText": "Sen... sen gücü ele geçirdin! Bu nasıl mümkün olabilir!?",
+            "options": [
+                "Goblinlere gücünü göster",
+                "Kamptan ayrıl"
+            ],
+            "nextNodes": [
+                38,
+                39
+            ],
+            "actions": [
+                "startDialogue:goblin"
+            ]
+           
+        },
+        {
+            "storyText": "Ellerinden enerji topları fırlatarak gücünü gösteriyorsun. Goblinler korkuyla geri çekiliyor.",
+            "dialogueText": "",
+            "options": [
+                "Goblinlerin hepsini öldür",
+                "Kampı terk et"
+            ],
+            "nextNodes": [
+                40,
+                39
+            ],
+            "actions": [
+                ""
+            ]
+           
+        },
+        {
+            "storyText": "Yeni güçlerinle kamptan ayrılıyorsun. Önünde yeni bir macera seni bekliyor.",
+            "dialogueText": "",
+            "options": [
+                "Son"
+            ],
+            "nextNodes": [],
+            "actions": [
+                "EndPoint:"
+            ]
+            
+        },
+        {
+            "storyText": "Elinden çıkan enerji toplarıyla tüm goblinleri öldürüyorsun. Çaresizce savaşmaya çalışsalar da gücüne denk değillerdi.",
+            "dialogueText": "",
+            "options": [
+                
+                "Kampı terk et"
+            ],
+            "nextNodes": [
+                39
+            ],
+            "actions": [
+                ""
+            ]
+               
+        },
+        {
+            "storyText": "",
+            "dialogueText": "",
+            "options": [
+                
+                ""
+            ],
+            "nextNodes": [
+                14,42
+            ],
+            "actions": [
+                "rastgele:0,4"
+            ]
+               
+        },
+        {
+            "storyText": "Gizlice gitmeye çalışırken fark edildin. Goblinler etrafını sardı ve sana saldırıyor!",
+            "dialogueText": "",
+            "options": [
+                
+                "Saldır"
+            ],
+            "nextNodes": [
+                6
+            ],
+            "actions": [
+                ""
+            ]
+               
+        }
+           
+    ]
+}

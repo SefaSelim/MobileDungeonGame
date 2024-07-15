@@ -51,7 +51,7 @@ MonoBehaviour:
   damage: 9
   maxHP: 50
   currentHP: 50
-  unitAttackRoll: 5
+  unitAttackRoll: 2
   unitAC: 13
   exptobegiven: 0
   weapondamage: 3

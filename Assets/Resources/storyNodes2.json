@@ -1,109 +1,292 @@
 {
     "nodes": [
         {
-            "storyText": "Bugün turanı götten siktin",
-            "dialogueText":"",
-            "options": ["(devam)"],
-            "nextNodes": [1],
-            "actions": [""]
+            "storyText": "Ormanda uzun bir zaman boyunca yürüdükten sonra sonunda haritada gösterilen yere ulaşıyorsun. Mağaranın içerisi oldukça derin ve karanlık gözüküyor.",
+            "dialogueText": "",
+            "options": [
+                "Daha dikkatli ilerle.",
+                "Daha hızlı ilerle."
+            ],
+            "nextNodes": [
+                1,
+                2
+            ],
+            "actions": []
+            
+        },
+        {
+            "storyText": "Dikkatli adımlarla ilerlerken, bir hışırtı duydun. Yolun kenarında devasa bir örümcek ağı var. Kafanı çevirdiğinde iki büyük örümceğin sana doğru yaklaştığını gördün.",
+            "dialogueText": "",
+            "options": [
+                "Saldır!",
+                "Kaçmaya çalış."
+            ],
+            "nextNodes": [
+                3,
+                4
+            ],
+            "actions": []
+            
+        },
+        {
+            "storyText": "Hızla ilerlerken bir anda ayağın bir taşa takıldı ve yere düştün. Tam kalkarken, etrafını saran iki büyük örümcekle karşılaştın.",
+            "dialogueText": "",
+            "options": [
+                "Saldır!",
+                "Savunmaya geç."
+            ],
+            "nextNodes": [
+                3,
+                3
+            ],
+            "actions": []
+            
+        },
+        {
+            "storyText": "Örümceklerle savaştın ve onları yendin. Derin bir nefes aldın ve mağaraya doğru ilerlemeye devam ettin.",
+            "dialogueText": "",
+            "options": [
+                "Yaklaşmaya devam et."
+            ],
+            "nextNodes": [
+                7
+            ],
+            "actions": ["startBattle:spider,spider"]
+            
         },
         {
             "storyText": "",
-            "dialogueText":"",
-            "options": [""],
-            "nextNodes": [],
+            "dialogueText": "",
+            "options": [
+                ""
+            ],
+            "nextNodes": [
+                5,
+                6
+            ],
+            "actions": [
+                "rastgele: 0,50"
+            ]
+           
+        },
+        {
+            "storyText": "Örümceklerden kaçmayı zor da olsa başardın. Gizlenerek ters yönden mağaraya doğru ilerlemeye devam ettin ve mağaranın girişine ulaştın.",
+            "dialogueText": "",
+            "options": [
+                "Mağaraya gir.",
+                "Mağara girişini incele."
+            ],
+            "nextNodes": [
+                7,
+                8
+            ],
+            "actions": []
+           
+        },
+        {
+            "storyText": "Örümceklerden kaçmayı başaramadın. Etrafını sarmaya başladılar.",
+            "dialogueText": "",
+            "options": [
+                "Saldır!",
+                "Savunmaya geç."
+            ],
+            "nextNodes": [
+                3,
+                3
+            ],
+            "actions": []
+          
+        },
+        {
+            "storyText": "Mağaraya girdin. İçerisi karanlık, ürkütücü ve soğuk. Derinliklerden gelen bazı tıkırtılar duyuluyor.",
+            "dialogueText": "",
+            "options": [
+                "İlerlemeye devam et."
+            ],
+            "nextNodes": [
+                9
+            ],
+            "actions": []
+            
+        },
+        {
+            "storyText": "Mağara girişini inceledin ve içeriden gelen sesleri dinledin. Birkaç ürkütücü ses dışında bir şey duyamadın.",
+            "dialogueText": "",
+            "options": [
+                "Mağaraya gir."
+            ],
+            "nextNodes": [
+                7
+            ],
+            "actions": []
+          
+        },
+        {
+            "storyText": "Mağarada ilerlemeye devam ettikçe sesler artmaya başladı. Sola doğru kıvrılan yolun sonunda düşmanlar var gibi hissediyorsun.",
+            "dialogueText": "",
+            "options": [
+                "İlerle ve sola dön."
+            ],
+            "nextNodes": [
+                10
+            ],
+            "actions": []
+            
+        },
+        {
+            "storyText": "Mağaranın derinliklerinde bir grup imp ile karşılaştın. Onlarla savaştın ve hepsini yendin.",
+            "dialogueText": "",
+            "options": [
+                "Daha derine in."
+            ],
+            "nextNodes": [
+                11
+            ],
+            "actions": ["startBattle:imp,imp,imp"]
+         
+        },
+        {
+            "storyText": "Mağaranın derinliklerine inmeye devam ettin. Daha karanlık ve soğuk bir alana geldin. Bir köşede büyükbüyük babanın eski kitabı ve gizemli bir harita buldun.",
+            "dialogueText": "",
+            "options": [
+                "Kitabı ve haritayı al.",
+                "Çevreyi incele."
+            ],
+            "nextNodes": [
+                12,
+                13
+            ],
+            "actions": []
+            
+        },
+        {
+            "storyText": "Kitabı aldın ve okumaya başladın. Kitap, büyük büyükbabana aitti ve köyün fakirleşme sebebinin kilise olduğunu ve köyün eski refahına kavuşması için kâhinin güçlenip kiliseye karşı gelmesi gerektiğini yazıyordu. Bu gücü kazanmak için kilisenin yanındaki kampa gitmen gerektiği de eklenmişti.",
+            "dialogueText": "",
+            "options": [
+                "Haritayı takip et."
+            ],
+            "nextNodes": [
+                14
+            ],
+            "actions": []
+          
+        },
+        {
+            "storyText": "Çevreyi inceledin ve başka bir yol daha buldun. Bu yol seni mağaranın daha derinlerine götürüyor.",
+            "dialogueText": "",
+            "options": [
+                "Kitabı ve haritayı al."
+            ],
+            "nextNodes": [
+                12
+            ],
+            "actions": []
+            
+        },
+        {
+            "storyText": "Haritayı takip ederek mağaranın daha da derinliklerine indin. Bir odada büyük bir sandık buldun. Ancak sandığı koruyan bir boss imp var.",
+            "dialogueText": "",
+            "options": [
+                "Boss imp ile savaş.",
+                "Boss imp ile konuşmayı dene."
+            ],
+            "nextNodes": [
+                15,
+                16
+            ],
+            "actions": []
+        
+        },
+        {
+            "storyText": "Boss imp ile savaştın ve onu yendin. Savaştan sonra sandığın yanına gidip sandığı açtın. Sandığı açtığında içinde eski bir zırh buldun.",
+            "dialogueText": "",
+            "options": [
+                "Zırhı incele."
+            ],
+            "nextNodes": [
+                18
+            ],
+            "actions": [
+                "startBattle:impboss"
+            ]
+        
+        },
+        {
+            "storyText": "Boss imp ile konuşmayı denedin, ama seni dinlemeyip saldırdı. Savaşmak zorundasın.",
+            "dialogueText": "",
+            "options": [
+                "Saldır!",
+                "Savunmaya geç!"
+            ],
+            "nextNodes": [
+                15,
+                15
+            ],
+            "actions": []
+          
+        },
+        {
+            "storyText": "Mektubu okuduğunda, köyün eski refahına kavuşması için yapılması gerekenleri anlatan detaylı bir plan buldun.",
+            "dialogueText": "",
+            "options": [
+                "Planı inceleyip detayları öğren."
+            ],
+            "nextNodes": [
+                20
+            ],
+            "actions": []
+        
+        },
+        {
+            "storyText": "Zırhı incelediğinde içinde bir mektup olduğunu gördün. Zırhın özel bir malzemeden yapıldığını ve eski bir büyüyle korunduğunu fark ettin.",
+            "dialogueText": "",
+            "options": [
+                "Mektubu oku."
+            ],
+            "nextNodes": [
+                17
+            ],
+            "actions": []
+        
+        },
+        {
+            "storyText": "Planı uygulamak için hemen yola koyuldun ve köyün eski refahına kavuşması için gereken ilk adımı attın.",
+            "dialogueText": "",
+            "options": [
+                "Yola devam et."
+            ],
+            "nextNodes": [
+                22
+            ],
+            "actions": [
+                "EndPoint:"
+            ]
+            
+        },
+        {
+            "storyText": "Mektupta kiliseye dikkat etmen gerektiği, kamptaki gücü bu zırhı kullanarak kendi başına ele geçirmen gerektiği yazıyor. ",
+            "dialogueText": "",
+            "options": [
+                "Zırhı giyip mağaradan ayrıl."
+            ],
+            "nextNodes": [
+                21
+            ],
+            "actions": []
+          
+        },
+        {
+            "storyText": "Zırhı giydin ve kendini bir büyüyle kaplı ve daha güçlü hissettin. Geldiğin yolu takip ederek mağaradan ayrıldın.",
+            "dialogueText": "",
+            "options": [
+                "Mağaradan çık."
+            ],
+            "nextNodes": [
+                21,
+                24
+            ],
             "actions": ["EndPoint:"]
-        },
-        {
-            "storyText": "",
-            "dialogueText":"Uh! merhaba hoşgeldin",
-            "options": ["merhaba"],
-            "nextNodes": [3],
-            "actions": ["startDialogue:köylü"]
-        },
-        {
-            "storyText": "",
-            "dialogueText":"...   Adın nedir?",
-            "options": ["Ben, Kai","Tanımadığım birine ismimi söylememeyi tercih ederim"],
-            "nextNodes": [4,5],
-            "actions": ["startDialogue:köylü"]
-        },
-        {
-            "storyText": "",
-            "dialogueText":"Aaa! Demek Kai sensin. Adını çok duydum. Köy halkı sana minnettar",
-            "options": ["Teşekkürler fakat ben seni hiç tanıyamadım"],
-            "nextNodes": [6],
-            "actions": ["startDialogue:köylü"]
-        },
-        {
-            "storyText": "",
-            "dialogueText":"Demek öyle... Tamam söylemesen de olur. Ne için geldin?",
-            "options": ["Biraz gergin görünüyorsun"],
-            "nextNodes": [8],
-            "actions": ["startDialogue:köylü"]
-        },
-        {
-            "storyText": "",
-            "dialogueText":"Iıı... Olabilir sonuçta bu köyde bir sürü insan var.",
-            "options": ["Sen hangi evde oturuyorsun","Biraz gergin görünüyorsun"],
-            "nextNodes": [7,8],
-            "actions": ["startDialogue:köylü"]
-        },
-        {
-            "storyText": "",
-            "dialogueText":"Iı... Ş şu evde",
-            "options": ["İyi de o ev Kıro amcanın evi"],
-            "nextNodes": [9],
-            "actions": ["startDialogue:köylü"]
-        },
-        {
-            "storyText": "",
-            "dialogueText":"Ö- Önemli bir şey yok. Konuşmasak iyi olur",
-            "options": ["Bir şey var, eminim. Söyle ne oldu"],
-            "nextNodes": [9],
-            "actions": ["startDialogue:köylü"]
-        },
-        {
-            "storyText": "Yabancı hızlıca koşmaya başladı",
-            "dialogueText":"",
-            "options": ["--Arkasından koş--"],
-            "nextNodes": [10],
-            "actions": [""]
-        },
-        {
-            "storyText": "Yakalayıp ayağına çelme taktın ve onu düşürdün",
-            "dialogueText":"",
-            "options": ["SÖYLE NE OLDU"],
-            "nextNodes": [11],
-            "actions": [""]
-        },
-        {
-            "storyText": "",
-            "dialogueText":"Hu huh huh! Beni deşifre etmene izin vermeyeceğim.(Yabancı kılıç çekti)",
-            "options": ["--Gerile--"],
-            "nextNodes": [12],
-            "actions": ["startDialogue:köylü"]
-        },
-        {
-            "storyText": "",
-            "dialogueText":"Şarabımı kafatasında içeceğim",
-            "options": ["--Kılıcını çek--(Savaşa başlar)","'Dur, Kılıcına Davranma !'"],
-            "nextNodes": [13,14],
-            "actions": ["startDialogue:köylü"]
-        },
-        {
-            "storyText": "",
-            "dialogueText":"",
-            "options": [""],
-            "nextNodes": [],
-            "actions": ["startBattle:"]
-        },
-        { 
-            "storyText": "",
-            "dialogueText":"Selam Bebek ben geldim",
-            "options": [""],
-            "nextNodes": [],
-            "actions": ["startDialogue:knight"]
+           
         }
     ]
 }
