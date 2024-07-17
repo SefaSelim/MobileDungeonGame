@@ -57,9 +57,7 @@
         {
             "storyText": "",
             "dialogueText": "",
-            "options": [
-                ""
-            ],
+            "options": [],
             "nextNodes": [
                 5,
                 6

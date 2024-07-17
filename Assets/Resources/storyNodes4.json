@@ -638,10 +638,7 @@
         {
             "storyText": "",
             "dialogueText": "",
-            "options": [
-                
-                ""
-            ],
+            "options": [],
             "nextNodes": [
                 14,42
             ],

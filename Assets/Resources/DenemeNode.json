@@ -1,0 +1,68 @@
+{
+    "nodes": [
+        {
+            "storyText": "bu 0. node",
+            "dialogueText": "",
+            "options": ["selam","sada","sosis rastgele"],
+            "nextNodes": [1,2,3],
+            "actions": []
+        },
+        {
+            "storyText": "bu 1",
+            "dialogueText": "",
+            "options": ["tamam","kk",""],
+            "nextNodes": [4,5],
+            "actions": []
+        },
+        {
+            "storyText": "bu 2",
+            "dialogueText": "",
+            "options": ["peki","buna basma","buna da basma"],
+            "nextNodes": [6,7,8],
+            "actions": []
+        },
+        {
+            "storyText": "",
+            "dialogueText": "",
+            "options": [],
+            "nextNodes": [7,8],
+            "actions": ["rastgele:0,5"]
+        },
+        {
+            "storyText": "bu 4",
+            "dialogueText": "",
+            "options": ["bitti","",""],
+            "nextNodes": [12],
+            "actions": []
+        },
+        {
+            "storyText": "bu 5",
+            "dialogueText": "",
+            "options": ["bitiyo","valla bitiyo",""],
+            "nextNodes": [13,15],
+            "actions": []
+        },
+        {
+            "storyText": "bu da 6",
+            "dialogueText": "",
+            "options": [],
+            "nextNodes": [],
+            "actions": []
+        },
+        {
+            "storyText": "7 1. ihtimal",
+            "dialogueText": "",
+            "options": ["valla","işte","öyle"],
+            "nextNodes": [23,24,23],
+            "actions": []
+        },
+        {
+            "storyText": "8 2, ihtimal",
+            "dialogueText": "",
+            "options": ["a","böyle",""],
+            "nextNodes": [32,32],
+            "actions": []
+        }
+
+    ]
+}

@@ -125,16 +125,15 @@ public class StoryManagementScript : MonoBehaviour
             // Seçenek düğmelerini devre dışı bırak
             foreach (var button in optionButtons)
             {
-                button.gameObject.SetActive(false);
+                // button.gameObject.SetActive(false);
             }
             return;
         }
-
         for (int i = 0; i < optionButtons.Length; i++)
         {
-            if (i < node.options.Length)
+            if (i < node.options.Length )
             {
-                optionButtons[i].gameObject.SetActive(true);
+                // optionButtons[i].gameObject.SetActive(true);
                 optionButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = node.options[i];
                 int index = i; // Closure probleminden kaçınmak için
                 optionButtons[i].onClick.RemoveAllListeners();
@@ -142,8 +141,19 @@ public class StoryManagementScript : MonoBehaviour
             }
             else
             {
-                optionButtons[i].gameObject.SetActive(false);
+                // optionButtons[i].gameObject.SetActive(false);
             }
+        }
+        for (int a = 0; a < optionButtons.Length; a++)
+        {
+            if (optionButtons[a].GetComponentInChildren<TextMeshProUGUI>().text=="")
+            {
+                optionButtons[a].gameObject.SetActive(false);
+            }
+            else
+            {
+                optionButtons[a].gameObject.SetActive(true);
+            }      
         }
 
         StartCoroutine(EnableOptionsAfterDelay(0.5f)); // Seçenekleri 0.5 saniye sonra yeniden etkinleştir

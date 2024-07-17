@@ -5,7 +5,8 @@
             "dialogueText": "",
             "options": [
                 "'Hey dede !'",
-                "Hiçbir şey yapma"
+                "Hiçbir şey yapma",
+                ""
             ],
             "nextNodes": [
                 1,
@@ -18,7 +19,8 @@
             "dialogueText": "Hah ha evlat ne kadar çabuk dönmüşsün, dediğim mantarları topladın mı ?",
             "options": [
                 "Evet dede işte burada",
-                "Hayır dede hiç mantar bulamadım ben de geri döndüm (+3 Mantar)"
+                "Hayır dede hiç mantar bulamadım ben de geri döndüm (+3 Mantar)",
+                ""
             ],
             "nextNodes": [
                 3,
@@ -32,7 +34,7 @@
             "storyText": "Dedene seslenmedin ve senden habersiz yoluna devam etti, sanırım kahvehaneye gidiyor.",
             "dialogueText": "",
             "options": [
-                "Eve doğru yürümeye devam et"
+                "Eve doğru yürümeye devam et","",""
             ],
             "nextNodes": [
                 7
@@ -44,7 +46,8 @@
             "dialogueText": "Aferin sana evlat! Al sana biraz para, bakkaldan kendine bir şeyler alırsın.",
             "options": [
                 "'Teşekkürler Dede ! Bu gerçekten çok işime yarayacak !'   (+10 gold)",
-                "Daha fazlasını iste (verme ihtimali %40)"
+                "Daha fazlasını iste (verme ihtimali %40)",
+                ""
             ],
             "nextNodes": [
                 4,
@@ -58,7 +61,7 @@
             "storyText": "",
             "dialogueText": "Haydi evlat, artık eve doğru git, hava kararıyor ben de yakında gelirim kahveye uğramam gerekiyor.",
             "options": [
-                "Tamam dede, eve gidiyorum"
+                "Tamam dede, eve gidiyorum","",""
             ],
             "nextNodes": [
                 8
@@ -68,11 +71,9 @@
             ]
         },
         {
-            "storyText": "",
+            "storyText": "5",
             "dialogueText": "",
-            "options": [
-                "Eve doğru yürümeye devam et."
-            ],
+            "options": [],
             "nextNodes": [
                 6,
                 7
@@ -85,7 +86,7 @@
             "storyText": "",
             "dialogueText": "Al bakalım evlat sana 20 altın, Ancak şansını fazla zorlama haydi eve artık.",
             "options": [
-                "Tamam dede, hemen dönüyorum. (+20 altın)"
+                "Tamam dede, hemen dönüyorum. (+20 altın)","",""
             ],
             "nextNodes": [
                 8
@@ -98,7 +99,7 @@
             "storyText": "",
             "dialogueText": "Hadi lan oradan yallah doğru eve, elinizdekilerle yetinmeyi bir öğrenemediniz.",
             "options": [
-                "Tamam dede dönüyorum off !"
+                "Tamam dede dönüyorum off !","",""
             ],
             "nextNodes": [
                 8
@@ -112,7 +113,8 @@
             "dialogueText": "",
             "options": [
                 "Müdahale Et",
-                "Görmezden Gel"
+                "Görmezden Gel",
+                ""
             ],
             "nextNodes": [
                 10,
@@ -153,7 +155,7 @@
             "storyText": "",
             "dialogueText": "Tekrar teşekkür ederim Kai, bunu asla unutmayacağım ve herkesin yaptığın bu iyiliği bilmesini sağlayacağım.",
             "options": [
-                "Eve doğru devam et"
+                "Eve doğru devam et","",""
             ],
             "nextNodes": [
                 18
@@ -166,7 +168,7 @@
             "storyText": "",
             "dialogueText": "Tekrar teşekkür ederim, O kolyeye iyi bak tamam mı o benim için çok değerli... -- Yürüyerek uzaklaşır --",
             "options": [
-                "Eve doğru devam et"
+                "Eve doğru devam et","",""
             ],
             "nextNodes": [
                 18
@@ -180,7 +182,7 @@
             "dialogueText": "Şşşey, Tam olarak ne istiyorsun, çok bir şeyim yok gerçekten",
             "options": [
                 "Neyin varsa ver (+20 Gold , +Evsiz Kadının Kolyesi)",
-                "Aslında sahip olduğun güzel şeyleri görebiliyorum -- Kadına doğru yaklaş -- (%5 Şans)"
+                "Aslında sahip olduğun güzel şeyleri görebiliyorum -- Kadına doğru yaklaş -- (%5 Şans)",""
             ],
             "nextNodes": [
                 14,
@@ -194,7 +196,7 @@
             "storyText": "",
             "dialogueText": "Tamam Al. Her şeyi al. -- Kadın korku dolu gözleriyle kaçıp uzaklaşır --",
             "options": [
-                "Eve doğru devam et"
+                "Eve doğru devam et","",""
             ],
             "nextNodes": [
                 18
@@ -219,7 +221,7 @@
             "storyText": "Kadına istemeyeceği şeyler yaşattın ve ardından işin bittiği anda kadın kaçarak uzaklaştı",
             "dialogueText": "",
             "options": [
-                "Eve doğru devam et (+1 Çeviklik / -1000 aura)"
+                "Eve doğru devam et (+1 Çeviklik / -1000 aura)","",""
             ],
             "nextNodes": [
                 18
@@ -230,7 +232,7 @@
             "storyText": "Kadına yaptığın hamle başarısız oldu ve kadın ani bir hareketle kaçarak uzaklaştı, hiçbir şey elde edemedin",
             "dialogueText": "",
             "options": [
-                "Tüh! Eve doğru gideyim artık"
+                "Tüh! Eve doğru gideyim artık","",""
             ],
             "nextNodes": [
                 18
@@ -241,7 +243,7 @@
             "storyText": "Bir süre daha eve yürümeye devam ettikten sonra sonunda eve vardın. Evine bakıp bir iç çekiyorsun -- evim evim, güzel evim --",
             "dialogueText": "",
             "options": [
-                "Eve gir"
+                "Eve gir","",""
             ],
             "nextNodes": [
                 19
@@ -252,7 +254,7 @@
             "storyText": "Eve girdiğinde annenin yemek hazırladığını görüyorsun. Geldiğini görüp -- Hoşgeldin Kai. Yemek birazdan hazır olacak. Deden nerede kaldı?-- diye soruyor.",
             "dialogueText": "",
             "options": [
-                "Onu az önce gördüm. Sanırım kahveye gidiyordu."
+                "Onu az önce gördüm. Sanırım kahveye gidiyordu.","",""
             ],
             "nextNodes": [
                 20
@@ -264,7 +266,7 @@
             "dialogueText": "Ah şu yaşlıların kahve sevdası...- Muhtemelen yine zamanında gelmeyecektir. Biz en iyisi soğutmadan yemeye başlayalım.",
             "options": [
                 "--Tamam hadi yiyelim!--",
-                "--Ben pek aç hissetmiyorum--"
+                "--Ben pek aç hissetmiyorum--",""
             ],
             "nextNodes": [
                 21,
@@ -278,7 +280,7 @@
             "storyText": "Ailenle birlikte yemeğini yedin ve dinlenmek için odana geçip uzandın. ",
             "dialogueText": "",
             "options": [
-                "..."
+                "...","",""
             ],
             "nextNodes": [
                 23
@@ -289,7 +291,7 @@
             "storyText": "",
             "dialogueText": "Peki oğlum nasıl istersen.",
             "options": [
-                "Dinlenmek için odana geç"
+                "Dinlenmek için odana geç","",""
             ],
             "nextNodes": [
                 23
@@ -302,7 +304,7 @@
             "storyText": "Yatağında uzanmış pencereden gökyüzünü izlerken, parlak bir yıldız takımı dikkatini çekti.",
             "dialogueText": "",
             "options": [
-                "Yıldızlara dikkatle bak"
+                "Yıldızlara dikkatle bak","",""
             ],
             "nextNodes": [
                 24
@@ -314,7 +316,7 @@
             "dialogueText": "",
             "options": [
                 "İncelemeye devam et",
-                "Koşup annene seslen"
+                "Koşup annene seslen",""
             ],
             "nextNodes": [
                 25,
@@ -326,7 +328,7 @@
             "storyText": "Gökyüzüne bakmaya devam ettin ancak bir değişim olmadı. Gökyüzünde hala parlak bir şekilde --KAI-- yazıyor.",
             "dialogueText": "",
             "options": [
-                "Koşup annene seslen"
+                "Koşup annene seslen","",""
             ],
             "nextNodes": [
                 26
@@ -337,7 +339,7 @@
             "storyText": "--ANNNNEEEE!!-- diye koşarak içeri girdiğinde annen,baban ve deden yemek yiyorlardı.",
             "dialogueText": "",
             "options": [
-                "Hemen gökyüzüne bakın hemen!!!"
+                "Hemen gökyüzüne bakın hemen!!!","",""
             ],
             "nextNodes": [
                 27
@@ -348,7 +350,7 @@
             "storyText": "Başta anlam veremeseler de gökyüzüne baktılar. Hepsinin şaşkınlığı yüzlerinden okunuyordu.",
             "dialogueText": "",
             "options": [
-                "Gördünüz mü? Gökyüzünde ismim yazıyor"
+                "Gördünüz mü? Gökyüzünde ismim yazıyor","",""
             ],
             "nextNodes": [
                 28
@@ -359,7 +361,7 @@
             "storyText": "",
             "dialogueText": "--Babana bakarak-- Sanırım Kai evladımın öğrenme zamanı geldi ha? Ne diyorsun? ",
             "options": [
-                "..."
+                "...","",""
             ],
             "nextNodes": [
                 29
@@ -372,7 +374,7 @@
             "storyText": "",
             "dialogueText": "--Baban derin bir nefes alarak konuşmaya başladı.-- Evet, sanırım öyle. Kai, artık sana bu ailenin büyük sırrını anlatmanın zamanı geldi.",
             "options": [
-                "Sır ne baba?"
+                "Sır ne baba?","",""
             ],
             "nextNodes": [
                 30
@@ -385,7 +387,7 @@
             "storyText": "",
             "dialogueText": "Ailemizin kökleri eski ve gizemli bir geçmişe dayanıyor. Sen ilk doğduğunda da gökyüzünde yıldızlarla ismin yazılmıştı.",
             "options": [
-                "İlk doğduğumda da mı yazılmıştı?"
+                "İlk doğduğumda da mı yazılmıştı?","",""
             ],
             "nextNodes": [
                 31
@@ -398,7 +400,7 @@
             "storyText": "",
             "dialogueText": "Evet. Senin yıldızlarda isminin yazması, büyük bir kahraman olacağını gösteriyor. Sana bir görev düşüyor Kai, bu köyü eski günlerine kavuşturacak olan kahraman sensin.",
             "options": [
-                "Köyün eski günleri derken neyi kastediyorsun?"
+                "Köyün eski günleri derken neyi kastediyorsun?","",""
             ],
             "nextNodes": [
                 32
@@ -412,7 +414,7 @@
             "dialogueText": "--Deden lafa girer.-- Kai evladım, benim gençliğimde herkes karnını rahatlıkla doyurur, her gece şarap festivalleri olurdu. Son 50 yıldır millet yiyecek bulamıyor. Herkes eşkiyalığa başladı...",
             "options": [
                 "Peki fakirleşmemize sebep olan şey nedir?",
-                "İyi ama benim görevim nedir?"
+                "İyi ama benim görevim nedir?",""
             ],
             "nextNodes": [
                 33,
@@ -426,7 +428,7 @@
             "storyText": "",
             "dialogueText": "Bunu maalesef ben de bilmiyorum evladım. Ama bunu sen öğrecenskin. Öncelikle büyük büyük dedenin eski günlüğünü bulmalısın.",
             "options": [
-                "Sonra?"
+                "Sonra?","",""
             ],
             "nextNodes": [
                 34
@@ -439,7 +441,7 @@
             "storyText": "",
             "dialogueText": " O günlüğün içinde sana lazım olan bilgiler mevcut olmalı. Günlük, ormanın derinliklerinde bir mağarada saklı. Al bu haritayı, yarın yola çıkmalısın.",
             "options": [
-                "Haritayı al."
+                "Haritayı al.","",""
             ],
             "nextNodes": [
                 35
@@ -453,7 +455,7 @@
             "dialogueText": "Şimdiden başarılar evladım. Sana öğrettiğim kılıç tekniklerini sakın unutma. Karşına neler çıkacağını bilemeyiz, kahraman olacak olan sensin. Bu yolda yalnız yürümelisin ama bir desteğe ihtiyaç duyduğunda burada olduğumuzu sakın unutma.",
             "options": [
                 "Ailene her şey için teşekkür et ve uyumaya git.",
-                "--Ne yani yalnız mı gideceğim?--"
+                "--Ne yani yalnız mı gideceğim?--",""
             ],
             "nextNodes": [
                 37,
@@ -467,7 +469,7 @@
             "storyText": "",
             "dialogueText": "Oğlum, yıllar önce bu hikaye kahramanın tek olduğu şeklinde aktarıldı. Gökyüzünde isminin yazmasının elbette bir sebebi var. Merak etme, eminim ki başaracaksın.",
             "options": [
-                "Ailene her şey için teşekkür et ve uyumaya git."
+                "Ailene her şey için teşekkür et ve uyumaya git.","",""
             ],
             "nextNodes": [
                 37
@@ -480,7 +482,7 @@
             "storyText": "Gece geç saatlere kadar heyecandan uyuyamıyorsun. Kafanda olup bitenler dönüp duruyor. Sana bundan daha önce bahsedilmemişti bile. En sonunda derin bir nefes alıp uykuya dalmaya çalışıyorsun.",
             "dialogueText": "",
             "options": [
-                "..."
+                "...","",""
             ],
             "nextNodes": [
                 38
@@ -494,7 +496,7 @@
             "dialogueText": "",
             "options": [
                 "Macerana başlamak için evden çık",
-                "Ailenin uyanmasını bekle"
+                "Ailenin uyanmasını bekle",""
             ],
             "nextNodes": [
                 42,
@@ -509,7 +511,7 @@
             "dialogueText": "",
             "options": [
                 "Tamam anne",
-                "Üzgünüm anne ama gitmem gerek"
+                "Üzgünüm anne ama gitmem gerek",""
             ],
             "nextNodes": [
                 41,
@@ -523,7 +525,7 @@
             "storyText": "Ailenle son kez vedalaşıp evden dışarıya çıkıyorsun. Şimdi mağarayı bulman gerek.",
             "dialogueText": "",
             "options": [
-                "..."
+                "...","",""
             ],
             "nextNodes": [
                 43
@@ -536,7 +538,7 @@
             "storyText": "Ailenle birlikte kahvaltı yaptıktan sonra deden sana sandığından bir kılıç veriyor. --Gençliğimde alıp kullanmadığım bu kılıç eminim ki maceranda çok işe yarayacaktır evladım.--",
             "dialogueText": "",
             "options": [
-                "Teşekkürler dede"
+                "Teşekkürler dede","",""
             ],
             "nextNodes": [
                 40
@@ -549,7 +551,7 @@
             "storyText": "Ailenle vedalaşmadan dışarıya çıkıyorsun. İçinde buruk bir his var. Şimdi mağarayı bulman gerek.",
             "dialogueText": "",
             "options": [
-                "..."
+                "...","",""
             ],
             "nextNodes": [
                 43
