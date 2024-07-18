@@ -23,7 +23,7 @@
             "dialogueText": "",
             "options": [
                 "Dinlemeye devam et",
-                "Kendini göster"
+                "Kendini göster",""
             ],
             "nextNodes": [
                 4,
@@ -39,7 +39,7 @@
             "dialogueText": "",
             "options": [
                 "Barışçıl yaklaş",
-                "Savaşa hazırlan"
+                "Savaşa hazırlan",""
             ],
             "nextNodes": [
                 5,
@@ -55,7 +55,7 @@
             "dialogueText": "",
             "options": [
                 "Gizlice yaklaş",
-                "Doğrudan yaklaş"
+                "Doğrudan yaklaş",""
             ],
             "nextNodes": [
                 1,
@@ -71,7 +71,7 @@
             "dialogueText": "Şef, kuyudan gelen güç gittikçe artıyor. Ne yapacağız?",
             "options": [
                 "Dinlemeye devam et",
-                "Kendini göster"
+                "Kendini göster",""
             ],
             "nextNodes": [
                 7,
@@ -87,7 +87,7 @@
             "dialogueText": "Dur! Kim olduğunu söyle!",
             "options": [
                 "Barışçıl olduğunu söyle",
-                "Saldır"
+                "Saldır",""
             ],
             "nextNodes": [
                 8,
@@ -102,7 +102,7 @@
             "storyText": "Goblinlere saldırıyorsun.",
             "dialogueText": "",
             "options": [
-                "Savaş"
+                "Savaş","",""
             ],
             "nextNodes": [
                 9
@@ -117,7 +117,7 @@
             "dialogueText": "Sessiz olun! Birisi bizi dinliyor olabilir. Bunu gece toplantımızda tekrar konuşuruz.",
             "options": [
                 "Gizlice kuyu'ya doğru ilerle",
-                "Kendini göster"
+                "Kendini göster",""
             ],
             "nextNodes": [
                 11,
@@ -133,7 +133,7 @@
             "dialogueText": "Pekala, neden buradasın?",
             "options": [
                 "Kuyudaki güç hakkında soru sor",
-                "Yardım teklif et"
+                "Yardım teklif et",""
             ],
             "nextNodes": [
                 12,
@@ -148,7 +148,7 @@
             "storyText": "Goblinlerle savaşıyorsun. Zorlu bir mücadele sonunda onları alt ediyorsun. Geri kalan goblinler kampın kuytularına kaçıyor",
             "dialogueText": "",
             "options": [
-                "Kuyu'ya doğru ilerle"
+                "Kuyu'ya doğru ilerle","",""
             ],
             "nextNodes": [
                 14
@@ -163,7 +163,7 @@
             "dialogueText": "",
             "options": [
                 "Gizlice yaklaş",
-                "Doğrudan yaklaş"
+                "Doğrudan yaklaş",""
             ],
             "nextNodes": [
                 1,
@@ -179,7 +179,7 @@
             "dialogueText": "",
             "options": [
                 "Kuyuya ulaşmaya çalış %40",
-                "Geri dön ve başka bir yol dene"
+                "Geri dön ve başka bir yol dene",""
             ],
             "nextNodes": [
                 41,
@@ -195,7 +195,7 @@
             "dialogueText": "Kuyudaki güç bizim kontrolümüzde. Senin gibi yabancıların burada işi yok!",
             "options": [
                 "Gücü paylaşmayı teklif et",
-                "Gücün tehlikeli olduğunu söyle"
+                "Gücün tehlikeli olduğunu söyle",""
             ],
             "nextNodes": [
                 15,
@@ -210,7 +210,7 @@
             "storyText": "",
             "dialogueText": "Yardıma mı ihtiyacımız varmış? Ne cüretle!",
             "options": [
-                "Özür dile ve gücü sor"
+                "Özür dile ve gücü sor","",""
             ],
             "nextNodes": [
                 12
@@ -225,7 +225,7 @@
             "dialogueText": "",
             "options": [
                 "Kuyuya in",
-                "Etrafı incele"
+                "Etrafı incele",""
             ],
             "nextNodes": [
                 17,
@@ -241,7 +241,7 @@
             "dialogueText": "Gücü paylaşmak mı? Neden seninle paylaşalım ki?",
             "options": [
                 "Faydalarını anlat",
-                "Tehlikeyi açıkla"
+                "Tehlikeyi açıkla",""
             ],
             "nextNodes": [
                 19,
@@ -257,7 +257,7 @@
             "dialogueText": "Tehlikeli mi? Ne biliyorsun sen bu güç hakkında?",
             "options": [
                 "Bilgini paylaş",
-                "Blöf yap"
+                "Blöf yap",""
             ],
             "nextNodes": [
                 20,
@@ -273,7 +273,7 @@
             "dialogueText": "",
             "options": [
                 "Gücü kabul et",
-                "Direnmeye çalış"
+                "Direnmeye çalış",""
             ],
             "nextNodes": [
                 22,
@@ -289,7 +289,7 @@
             "dialogueText": "",
             "options": [
                 "Yazıtları oku",
-                "Kuyuya in"
+                "Kuyuya in",""
             ],
             "nextNodes": [
                 24,
@@ -305,7 +305,7 @@
             "dialogueText": "Hmm, ilginç. Belki de seninle iş birliği yapabiliriz. Güç karşılığında kilisenin altınlarının hepsini istiyoruz!",
             "options": [
                 "Anlaşmayı kabul et",
-                "Daha fazla bilgi iste"
+                "Daha fazla bilgi iste",""
             ],
             "nextNodes": [
                 25,
@@ -321,7 +321,7 @@
             "dialogueText": "Bu gücün tehlikeleri hakkında bildiklerini anlat. Eğer doğruysa, belki bir anlaşma yapabiliriz.",
             "options": [
                 "Dürüstçe anlat",
-                "Yalan söyle"
+                "Yalan söyle",""
             ],
             "nextNodes": [
                 27,
@@ -337,7 +337,7 @@
             "dialogueText": "Blöf yaptığını hissedebiliyorum. Bizi kandırmaya çalışıyorsun!",
             "options": [
                 "Özür dile",
-                "Kaç"
+                "Kaç",""
             ],
             "nextNodes": [
                 29,
@@ -352,7 +352,7 @@
             "storyText": "Güç bedenini dolduruyor. Kendini daha güçlü ve bilge hissediyorsun.",
             "dialogueText": "",
             "options": [
-                "Kuyudan çık"
+                "Kuyudan çık","",""
             ],
             "nextNodes": [
                 30
@@ -367,7 +367,7 @@
             "dialogueText": "",
             "options": [
                 "Son bir çaba göster",
-                "Teslim ol"
+                "Teslim ol",""
             ],
             "nextNodes": [
                 31,
@@ -382,7 +382,7 @@
             "storyText": "Yazıtları okuyorsun. Gücün tehlikeli olduğunu ve dikkatli kullanılması gerektiğini öğreniyorsun.",
             "dialogueText": "",
             "options": [
-                "Kuyuya in"
+                "Kuyuya in","",""
             ],
             "nextNodes": [
                 17
@@ -397,7 +397,7 @@
             "dialogueText": "Anlaştık. Kilisenin altınları karşılığında gücü kullanabilirsin.",
             "options": [
                 "Kabul et",
-                "Reddet (Sana saldıracaklar)"
+                "Reddet (Sana saldıracaklar)",""
             ],
             "nextNodes": [
                 33,
@@ -413,7 +413,7 @@
             "dialogueText": "Ne bilmek istiyorsun? Sorularını dikkatlice seç.",
             "options": [
                 "Gücün kaynağı nedir?",
-                "Nasıl kontrol ediliyor?"
+                "Nasıl kontrol ediliyor?",""
             ],
             "nextNodes": [
                 34,
@@ -429,7 +429,7 @@
             "dialogueText": "Anlattıkların doğru gibi görünüyor. Belki de birlikte çalışabiliriz.",
             "options": [
                 "İş birliği teklif et",
-                "Gücü yalnız ele geçirmeye çalışmak için onlara saldır"
+                "Gücü yalnız ele geçirmeye çalışmak için onlara saldır",""
             ],
             "nextNodes": [
                 25,
@@ -445,7 +445,7 @@
             "dialogueText": "Yalancı! Gücün her sırrını bilmiyor olsak da yalanını anlamayacak kadar saf değiliz. Bizi kandırmaya çalışıyorsun. Cezanı çekeceksin!",
             "options": [
                 "Savaş",
-                "Kaç"
+                "Kaç",""
             ],
             "nextNodes": [
                 6,
@@ -461,7 +461,7 @@
             "dialogueText": "Sana son bir şans veriyorum. Dürüst ol yoksa kelleni uçururum!",
             "options": [
                 "Teşekkür et",
-                "Gücü sor"
+                "Gücü sor",""
             ],
             "nextNodes": [
                 36,
@@ -494,7 +494,7 @@
             "storyText": "Son bir çabayla güce direniyorsun ve kontrolü ele geçirmeyi başarıyorsun.",
             "dialogueText": "",
             "options": [
-                "Kuyudan çık"
+                "Kuyudan çık","",""
             ],
             "nextNodes": [
                 30
@@ -508,7 +508,7 @@
             "storyText": "",
             "dialogueText": "Bu yazıtlar doğruysa, hepimiz büyük tehlike altındayız!",
             "options": [
-                "Gücü kontrol etmeyi dene"
+                "Gücü kontrol etmeyi dene","",""
             ],
             "nextNodes": [
                 18
@@ -522,7 +522,7 @@
             "storyText": "Goblinlerle anlaşmaya varıyorsun. Gücü almana izin veriyorlar. Karşılığında onlara kilisenin altınlarını getireceğine inanıyorlar.",
             "dialogueText": "",
             "options": [
-                "Kuyu'ya doğru ilerle"
+                "Kuyu'ya doğru ilerle","",""
             ],
             "nextNodes": [
                 14
@@ -536,7 +536,7 @@
             "storyText": "",
             "dialogueText": "Gücün kaynağı çok eski. Efsanelere göre, bu kuyu antik bir medeniyetin kalıntısı.",
             "options": [
-                "Nasıl kontrol ediliyor?"
+                "Nasıl kontrol ediliyor?","",""
             ],
             "nextNodes": [
                 35
@@ -550,7 +550,7 @@
             "storyText": "",
             "dialogueText": "Gücü kontrol etmek zor. Şimdiye kadar sadece küçük miktarlarını kullanmayı başardık.",
             "options": [
-                "Birlikte çalışmayı öner"
+                "Birlikte çalışmayı öner","",""
             ],
             "nextNodes": [
                 19
@@ -565,7 +565,7 @@
             "dialogueText": "Teşekkür kabul edildi. Şimdi söyle bakalım, neden buradasın?",
             "options": [
                 "Dürüstçe anlat",
-                "Yalan söyle"
+                "Yalan söyle",""
             ],
             "nextNodes": [
                 27,
@@ -581,7 +581,7 @@
             "dialogueText": "Sen... sen gücü ele geçirdin! Bu nasıl mümkün olabilir!?",
             "options": [
                 "Goblinlere gücünü göster",
-                "Kamptan ayrıl"
+                "Kamptan ayrıl",""
             ],
             "nextNodes": [
                 38,
@@ -597,7 +597,7 @@
             "dialogueText": "",
             "options": [
                 "Goblinlerin hepsini öldür",
-                "Kampı terk et"
+                "Kampı terk et",""
             ],
             "nextNodes": [
                 40,
@@ -612,7 +612,7 @@
             "storyText": "Yeni güçlerinle kamptan ayrılıyorsun. Önünde yeni bir macera seni bekliyor.",
             "dialogueText": "",
             "options": [
-                "Son"
+                "Son","",""
             ],
             "nextNodes": [],
             "actions": [
@@ -625,7 +625,7 @@
             "dialogueText": "",
             "options": [
                 
-                "Kampı terk et"
+                "Kampı terk et","",""
             ],
             "nextNodes": [
                 39
@@ -652,7 +652,7 @@
             "dialogueText": "",
             "options": [
                 
-                "Saldır"
+                "Saldır","",""
             ],
             "nextNodes": [
                 6

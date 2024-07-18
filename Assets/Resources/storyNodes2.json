@@ -5,7 +5,7 @@
             "dialogueText": "",
             "options": [
                 "Daha dikkatli ilerle.",
-                "Daha hızlı ilerle."
+                "Daha hızlı ilerle.",""
             ],
             "nextNodes": [
                 1,
@@ -19,7 +19,7 @@
             "dialogueText": "",
             "options": [
                 "Saldır!",
-                "Kaçmaya çalış."
+                "Kaçmaya çalış.",""
             ],
             "nextNodes": [
                 3,
@@ -33,7 +33,7 @@
             "dialogueText": "",
             "options": [
                 "Saldır!",
-                "Savunmaya geç."
+                "Savunmaya geç.",""
             ],
             "nextNodes": [
                 3,
@@ -46,7 +46,7 @@
             "storyText": "Örümceklerle savaştın ve onları yendin. Derin bir nefes aldın ve mağaraya doğru ilerlemeye devam ettin.",
             "dialogueText": "",
             "options": [
-                "Yaklaşmaya devam et."
+                "Yaklaşmaya devam et.","",""
             ],
             "nextNodes": [
                 7
@@ -72,7 +72,7 @@
             "dialogueText": "",
             "options": [
                 "Mağaraya gir.",
-                "Mağara girişini incele."
+                "Mağara girişini incele.",""
             ],
             "nextNodes": [
                 7,
@@ -86,7 +86,7 @@
             "dialogueText": "",
             "options": [
                 "Saldır!",
-                "Savunmaya geç."
+                "Savunmaya geç.",""
             ],
             "nextNodes": [
                 3,
@@ -99,7 +99,7 @@
             "storyText": "Mağaraya girdin. İçerisi karanlık, ürkütücü ve soğuk. Derinliklerden gelen bazı tıkırtılar duyuluyor.",
             "dialogueText": "",
             "options": [
-                "İlerlemeye devam et."
+                "İlerlemeye devam et.","",""
             ],
             "nextNodes": [
                 9
@@ -111,7 +111,7 @@
             "storyText": "Mağara girişini inceledin ve içeriden gelen sesleri dinledin. Birkaç ürkütücü ses dışında bir şey duyamadın.",
             "dialogueText": "",
             "options": [
-                "Mağaraya gir."
+                "Mağaraya gir.","",""
             ],
             "nextNodes": [
                 7
@@ -123,7 +123,7 @@
             "storyText": "Mağarada ilerlemeye devam ettikçe sesler artmaya başladı. Sola doğru kıvrılan yolun sonunda düşmanlar var gibi hissediyorsun.",
             "dialogueText": "",
             "options": [
-                "İlerle ve sola dön."
+                "İlerle ve sola dön.","",""
             ],
             "nextNodes": [
                 10
@@ -135,7 +135,7 @@
             "storyText": "Mağaranın derinliklerinde bir grup imp ile karşılaştın. Onlarla savaştın ve hepsini yendin.",
             "dialogueText": "",
             "options": [
-                "Daha derine in."
+                "Daha derine in.","",""
             ],
             "nextNodes": [
                 11
@@ -148,7 +148,7 @@
             "dialogueText": "",
             "options": [
                 "Kitabı ve haritayı al.",
-                "Çevreyi incele."
+                "Çevreyi incele.",""
             ],
             "nextNodes": [
                 12,
@@ -161,7 +161,7 @@
             "storyText": "Kitabı aldın ve okumaya başladın. Kitap, büyük büyükbabana aitti ve köyün fakirleşme sebebinin kilise olduğunu ve köyün eski refahına kavuşması için kâhinin güçlenip kiliseye karşı gelmesi gerektiğini yazıyordu. Bu gücü kazanmak için kilisenin yanındaki kampa gitmen gerektiği de eklenmişti.",
             "dialogueText": "",
             "options": [
-                "Haritayı takip et."
+                "Haritayı takip et.","",""
             ],
             "nextNodes": [
                 14
@@ -173,7 +173,7 @@
             "storyText": "Çevreyi inceledin ve başka bir yol daha buldun. Bu yol seni mağaranın daha derinlerine götürüyor.",
             "dialogueText": "",
             "options": [
-                "Kitabı ve haritayı al."
+                "Kitabı ve haritayı al.","",""
             ],
             "nextNodes": [
                 12
@@ -186,7 +186,7 @@
             "dialogueText": "",
             "options": [
                 "Boss imp ile savaş.",
-                "Boss imp ile konuşmayı dene."
+                "Boss imp ile konuşmayı dene.",""
             ],
             "nextNodes": [
                 15,
@@ -199,7 +199,7 @@
             "storyText": "Boss imp ile savaştın ve onu yendin. Savaştan sonra sandığın yanına gidip sandığı açtın. Sandığı açtığında içinde eski bir zırh buldun.",
             "dialogueText": "",
             "options": [
-                "Zırhı incele."
+                "Zırhı incele.","",""
             ],
             "nextNodes": [
                 18
@@ -214,7 +214,7 @@
             "dialogueText": "",
             "options": [
                 "Saldır!",
-                "Savunmaya geç!"
+                "Savunmaya geç!",""
             ],
             "nextNodes": [
                 15,
@@ -227,7 +227,7 @@
             "storyText": "Mektubu okuduğunda, köyün eski refahına kavuşması için yapılması gerekenleri anlatan detaylı bir plan buldun.",
             "dialogueText": "",
             "options": [
-                "Planı inceleyip detayları öğren."
+                "Planı inceleyip detayları öğren.","",""
             ],
             "nextNodes": [
                 20
@@ -239,7 +239,7 @@
             "storyText": "Zırhı incelediğinde içinde bir mektup olduğunu gördün. Zırhın özel bir malzemeden yapıldığını ve eski bir büyüyle korunduğunu fark ettin.",
             "dialogueText": "",
             "options": [
-                "Mektubu oku."
+                "Mektubu oku.","",""
             ],
             "nextNodes": [
                 17
@@ -251,7 +251,7 @@
             "storyText": "Planı uygulamak için hemen yola koyuldun ve köyün eski refahına kavuşması için gereken ilk adımı attın.",
             "dialogueText": "",
             "options": [
-                "Yola devam et."
+                "Yola devam et.","",""
             ],
             "nextNodes": [
                 22
@@ -265,7 +265,7 @@
             "storyText": "Mektupta kiliseye dikkat etmen gerektiği, kamptaki gücü bu zırhı kullanarak kendi başına ele geçirmen gerektiği yazıyor. ",
             "dialogueText": "",
             "options": [
-                "Zırhı giyip mağaradan ayrıl."
+                "Zırhı giyip mağaradan ayrıl.","",""
             ],
             "nextNodes": [
                 21
@@ -277,7 +277,7 @@
             "storyText": "Zırhı giydin ve kendini bir büyüyle kaplı ve daha güçlü hissettin. Geldiğin yolu takip ederek mağaradan ayrıldın.",
             "dialogueText": "",
             "options": [
-                "Mağaradan çık."
+                "Mağaradan çık.","",""
             ],
             "nextNodes": [
                 21,

@@ -3,7 +3,7 @@
         {
             "storyText": "Kiliseye varıyorsun. Oldukça zengin bir görünüme sahip gözüküyor.",
             "dialogueText":"",
-            "options": ["İçeri gir", "Etrafı incele"],
+            "options": ["İçeri gir", "Etrafı incele",""],
             "nextNodes": [2,1],
             "actions": [""]
        
@@ -11,7 +11,7 @@
         {
             "storyText": "Kilisenin duvarları oldukça şatafatlı. Kapıdaki mücevherler ilgini çekiyor. ",
             "dialogueText":".",
-            "options": ["İçeri gir"],
+            "options": ["İçeri gir","",""],
             "nextNodes": [2],
             "actions": [""]
           
@@ -19,7 +19,7 @@
         {
             "storyText": "Kapıdan içeri girdiğinde seni muhafızlar karşılıyor. --Neye baktın genç oğlan?--",
             "dialogueText":"",
-            "options": ["Beni rahip ile görüştürün", "Geri çekilmelerini emret"],
+            "options": ["Beni rahip ile görüştürün", "Geri çekilmelerini emret",""],
             "nextNodes": [3,4],
             "actions": [""]
         
@@ -34,77 +34,77 @@
         {
             "storyText": "",
             "dialogueText":"Geri mi çekilelim? Sen ne dediğinin farkında mısın lan it! Bir kelime daha edersen kelleni alırım senin!",
-            "options": ["Onlara gücünü göster","Gücünü muhafızlardan birinin üstünde dene"],
+            "options": ["Onlara gücünü göster","Gücünü muhafızlardan birinin üstünde dene",""],
             "nextNodes": [5,6],
             "actions": ["startDialogue:muhafiz"]  
         },
         {
             "storyText": "Enerji bedeninden yayılırken ayakların yerden kesiliyor. Havada elinden enerji topları çıkarıyorsun. Gözlerin bembeyaza dönüyor. Muhafızlar ağzı açık bir şekilde seni izliyor.",
             "dialogueText":"",
-            "options": ["Şimdi geri çekilin","Gücünü muhafızlardan birinin üstünde dene"],
+            "options": ["Şimdi geri çekilin","Gücünü muhafızlardan birinin üstünde dene",""],
             "nextNodes": [8,6],
             "actions": [""]  
         },
         { 
             "storyText": "Elinden bir enerji topu çıkarıyor sonra da akılalmaz bir hızla muhafıza fırlatıyorsun. Vücudunun tüm parçaları etrafa dağılıyor. Muhafızlar karşı koyamayacaklarının farkındalar ve kaçmaya başlıyorlar. ",
             "dialogueText":"",
-            "options": ["Hepsini öldür","Rahibin yanına git"],
+            "options": ["Hepsini öldür","Rahibin yanına git",""],
             "nextNodes": [7,9],
             "actions": [""]   
         },
         { 
             "storyText": "Kaçmaya çalışan muhafızların üstüne enerji toplarını atmaya devam ediyorsun. Hepsi birer birer can veriyor. ",
             "dialogueText":"",
-            "options": ["Rahibin yanına git"],
+            "options": ["Rahibin yanına git","",""],
             "nextNodes": [9],
             "actions": [""]   
         },
         { 
             "storyText": "Muhafızlar çok korkmuş görünüyorlar. Geri çekiliyorlar ve yolu açıyorlar.",
             "dialogueText":"",
-            "options": ["Rahibin yanına git"],
+            "options": ["Rahibin yanına git","",""],
             "nextNodes": [9],
             "actions": [""]   
         },
         { 
             "storyText": "Küçük bir arayıştan sonra rahibin odasını buluyorsun ve içeri giriyorsun. Girer girmez sendeki gücün bir benzerinin onda da olduğunu anlıyorsun.",
             "dialogueText":"",
-            "options": ["Köyümüzün fakirleşme sebebi sen misin?","Rahibe saldır"],
+            "options": ["Köyümüzün fakirleşme sebebi sen misin?","Rahibe saldır",""],
             "nextNodes": [10,11],
             "actions": [""]  
         },
         {
             "storyText": "",
             "dialogueText":"Gücünü sezebiliyorum ve gerçeği biliyorsun. Dürüst olacağım evet, köyünüzün fakirleşme sebebi benim. Ama bu gücü sadece sen ve ben kontrol edebiliyoruz. Çok daha fazlasını yapabiliriz. Birlikte, dünyayı bile ele geçirebiliriz.",
-            "options": ["Şehri sömürmek için rahiple iş birliği yap", "Rahibe saldır"],
+            "options": ["Şehri sömürmek için rahiple iş birliği yap", "Rahibe saldır",""],
             "nextNodes": [14,11],
             "actions": ["startDialogue:Rahip"]   
         },
         {
             "storyText": "Rahip ile uzun bir savaşın ardından sonunda onu alt ediyorsun.",
             "dialogueText":"",
-            "options": ["Rahibi öldür", "Rahibi bağla ve köyü kurtar"],
+            "options": ["Rahibi öldür", "Rahibi bağla ve köyü kurtar",""],
             "nextNodes": [12,13],
             "actions": ["startBattle:rahipboss"]      
         },
         {
             "storyText": "Rahibi öldürdün ve köy halkı artık özgür. Köyde bir kahraman olarak anılacaksın.",
             "dialogueText":"",
-            "options": ["Oyunu bitir"],
+            "options": ["Oyunu bitir","",""],
             "nextNodes": [15],
             "actions": [""]   
         },
         {
             "storyText": "Rahibi bağladın ve köy halkına onun gerçek yüzünü gösterdin. Köy halkı seni bir kahraman olarak anacak.",
             "dialogueText":"",
-            "options": ["Oyunu bitir"],
+            "options": ["Oyunu bitir","",""],
             "nextNodes": [15],
             "actions": [""]   
         },
         {
             "storyText": "Rahip ile iş birliği yaptın ve köyü birlikte sömürmeye başladınız. Gücün akıl almaz seviyelere ulaştı. Zenginlik ve güç içinde yüzüyorsunuz, ancak köy halkı sefalet içinde.",
             "dialogueText":"",
-            "options": ["Oyunu bitir"],
+            "options": ["Oyunu bitir","",""],
             "nextNodes": [15],
             "actions": [""]   
         },

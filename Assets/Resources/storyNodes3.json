@@ -3,49 +3,49 @@
         {
             "storyText": "Köprüden geçerken telaş içerisinde koşturan bir adamla karşılaştın.",
             "dialogueText":"",
-            "options": ["Hey ne oldu sana?", "Önemseme"],
+            "options": ["Hey ne oldu sana?", "Önemseme",""],
             "nextNodes": [1,6],
             "actions": [""]
         },
         {
             "storyText": "",
             "dialogueText":"Go-Goblinler var. Görür görmez hemen kaçtım bir tanesi peşime takıldı ama atlatmayı başardım.",
-            "options": ["Bir şeyin yok değil mi?", "Neredelerdi?"],
+            "options": ["Bir şeyin yok değil mi?", "Neredelerdi?",""],
             "nextNodes": [2,3],
             "actions": ["startDialogue:köylü"]
         },
         {
             "storyText": "",
             "dialogueText":"Hayır bir şeyim yok. Dediğim gibi kaçmayı başardım ama dikkat etsen iyi olur.",
-            "options": ["Goblinleri nerede görmüştün?"],
+            "options": ["Goblinleri nerede görmüştün?","",""],
             "nextNodes": [3],
             "actions": ["startDialogue:köylü"]
         },
         {
             "storyText": "",
             "dialogueText":"Kilisenin yakınlarında bir kamp var. Sanırım orada kalıyorlar.",
-            "options": ["Pekala, kendine iyi bak.","Başka bir şey biliyor musun?"],
+            "options": ["Pekala, kendine iyi bak.","Başka bir şey biliyor musun?",""],
             "nextNodes": [5,4],
             "actions": ["startDialogue:köylü"]
         },
         {
             "storyText": "",
             "dialogueText":"Maalesef tüm bildiklerim bunlar.",
-            "options": ["Görüşmek üzere o halde."],
+            "options": ["Görüşmek üzere o halde.","",""],
             "nextNodes": [5],
             "actions": ["startDialogue:köylü"]
         },
         {
             "storyText": "Adam teşekkür edip telaşla tekrar yürümeye başladı. Kampa doğru ilerlemeye devam ettin",
             "dialogueText":"",
-            "options": ["İlerlemeye devam et."],
+            "options": ["İlerlemeye devam et.","",""],
             "nextNodes": [7],
             "actions": [""]
         },
         { 
             "storyText": "Adamı umursamadan yürümeye devam ettin. Telaşlı şekilde yanından geçip gitti. ",
             "dialogueText":"",
-            "options": ["Yürümeye devam et"],
+            "options": ["Yürümeye devam et","",""],
             "nextNodes": [7],
             "actions": [""]
         },
