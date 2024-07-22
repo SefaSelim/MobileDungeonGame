@@ -12,7 +12,7 @@
                 1,
                 2
             ],
-            "actions": []
+            "actions": ["changeImage:köybg"]
         },
         {
             "storyText": "",
@@ -259,7 +259,7 @@
             "nextNodes": [
                 20
             ],
-            "actions": []
+            "actions": ["changeImage:evbg"]
         },
         {
             "storyText": "",
@@ -531,7 +531,7 @@
                 43
             ],
             "actions": [
-                ""
+                "changeImage:köybg"
             ]
         },
         {
@@ -557,7 +557,7 @@
                 43
             ],
             "actions": [
-                ""
+                "changeImage:köybg"
             ]
         },
         {

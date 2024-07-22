@@ -39,6 +39,8 @@ public class StoryManagementScript : MonoBehaviour
     private int currentNode;
     private bool canSelectOption = true;
     public string jsonName;
+    public Image placeBgimage;
+    public Sprite placesprite;
 
     // public GameObject fightpoint;
 
@@ -68,6 +70,7 @@ public class StoryManagementScript : MonoBehaviour
 
     void Update()
     {
+        placeBgimage.sprite = placesprite;
         if (dialogueTextUI.text == "")
         {
             char_image.gameObject.SetActive(false);
@@ -213,10 +216,12 @@ public class StoryManagementScript : MonoBehaviour
                     break;
                 case "startBattle":
                     StartBattle(buabibirimi);
-
                     break;
                 case "startDialogue":
                     StartDialogue(actionValue);
+                    break;
+                case "changeImage":
+                    ChangeImage(actionValue);
                     break;
                 case "rastgele":
                     Rastgele(float.Parse(actionValue));
@@ -246,6 +251,12 @@ public class StoryManagementScript : MonoBehaviour
     void IncreaseScore(int amount)
     {
         Debug.Log("Score increased by: " + amount);
+    }
+
+    void ChangeImage(string bgspritename)
+    {
+        string bgname = bgspritename;
+        placesprite = Resources.Load<Sprite>(bgname);
     }
 
     void StartBattle(string[] enemies)
@@ -292,7 +303,6 @@ public class StoryManagementScript : MonoBehaviour
         Sprite newSprite = Resources.Load<Sprite>(image_name);
         if (newSprite != null)
         {
-            // Image bileşenine yeni Sprite'ı ata
             char_image.sprite = newSprite;
         }
         else
