@@ -24,6 +24,8 @@ public class FightSystem : MonoBehaviour
     public TextMeshProUGUI[] enemyACs;
     public Button[] attackButtons;
 
+      public GameObject[] Fillers;
+
     public TextMeshProUGUI playerHP, playerLevel, playerName, dialogueText, playerAC, playerCurrentEXP, playerMaxExp;
     public Button mainAttackButton;
     public Button healButton;
@@ -168,6 +170,8 @@ public class FightSystem : MonoBehaviour
                 enemyHPs[i].text = "" + enemy.currentHP;
                 enemyACs[i].text = "" + enemy.unitAC;
                 attackButtons[i].gameObject.SetActive(true);
+                Image fillImage = Fillers[i].GetComponent<Image>();
+                fillImage.fillAmount =(float)((float)enemy.currentHP / (float)enemy.maxHP);
             }
             else
             {
