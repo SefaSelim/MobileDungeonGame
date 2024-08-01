@@ -10,9 +10,10 @@
             ],
             "nextNodes": [
                 1,
-                2
+                2,
+                3
             ],
-            "actions": ["changeImage:köybg"]
+            "actions": ["changeImage:köybg","karizma:6,2,'A bu seçenek'"]
         },
         {
             "storyText": "",

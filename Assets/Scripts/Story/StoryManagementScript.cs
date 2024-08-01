@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 public class StoryManagementScript : MonoBehaviour
 {
-
+    public CharInfos charInfos;
 
     public GameObject BattleSystem;
     GameObject StoryPointOnParent;
@@ -120,7 +120,7 @@ public class StoryManagementScript : MonoBehaviour
         dialogueTextUI.text = node.dialogueText;
 
         // Eylemleri gerçekleştir
-        PerformActions(node.actions);
+        
 
         // Mevcut düğümün son düğüm olup olmadığını kontrol et
         if (node.nextNodes.Length == 0)
@@ -158,6 +158,7 @@ public class StoryManagementScript : MonoBehaviour
                 optionButtons[a].gameObject.SetActive(true);
             }      
         }
+        PerformActions(node.actions);
 
         StartCoroutine(EnableOptionsAfterDelay(0.5f)); // Seçenekleri 0.5 saniye sonra yeniden etkinleştir
     }
@@ -201,7 +202,7 @@ public class StoryManagementScript : MonoBehaviour
 
             string actionType = parts[0];
             string actionValue = parts[1];
-            string[] buabibirimi = actionValue.Split(',');
+            string[] actValues = actionValue.Split(',');
 
             switch (actionType)
             {
@@ -215,7 +216,7 @@ public class StoryManagementScript : MonoBehaviour
                     IncreaseScore(int.Parse(actionValue));
                     break;
                 case "startBattle":
-                    StartBattle(buabibirimi);
+                    StartBattle(actValues);
                     break;
                 case "startDialogue":
                     StartDialogue(actionValue);
@@ -228,11 +229,23 @@ public class StoryManagementScript : MonoBehaviour
                     break;
                 case "EndPoint":
                     EndPoint();
-                break;
+                    break;
+                case "karizma":
+                    ControlStat(charInfos.karizma,actValues);
+                    break;
                 default:
                     Debug.LogError("Unknown action type: " + actionType);
                     break;
             }
+        }
+    }
+
+    void ControlStat(int stat ,string[]actvalues)
+    { 
+        if (stat > int.Parse(actvalues[0]))
+        {
+            optionButtons[int.Parse(actvalues[1])].GetComponentInChildren<TextMeshProUGUI>().text = actvalues[2];
+            optionButtons[int.Parse(actvalues[1])].gameObject.SetActive(true);
         }
     }
 
