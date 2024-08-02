@@ -10,7 +10,7 @@ public class StoryManagementScript : MonoBehaviour
     public CharInfos charInfos;
 
     public GameObject BattleSystem;
-    GameObject StoryPointOnParent;
+    public GameObject StoryPointOnParent;
     public FightSystem fightSystemsc;
     [System.Serializable]
     public class StoryNode
@@ -53,7 +53,6 @@ public class StoryManagementScript : MonoBehaviour
 
     void Start()
     {
-        StoryPointOnParent = transform.parent.gameObject;
         LoadStoryNodesFromJSON();
         currentNode = 0;
         UpdateStory();
@@ -62,7 +61,7 @@ public class StoryManagementScript : MonoBehaviour
 
     public void nextDialoge()
     {
-        StoryPointOnParent = transform.parent.gameObject;
+        
         LoadStoryNodesFromJSON();
         currentNode = 0;
         UpdateStory();
@@ -120,7 +119,7 @@ public class StoryManagementScript : MonoBehaviour
         dialogueTextUI.text = node.dialogueText;
 
         // Eylemleri gerçekleştir
-        
+
 
         // Mevcut düğümün son düğüm olup olmadığını kontrol et
         if (node.nextNodes.Length == 0)
@@ -132,6 +131,7 @@ public class StoryManagementScript : MonoBehaviour
             }
             return;
         }
+
         for (int i = 0; i < optionButtons.Length; i++)
         {
             if (i < node.options.Length )
@@ -147,6 +147,7 @@ public class StoryManagementScript : MonoBehaviour
                 // optionButtons[i].gameObject.SetActive(false);
             }
         }
+    
         for (int a = 0; a < optionButtons.Length; a++)
         {
             if (optionButtons[a].GetComponentInChildren<TextMeshProUGUI>().text=="")
@@ -158,8 +159,8 @@ public class StoryManagementScript : MonoBehaviour
                 optionButtons[a].gameObject.SetActive(true);
             }      
         }
-        PerformActions(node.actions);
-
+        
+         PerformActions(node.actions);
         StartCoroutine(EnableOptionsAfterDelay(0.5f)); // Seçenekleri 0.5 saniye sonra yeniden etkinleştir
     }
 
@@ -231,7 +232,7 @@ public class StoryManagementScript : MonoBehaviour
                     EndPoint();
                     break;
                 case "karizma":
-                    ControlStat(charInfos.karizma,actValues);
+                    ControlStat(charInfos.charisma,actValues);
                     break;
                 default:
                     Debug.LogError("Unknown action type: " + actionType);

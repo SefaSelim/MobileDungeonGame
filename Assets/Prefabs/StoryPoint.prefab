@@ -465,7 +465,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7785845285154621987}
-  - {fileID: 4406305493907290803}
   - {fileID: 5341494935861807961}
   - {fileID: 1012017665478385343}
   m_Father: {fileID: 0}
@@ -922,7 +921,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e54cc7c87667594aae04cf31027687e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  storyManagementScript: {fileID: 4234377917979191730}
+  storyManagementScript: {fileID: 0}
   index: 0
 --- !u!1 &2695061256073908634
 GameObject:
@@ -1988,67 +1987,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   historyPanel: {fileID: 0}
   historyText: {fileID: 0}
---- !u!1 &6486609280121088584
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4406305493907290803}
-  - component: {fileID: 4234377917979191730}
-  m_Layer: 0
-  m_Name: StoryManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4406305493907290803
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6486609280121088584}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 169.77373, y: 317.31854, z: -0.60196155}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 9078143227703709142}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4234377917979191730
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6486609280121088584}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0aca31aa76f737a4b8237d7e5e183a76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BattleSystem: {fileID: 0}
-  fightSystemsc: {fileID: 0}
-  storyTextUI: {fileID: 8411864246580834257}
-  optionButtons:
-  - {fileID: 8062269341100434203}
-  - {fileID: 6442790450059130805}
-  - {fileID: 4299786908628588226}
-  storyNodes: []
-  dialogueTextUI: {fileID: 6174569985772290697}
-  char_image: {fileID: 818672362820001472}
-  image_name: 
-  jsonName: 
-  placeBgimage: {fileID: 204344659164046697}
-  placesprite: {fileID: 0}
-  history: []
-  historyPanel: {fileID: 3937491576482438055}
-  historyText: {fileID: 5114966377390622166}
 --- !u!1 &6598614621438461041
 GameObject:
   m_ObjectHideFlags: 0
@@ -2205,7 +2143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e54cc7c87667594aae04cf31027687e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  storyManagementScript: {fileID: 4234377917979191730}
+  storyManagementScript: {fileID: 0}
   index: 2
 --- !u!1 &6668966480635859900
 GameObject:
@@ -2363,7 +2301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e54cc7c87667594aae04cf31027687e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  storyManagementScript: {fileID: 4234377917979191730}
+  storyManagementScript: {fileID: 0}
   index: 1
 --- !u!1 &7457218247255825473
 GameObject:

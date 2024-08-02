@@ -47,14 +47,8 @@
             "dialogueText":"",
             "options": ["Yürümeye devam et","",""],
             "nextNodes": [7],
-            "actions": [""]
-        },
-        { 
-            "storyText": "",
-            "dialogueText":"",
-            "options": [""],
-            "nextNodes": [],
             "actions": ["EndPoint:"]
         }
+       
     ]
 }

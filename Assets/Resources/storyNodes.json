@@ -13,7 +13,7 @@
                 2,
                 3
             ],
-            "actions": ["changeImage:köybg","karizma:6,2,'A bu seçenek'"]
+            "actions": ["changeImage:köybg","karizma:3,2,'A bu seçenek'"]
         },
         {
             "storyText": "",
@@ -555,18 +555,10 @@
                 "...","",""
             ],
             "nextNodes": [
-                43
+                48
             ],
             "actions": [
-                "changeImage:köybg"
-            ]
-        },
-        {
-            "storyText": "",
-            "dialogueText": "",
-            "options": [],
-            "nextNodes": [],
-            "actions": [
+                "changeImage:köybg",
                 "EndPoint:"
             ]
         }
