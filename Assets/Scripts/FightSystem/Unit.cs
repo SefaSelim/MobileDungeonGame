@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using System;
 
 public class Unit : MonoBehaviour
 {
@@ -20,6 +22,10 @@ public class Unit : MonoBehaviour
     public int weapondamage;
 
 
+    [SerializeField]
+    private GameObject LevelMark;
+    [SerializeField]
+    private TextMeshProUGUI LevelMarkText;
     public bool TakeDamage(int dmg)
     {
         currentHP -= dmg;
@@ -59,5 +65,8 @@ public class Unit : MonoBehaviour
         unitLevel++;
         expToLevelUP = Mathf.FloorToInt(expToLevelUP * 1.5f);
         statpoint++;
+
+        LevelMark.SetActive(true);
+        LevelMarkText.text=Convert.ToString(statpoint);
     }
 }

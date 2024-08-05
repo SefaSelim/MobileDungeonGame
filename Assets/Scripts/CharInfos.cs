@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,9 +18,12 @@ public class CharInfos : MonoBehaviour
 
     //statlar burdan
 
-
+    // **eyvallah kanka dinlemişsin**
 
     //a buraya kadar yazılıack
+
+    public GameObject LevelMark;
+    public TextMeshProUGUI LevelMarkText;
     [SerializeField]
     GameObject panel;
     public Button CharismaAddButton;
@@ -59,6 +63,13 @@ public class CharInfos : MonoBehaviour
             charisma++;
             unit.statpoint--;
         }
+
+        LevelMarkText.text=Convert.ToString(unit.statpoint);
+        if(unit.statpoint<=0)
+        {
+            LevelMark.SetActive(false);
+        }
+
         UpdateInfos();
     }
     public void AddStatIntelligence()
@@ -68,6 +79,13 @@ public class CharInfos : MonoBehaviour
             intelligence++;
             unit.statpoint--;
         }
+
+        LevelMarkText.text=Convert.ToString(unit.statpoint);
+        if(unit.statpoint<=0)
+        {
+            LevelMark.SetActive(false);
+        }
+
         UpdateInfos();
     }
     public void AddStatDexterity()
@@ -77,6 +95,13 @@ public class CharInfos : MonoBehaviour
             dexterity++;
             unit.statpoint--;
         }
+
+        LevelMarkText.text=Convert.ToString(unit.statpoint);
+        if(unit.statpoint<=0)
+        {
+            LevelMark.SetActive(false);
+        }
+
         UpdateInfos();
     }
     public void AddStatStrength()
@@ -86,6 +111,13 @@ public class CharInfos : MonoBehaviour
             strength++;
             unit.statpoint--;
         }
+
+        LevelMarkText.text=Convert.ToString(unit.statpoint);
+        if(unit.statpoint<=0)
+        {
+            LevelMark.SetActive(false);
+        }
+        
         UpdateInfos();
     }
     public void LevelUpButton()
