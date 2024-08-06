@@ -234,6 +234,15 @@ public class StoryManagementScript : MonoBehaviour
                 case "karizma":
                     ControlStat(charInfos.charisma,actValues);
                     break;
+                case "beceri":
+                    ControlStat(charInfos.dexterity,actValues);
+                    break;
+                case "güç":
+                    ControlStat(charInfos.strength,actValues);
+                    break;
+                case "zeka":
+                    ControlStat(charInfos.intelligence,actValues);
+                    break;
                 default:
                     Debug.LogError("Unknown action type: " + actionType);
                     break;

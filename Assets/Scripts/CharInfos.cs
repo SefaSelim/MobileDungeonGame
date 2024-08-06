@@ -44,6 +44,10 @@ public class CharInfos : MonoBehaviour
         UpdateInfos();
         panel.SetActive(!panel.activeSelf);
     }
+    public void ClosePanel()
+    {
+        panel.SetActive(false);
+    }
 
 
     void UpdateInfos()
