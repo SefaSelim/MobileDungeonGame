@@ -5,17 +5,21 @@ using Pathfinding;
 
 public class AIAgent : MonoBehaviour
 {
-    private AIPath path;
-    [SerializeField] private float movespeed;
-    [SerializeField] private Transform target;
+    public AIPath aipath;
+    Vector2 direction;
     void Start()
     {
-        path = GetComponent<AIPath>();        
+     
     }
 
     void Update()
     {
-        path.maxSpeed = movespeed;
-        path.destination = target.position;
+        faceVelocity();
+    }
+
+    void faceVelocity()
+    {
+        direction = aipath.desiredVelocity;
+        transform.right = direction;
     }
 }
