@@ -1957,10 +1957,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68db0b89e9f7ce4459c90fab45a5425d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unit: {fileID: 0}
   questArrow: {fileID: 0}
   nextTargetPointToQuestPointer: {fileID: 0}
   storyManagementScript: {fileID: 0}
-  dialogeName: storyNodes2
+  completedDialogName: 
+  notCompletedDialogName: 
+  locationDialogName: 
+  dialogConditions: []
+  questManager: {fileID: 0}
 --- !u!114 &311843606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2591,10 +2596,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68db0b89e9f7ce4459c90fab45a5425d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unit: {fileID: 2058833376}
   questArrow: {fileID: 1710283443}
   nextTargetPointToQuestPointer: {fileID: 833686956}
   storyManagementScript: {fileID: 230982868}
-  dialogeName: storyNodes
+  completedDialogName: 
+  notCompletedDialogName: 
+  locationDialogName: koy
+  dialogConditions:
+  - stringValue: 
+  questManager: {fileID: 0}
 --- !u!1 &423289726 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3937491576482438055, guid: 44253f09a93c6004a9611312d3642c5d, type: 3}
@@ -3713,10 +3724,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68db0b89e9f7ce4459c90fab45a5425d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unit: {fileID: 0}
   questArrow: {fileID: 1710283443}
   nextTargetPointToQuestPointer: {fileID: 1318786583}
   storyManagementScript: {fileID: 230982868}
-  dialogeName: storyNodes2
+  completedDialogName: 
+  notCompletedDialogName: 
+  locationDialogName: 
+  dialogConditions: []
+  questManager: {fileID: 0}
 --- !u!114 &833686959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3965,10 +3981,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68db0b89e9f7ce4459c90fab45a5425d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unit: {fileID: 0}
   questArrow: {fileID: 1710283443}
   nextTargetPointToQuestPointer: {fileID: 1573325096}
   storyManagementScript: {fileID: 230982868}
-  dialogeName: storyNodes4
+  completedDialogName: 
+  notCompletedDialogName: 
+  locationDialogName: 
+  dialogConditions: []
+  questManager: {fileID: 0}
 --- !u!114 &942247338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4406,7 +4427,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1199867158}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c9679e68a0f1144e79c664d9a11ca121, type: 3}
   m_Name: 
@@ -4420,7 +4441,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1199867158}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6eb1402c17e84a9282a7f0f62eb584f, type: 3}
   m_Name: 
@@ -4838,6 +4859,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1313672802
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1313672804}
+  - component: {fileID: 1313672803}
+  m_Layer: 0
+  m_Name: QuestManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1313672803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313672802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a81a72a6a3e2b9944bb8dcfb835ff5b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quests:
+  - questName: Village Dialogue
+    isCompleted: 0
+    conditions: []
+  unit: {fileID: 0}
+--- !u!4 &1313672804
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313672802}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.7504506, y: 2.9189692, z: -0.02104183}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1318786583
 GameObject:
   m_ObjectHideFlags: 0
@@ -4891,10 +4961,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68db0b89e9f7ce4459c90fab45a5425d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unit: {fileID: 0}
   questArrow: {fileID: 1710283443}
   nextTargetPointToQuestPointer: {fileID: 942247335}
   storyManagementScript: {fileID: 230982868}
-  dialogeName: storyNodes3
+  completedDialogName: 
+  notCompletedDialogName: 
+  locationDialogName: 
+  dialogConditions: []
+  questManager: {fileID: 0}
 --- !u!114 &1318786586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5466,7 +5541,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1375416862
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5640,7 +5715,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1406982485
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6432,7 +6507,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1505722580
 Transform:
   m_ObjectHideFlags: 0
@@ -6455,7 +6530,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1505722579}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78396926cbbfc4ac3b48fc5fc34a87d1, type: 3}
   m_Name: 
@@ -6798,10 +6873,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68db0b89e9f7ce4459c90fab45a5425d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unit: {fileID: 0}
   questArrow: {fileID: 1710283443}
   nextTargetPointToQuestPointer: {fileID: 311843603}
   storyManagementScript: {fileID: 230982868}
-  dialogeName: storyNodes5
+  completedDialogName: 
+  notCompletedDialogName: 
+  locationDialogName: 
+  dialogConditions: []
+  questManager: {fileID: 0}
 --- !u!114 &1573325099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8972,3 +9052,4 @@ SceneRoots:
   - {fileID: 1109068270}
   - {fileID: 849433080}
   - {fileID: 2015646746}
+  - {fileID: 1313672804}

@@ -1,0 +1,32 @@
+{
+    "nodes": [
+        {
+            "storyText": "köye geldin kanzi...",
+            "dialogueText": "",
+            "options": [
+                "...","",""
+            ],
+            "nextNodes": [
+                1
+            ],
+            "actions": [
+                "changeImage:köybg"
+                
+            ]
+        },
+        {
+            "storyText": "köye geldin kanzi...",
+            "dialogueText": "",
+            "options": [
+                "...","",""
+            ],
+            "nextNodes": [
+                2
+            ],
+            "actions": [
+                "EndPoint:"
+                
+            ]
+        }
+    ]
+}
